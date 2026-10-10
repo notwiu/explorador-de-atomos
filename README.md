@@ -52,7 +52,4 @@ npm run dev
 
 ## Autor
 
-Willian Teotonio
-Kemuel Darckson
-Yan Pedro
-João Rodrigues
+Willian Teotonio; Kemuel Darckson; Yan Pedro; João Rodrigues
