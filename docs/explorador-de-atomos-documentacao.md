@@ -1,0 +1,199 @@
+# Explorador de Átomos
+
+> Ferramenta web de apresentação, com muita animação, para ensinar e visualizar a evolução dos modelos atômicos em aulas de Química do ensino médio.
+
+**Status:** planejamento concluído, início do desenvolvimento
+**Autor:** Willian
+**Tipo:** trabalho de faculdade com aplicação em escola pública
+**Stack:** React + Vite
+**Última atualização:** 10/10/2026 (v0.2 da documentação)
+
+> Este é o documento-síntese. Os detalhes estão nos demais arquivos da pasta `docs/` (veja o índice no [README](../README.md)).
+
+---
+
+## 1. Contexto
+
+O projeto nasceu de um pedido de um professor de escola pública. A solicitação original foi:
+
+- Fazer um "joguinho" sobre modelos atômicos.
+- Que fosse mais didático.
+- Que servisse para os alunos **visualizarem** os modelos.
+
+A necessidade real: modelos atômicos são conteúdo abstrato, e muitos alunos têm dificuldade em imaginar o que cada cientista propôs e por que o modelo mudou ao longo do tempo.
+
+## 2. Problema
+
+Como ajudar alunos do ensino médio a **enxergar, entender e se interessar** pela evolução dos modelos atômicos, usando um site apresentado pelo professor em sala, por projetor?
+
+## 3. Objetivos
+
+**Geral:** desenvolver uma aplicação web interativa, rica em animações, que apoie o professor na explicação dos modelos atômicos.
+
+**Específicos:**
+
+- Apresentar cada modelo em uma cena animada, em **ordem cronológica**.
+- Exibir, ao lado do átomo, um **widget com foto e texto curto** sobre o modelo, para o professor ler.
+- Mostrar *por que* cada modelo foi substituído pelo seguinte.
+- Oferecer um **laboratório** para brincar com os modelos depois da explicação.
+- Encerrar com um **quiz básico**, em tela cheia, para fixar o conteúdo de forma divertida.
+- Funcionar bem em projetor, em escola pública, inclusive sem internet.
+
+## 4. Público e contexto de uso
+
+| Item | Definição |
+|---|---|
+| Público final | Alunos do ensino médio de escola pública |
+| Usuário direto | **Professor**, que apresenta o conteúdo em sala |
+| Forma de uso | Projetor, conduzido pelo professor |
+| Acesso dos alunos | Não terão acesso ao site, pelo menos por enquanto |
+| Plataforma | Navegador (site) |
+
+## 5. Fluxo da experiência
+
+```
+Abertura → Linha do tempo (5 cenas) → Laboratório → Quiz → Encerramento
+```
+
+1. **Abertura:** título animado e botão para começar.
+2. **Linha do tempo:** Dalton, Thomson, Rutherford, Bohr e modelo atual, passo a passo. Cada cena tem experimento animado, widget lateral e uma transição "Por que mudou?".
+3. **Laboratório:** o professor e a turma brincam com os modelos (escolher elemento, trocar de modelo, adicionar partículas, comparar lado a lado, ver a escala).
+4. **Quiz:** perguntas básicas em tela cheia, alternativas grandes, feedback com explicação e nova tentativa em caso de erro.
+5. **Encerramento:** resumo da linha do tempo.
+
+### 5.1 Cenas
+
+| Cena | Modelo | Ideia visual |
+|---|---|---|
+| 1 | Dalton (esfera maciça) | Esferas de elementos diferentes que se combinam em compostos simples |
+| 2 | Thomson (pudim de passas) | Tubo de raios catódicos; o feixe se desvia e revela o elétron |
+| 3 | Rutherford (modelo nuclear) | Partículas alfa disparadas contra uma folha de ouro; a maioria passa e algumas desviam, revelando o núcleo |
+| 4 | Bohr (camadas) | Elétron salta entre camadas ao receber energia e emite luz colorida |
+| 5 | Modelo atual (orbitais) | Nuvem de pontos que se forma aos poucos, mostrando que o elétron não tem trajetória fixa |
+
+### 5.2 Widget lateral
+
+Cartão fixo ao lado do átomo com:
+
+- foto do cientista;
+- nome, ano e nome do modelo;
+- texto curto (2 a 3 linhas) para o professor ler.
+
+### 5.3 Animação
+
+A animação é o grande diferencial. Princípios: movimento com significado (cada animação ensina algo), brilho e partículas, transições de câmera entre cenas, rastros dos elétrons, flashes de luz nas emissões. Para computadores simples, existe um **modo leve**.
+
+## 6. Quiz
+
+Quiz **básico**, só para fixar e brincar, depois de todo o conteúdo e do laboratório.
+
+- Tela cheia, uma pergunta por vez, alternativas grandes.
+- **Acertou:** tela informando o acerto e uma explicação curta.
+- **Errou:** o aluno pode tentar outra alternativa.
+- Sem nota ou ranking; tom leve.
+
+Detalhes e banco inicial de perguntas: [quiz.md](quiz.md).
+
+## 7. Decisões de projeto
+
+| # | Decisão | Motivo |
+|---|---|---|
+| 1 | Será um **site** | Requisito do professor; fácil de abrir em qualquer computador |
+| 2 | **React + Vite** | Escolha do autor; interface atraente e componentizada |
+| 3 | **Uso pelo professor**, não pelos alunos | Os alunos não terão acesso por ora |
+| 4 | Foco em **projeção em sala** | O professor apresenta por projetor |
+| 5 | **Muita animação** como prioridade | Chamar atenção e despertar interesse |
+| 6 | **Widget lateral** com foto e texto curto | O professor pode ler e a turma associa o rosto ao modelo |
+| 7 | **Ordem cronológica**, passo a passo | Mostra a evolução da ciência |
+| 8 | **Laboratório** após a explicação | Permitir que a turma brinque com os modelos |
+| 9 | **Quiz básico no final** (revisão de decisão anterior) | Fixar o conteúdo e divertir; a decisão inicial era não ter quiz |
+| 10 | Quiz em **tela cheia**, com nova tentativa após erro | Pensado para projeção e para não punir o erro |
+
+Registro completo e histórico: [decisoes.md](decisoes.md).
+
+## 8. Requisitos
+
+### 8.1 Funcionais
+
+- Navegar entre cenas (avançar e voltar).
+- Controlar cada animação por clique ou tecla, sem início automático.
+- Exibir o widget lateral em cada cena.
+- Reiniciar a cena atual e ajustar a velocidade das animações.
+- Alternar tela cheia e modo leve.
+- Modo laboratório com troca de modelo e elemento.
+- Quiz com feedback de acerto, explicação e nova tentativa.
+- Notas do professor opcionais, por atalho de teclado.
+
+### 8.2 Não funcionais
+
+- **Legibilidade em projetor:** fontes grandes, contraste alto, pouco texto.
+- **Navegação por teclado**, compatível com apresentadores de slides.
+- **Interface limpa:** controles que somem após alguns segundos.
+- **Offline:** sem CDN, fontes ou imagens externas.
+- **Desempenho:** fluido em computadores simples.
+- **Sem login e sem cadastro.**
+
+## 9. Arquitetura e tecnologias
+
+- React + Vite
+- Framer Motion (interface)
+- Canvas 2D com `requestAnimationFrame` (partículas, nuvem de elétrons)
+- `vite-plugin-singlefile` para gerar um único `index.html` offline
+
+Estrutura de pastas e detalhes: [arquitetura.md](arquitetura.md).
+
+## 10. Distribuição
+
+- **Offline:** arquivo único `index.html`, que o professor abre em qualquer navegador (inclusive de um pendrive).
+- **Online (opcional):** GitHub Pages ou Netlify, com envio de link ao professor.
+
+## 11. Plano de desenvolvimento
+
+| Etapa | Entrega |
+|---|---|
+| 1 | Projeto base: fluxo geral, navegação por teclado, tela cheia, controles que somem, widget lateral |
+| 2 | Cena do **Rutherford** (define o padrão visual) |
+| 3 | Cenas de Bohr e Thomson |
+| 4 | Cenas de Dalton e do modelo atual |
+| 5 | Laboratório |
+| 6 | Quiz |
+| 7 | Polimento para projetor, modo leve e build offline |
+| 8 | Validação com o professor e ajustes |
+
+Detalhes: [roadmap.md](roadmap.md).
+
+## 12. Riscos e cuidados
+
+| Risco | Mitigação |
+|---|---|
+| Internet instável na escola | Funcionamento 100% offline com arquivo único |
+| Computador simples travar com muita animação | Modo leve, partículas configuráveis, testes de desempenho |
+| Projetor com pouco brilho ou contraste | Cores fortes, fontes grandes, elementos grandes |
+| Conteúdo científico impreciso | Fonte única de conteúdo e revisão pelo professor |
+| Excesso de texto na tela | Widget com 2 a 3 linhas; detalhes nas notas do professor |
+| Imagens sem licença adequada | Usar imagens de domínio público/licença livre e registrar crédito |
+| Escopo crescer demais | Entregar por etapas, começando pelo Rutherford |
+
+## 13. Próximos passos
+
+- Criar o projeto base com Vite (Etapa 1).
+- Implementar a cena do Rutherford (Etapa 2).
+- Mostrar o protótipo ao professor e coletar feedback.
+
+## 14. Dados para completar (uso acadêmico)
+
+- Disciplina / curso: _______
+- Professor orientador: _______
+- Escola / professor solicitante: _______
+- Período de desenvolvimento: _______
+- Link do repositório: _______
+- Link da aplicação publicada: _______
+- Feedback recebido do professor: _______
+- Resultados observados em sala: _______
+
+## 15. Histórico da documentação
+
+| Versão | Data | Mudanças |
+|---|---|---|
+| 0.1 | 05/10/2026 | Documento inicial: escopo, decisões, conceito de cenas |
+| 0.2 | 10/10/2026 | Inclusão do quiz básico no final, laboratório, widget lateral, ênfase em animação; documentação dividida em vários arquivos |
