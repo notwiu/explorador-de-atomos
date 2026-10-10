@@ -18,6 +18,11 @@ Cada decisão importante fica registrada aqui, com data, motivo e consequências
 | D10 | Quiz em tela cheia, com nova tentativa após erro | Ativa |
 | D11 | Funcionar offline em arquivo único | Ativa |
 | D12 | Modo leve para computadores simples | Ativa |
+| D13 | Estilo com CSS Modules | Proposta (confirmar) |
+| D14 | JavaScript (sem TypeScript por enquanto) | Proposta (confirmar) |
+| D15 | Animação de interface só com Framer Motion por enquanto | Proposta (confirmar) |
+| D16 | Fontes embutidas: Bricolage Grotesque e Atkinson Hyperlegible | Proposta (confirmar) |
+| D17 | Cores de cada modelo inspiradas nas cores da luz dos átomos | Proposta (confirmar) |
 
 ---
 
@@ -87,13 +92,36 @@ Cada decisão importante fica registrada aqui, com data, motivo e consequências
 
 ---
 
+### D13 — Estilo com CSS Modules
+- **Data:** 10/10/2026
+- **Contexto:** a escolha estava em aberto (CSS Modules ou Tailwind).
+- **Decisão:** CSS Modules, que já vem no Vite, sem dependência extra, com tokens em variáveis CSS (`src/styles/tokens.css`).
+- **Consequência:** estilos ficam ao lado de cada componente (`Componente.module.css`).
+
+### D14 — JavaScript por enquanto
+- **Data:** 10/10/2026
+- **Decisão:** manter JavaScript para ir mais rápido. A arquitetura permite migrar para TypeScript depois.
+
+### D15 — Só Framer Motion por enquanto
+- **Data:** 10/10/2026
+- **Decisão:** usar Framer Motion para a interface e Canvas/SVG para as animações pesadas. GSAP só entra se uma cena realmente precisar.
+
+### D16 — Fontes embutidas
+- **Data:** 10/10/2026
+- **Contexto:** o site precisa funcionar offline, então nada de fontes do Google.
+- **Decisão:** **Bricolage Grotesque** (títulos, versão condensada e bem pesada, boa de ler de longe) e **Atkinson Hyperlegible** (texto, criada para máxima legibilidade). Ambas são livres (licença OFL) e ficam dentro do projeto, só o subconjunto latino para manter o arquivo leve.
+
+### D17 — Cores inspiradas nas cores da luz dos átomos
+- **Data:** 10/10/2026
+- **Decisão:** cada modelo tem uma cor própria (Dalton âmbar, Thomson violeta, Rutherford coral, Bohr ciano, modelo atual verde-água), em referência às cores emitidas por átomos. As cores se repetem na linha do tempo, nos elétrons e nas cenas.
+
+---
+
 ## Decisões em aberto
 
 | Tema | Opções | Responsável |
 |---|---|---|
-| Estilo | CSS Modules ou Tailwind | Willian |
-| Linguagem | JavaScript ou TypeScript | Willian |
-| Animação | Só Framer Motion ou também GSAP | Willian |
+| Confirmar D13 a D17 | Aceitar ou trocar | Willian |
 | Fotos | Embutidas no arquivo único ou pasta ao lado | Willian |
 | Alternativas do quiz | Ordem fixa ou embaralhada | Willian + professor |
 

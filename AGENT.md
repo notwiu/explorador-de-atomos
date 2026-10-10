@@ -36,14 +36,15 @@ Detalhes: veja `docs/escopo-e-requisitos.md` e `docs/experiencia-e-design.md`.
 |---|---|
 | Framework | React + Vite |
 | Linguagem | JavaScript (migrar para TypeScript só se o autor decidir) |
+| Fontes | Bricolage Grotesque (títulos) e Atkinson Hyperlegible (texto), embutidas no projeto |
 | Animação de interface | Framer Motion |
 | Animação pesada (partículas, nuvem de elétrons) | Canvas 2D com `requestAnimationFrame` |
-| Estilo | CSS Modules ou Tailwind (o autor decide na etapa 1; registrar em `docs/decisoes.md`) |
+| Estilo | CSS Modules, com tokens em `src/styles/tokens.css` (decisão D13) |
 | Distribuição offline | `vite-plugin-singlefile` (gera um único `index.html`) |
 
 ## 4. Comandos
 
-> Os comandos abaixo valem **depois da Etapa 1** (criação do projeto base). Atualize esta seção quando mudarem.
+Comandos disponíveis (projeto base criado). Atualize esta seção quando mudarem.
 
 ```bash
 npm install          # instala dependências
@@ -101,7 +102,8 @@ explorador-de-atomos/
 - `→`, `Espaço`, `PageDown`: avançar.
 - `←`, `PageUp`: voltar.
 - `F`: tela cheia.
-- `R`: reiniciar cena.
+- `L`: ligar/desligar modo leve.
+- `R`: reiniciar cena (a partir das cenas dos modelos).
 - `N`: mostrar/ocultar notas do professor.
 - `1`–`4` ou `A`–`D`: escolher alternativa no quiz.
 
@@ -153,8 +155,9 @@ Ao concluir qualquer mudança relevante, **atualize a documentação no mesmo co
 
 ## 10. Estado atual
 
-- **Fase:** planejamento concluído; início da Etapa 1.
-- **Próximo passo:** criar o projeto base (Vite + React), fluxo geral, navegação por teclado, tela cheia e widget lateral.
+- **Fase:** Etapa 1 em andamento. Projeto base e **tela inicial** prontos; a linha do tempo ainda é uma tela provisória.
+- **Próximo passo:** testar a tela inicial em tela grande e criar a cena do **Dalton** com o widget lateral (`AtomWidget`).
+- **Ritmo de trabalho:** uma etapa por vez, com commit e documentação a cada passo. Não adiantar cenas que o autor ainda não pediu.
 - Veja `docs/roadmap.md` para o detalhamento.
 
 ## 11. O que NÃO fazer

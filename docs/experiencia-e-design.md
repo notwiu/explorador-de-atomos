@@ -24,6 +24,41 @@ Quiz
 Encerramento
 ```
 
+## 2.1 Tela inicial (abertura)
+
+**Objetivo:** abrir a aula com impacto e deixar claro o que vem pela frente.
+
+```
+┌──────────────────────────────────────────────────────────────┐
+│                                              [L leve][F tela]│
+│  Explorador                          ╭─────────────╮          │
+│  de Átomos                           │  átomo      │          │
+│                                      │  animado    │          │
+│  Uma viagem pela história            ╰─────────────╯          │
+│  dos modelos atômicos...                                      │
+│  [ Começar a viagem ]                                         │
+│  Pressione Espaço, Enter ou →                                 │
+│                                                               │
+│  ●────────●────────●────────●────────●                        │
+│  Dalton  Thomson  Rutherford Bohr   Modelo atual              │
+│  1803    1897     1911       1913   1926                      │
+└──────────────────────────────────────────────────────────────┘
+```
+
+**Elementos**
+- **Título** em duas linhas, alinhado à esquerda, fonte condensada e pesada.
+- **Átomo animado** à direita: núcleo que "respira" e três elétrons de cores diferentes com rastro.
+- **Fundo** em azul-noite com estrelas que sobem devagar e piscam.
+- **Linha do tempo** com os cinco modelos e seus anos, cada um na sua cor.
+- **Botão grande** "Começar a viagem" e dica de teclado.
+- **Controles** (modo leve e tela cheia) no canto, que somem sozinhos.
+
+**Movimento:** um único momento orquestrado ao entrar (o átomo acende, o título se revela e a linha do tempo se desenha, da esquerda para a direita). Depois disso só continuam o átomo e as estrelas, de forma suave.
+
+**Atalhos:** Espaço/Enter/→ começam; F tela cheia; L modo leve.
+
+**Modo leve:** menos estrelas, sem brilhos nem rastros.
+
 ## 3. Layout de uma cena
 
 ```

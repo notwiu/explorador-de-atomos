@@ -1,0 +1,41 @@
+.wrap {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  display: grid;
+  place-items: center;
+}
+
+.svg {
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+}
+
+/* Brilhos só no modo normal (filtros são pesados em computadores simples) */
+.wrap[data-glow='true'] .electron {
+  filter: drop-shadow(0 0 10px currentColor) drop-shadow(0 0 22px currentColor);
+}
+
+.wrap[data-glow='true'] .nucleus {
+  filter: drop-shadow(0 0 18px rgba(255, 180, 84, 0.9));
+}
+
+.nucleus {
+  transform-origin: 300px 300px;
+  animation: breathe 3.2s ease-in-out infinite;
+}
+
+.aura {
+  transform-origin: 300px 300px;
+  animation: breathe 3.2s ease-in-out infinite;
+}
+
+@keyframes breathe {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.08);
+  }
+}

@@ -2,11 +2,11 @@
 
 > Ferramenta web de apresentação, com muita animação, para ensinar e visualizar a evolução dos modelos atômicos em aulas de Química do ensino médio.
 
-**Status:** planejamento concluído, início do desenvolvimento
+**Status:** em desenvolvimento (tela inicial pronta)
 **Autor:** Willian
 **Tipo:** trabalho de faculdade com aplicação em escola pública
 **Stack:** React + Vite
-**Última atualização:** 10/10/2026 (v0.2 da documentação)
+**Última atualização:** 10/10/2026 (v0.3 da documentação)
 
 > Este é o documento-síntese. Os detalhes estão nos demais arquivos da pasta `docs/` (veja o índice no [README](../README.md)).
 
@@ -151,7 +151,7 @@ Estrutura de pastas e detalhes: [arquitetura.md](arquitetura.md).
 
 | Etapa | Entrega |
 |---|---|
-| 1 | Projeto base: fluxo geral, navegação por teclado, tela cheia, controles que somem, widget lateral |
+| 1 | Projeto base e **tela inicial** (feitos); fluxo geral completo e widget lateral entram com as cenas |
 | 2 | Cena do **Rutherford** (define o padrão visual) |
 | 3 | Cenas de Bohr e Thomson |
 | 4 | Cenas de Dalton e do modelo atual |
@@ -197,3 +197,4 @@ Detalhes: [roadmap.md](roadmap.md).
 |---|---|---|
 | 0.1 | 05/10/2026 | Documento inicial: escopo, decisões, conceito de cenas |
 | 0.2 | 10/10/2026 | Inclusão do quiz básico no final, laboratório, widget lateral, ênfase em animação; documentação dividida em vários arquivos |
+| 0.3 | 10/10/2026 | Projeto base (Vite + React) e tela inicial criados; decisões D13 a D17 (estilo, fontes, cores) |

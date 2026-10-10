@@ -1,0 +1,91 @@
+.strip {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* Linha que se desenha de ponta a ponta */
+.strip::before {
+  content: '';
+  position: absolute;
+  top: 0.7rem;
+  left: 10%;
+  right: 10%;
+  height: 3px;
+  background: linear-gradient(
+    90deg,
+    var(--c-dalton),
+    var(--c-thomson),
+    var(--c-rutherford),
+    var(--c-bohr),
+    var(--c-quantum)
+  );
+  opacity: 0.55;
+  transform-origin: left center;
+  animation: draw 1.8s 1.4s cubic-bezier(0.6, 0, 0.2, 1) both;
+}
+
+.item {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.35rem;
+  text-align: center;
+  animation: light 0.6s calc(1.4s + var(--i) * 0.36s) ease-out both;
+}
+
+.dot {
+  width: 1.45rem;
+  height: 1.45rem;
+  border-radius: 50%;
+  background: var(--accent);
+  box-shadow: 0 0 0 5px var(--bg-deep), 0 0 18px var(--accent);
+}
+
+:global([data-light='true']) .dot {
+  box-shadow: 0 0 0 5px var(--bg-deep);
+}
+
+.label {
+  margin-top: 0.4rem;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: var(--fs-label);
+  line-height: 1.1;
+}
+
+.year {
+  font-size: var(--fs-small);
+  color: var(--text-muted);
+}
+
+@keyframes draw {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
+  }
+}
+
+@keyframes light {
+  from {
+    opacity: 0;
+    transform: translateY(0.6rem) scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* Em telas estreitas, esconde o ano para caber */
+@media (max-width: 560px) {
+  .year {
+    display: none;
+  }
+}

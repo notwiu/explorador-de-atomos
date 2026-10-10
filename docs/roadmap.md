@@ -7,7 +7,7 @@ Legenda: ✅ concluído · 🔄 em andamento · ⬜ pendente
 | Etapa | Entrega | Status |
 |---|---|---|
 | 0 | Planejamento e documentação | ✅ |
-| 1 | Projeto base | ⬜ |
+| 1 | Projeto base e tela inicial | 🔄 |
 | 2 | Cena do Rutherford | ⬜ |
 | 3 | Cenas de Bohr e Thomson | ⬜ |
 | 4 | Cenas de Dalton e modelo atual | ⬜ |
@@ -25,19 +25,23 @@ Legenda: ✅ concluído · 🔄 em andamento · ⬜ pendente
 - [x] Escolher stack (React + Vite)
 - [x] Criar `AGENT.md`, `README.md` e documentação em `docs/`
 
-## Etapa 1 — Projeto base ⬜
+## Etapa 1 — Projeto base e tela inicial 🔄
 
-- [ ] Criar projeto Vite + React
-- [ ] Configurar `vite-plugin-singlefile`
-- [ ] Definir estilo (CSS Modules ou Tailwind) e registrar em `decisoes.md`
-- [ ] Fluxo geral (abertura → linha do tempo → laboratório → quiz → encerramento)
-- [ ] Navegação por teclado (`useKeyboardNav`)
-- [ ] Tela cheia (`useFullscreen`)
-- [ ] Controles que somem sozinhos (`useIdleHide`)
-- [ ] Configuração central de desempenho (modo normal e leve)
-- [ ] Componente `AtomWidget` (foto, nome, ano, texto curto)
+Feita aos poucos: primeiro o projeto base e o design da tela inicial; o restante entra junto com as cenas.
+
+- [x] Criar projeto Vite + React
+- [x] Configurar `vite-plugin-singlefile`
+- [x] Definir estilo (CSS Modules) e registrar em `decisoes.md`
+- [x] Tokens de design (cores, fontes, tamanhos de texto)
+- [x] **Tela inicial (abertura)** com animações
+- [x] Navegação por teclado (`useKeyboardNav`)
+- [x] Tela cheia (`useFullscreen`)
+- [x] Controles que somem sozinhos (`useIdleHide`)
+- [x] Configuração central de desempenho (modo normal e leve)
+- [ ] Fluxo geral completo (abertura → linha do tempo → laboratório → quiz → encerramento); hoje só abertura → placeholder
+- [ ] Componente `AtomWidget` (foto, nome, ano, texto curto), entra com a cena do Dalton
 - [ ] Barra de progresso discreta
-- [ ] Tokens de design (cores, tamanhos de fonte)
+- [ ] Testar a tela inicial no projetor da escola
 
 ## Etapa 2 — Cena do Rutherford ⬜
 

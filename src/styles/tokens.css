@@ -1,0 +1,36 @@
+/* Tokens de design do Explorador de Átomos.
+   As cores de destaque vêm das cores da luz emitida por átomos (espectro):
+   cada modelo atômico tem uma cor própria, usada em todo o projeto. */
+
+:root {
+  /* Fundo: azul-noite profundo */
+  --bg-deep: #060a24;
+  --bg-ink: #0b1238;
+  --bg-haze: #1b2466;
+
+  /* Texto */
+  --text: #eef2ff;
+  --text-muted: #a9b4e0;
+
+  /* Cor de cada modelo */
+  --c-dalton: #ffb454;
+  --c-thomson: #b69cff;
+  --c-rutherford: #ff7a6b;
+  --c-bohr: #7ee7ff;
+  --c-quantum: #5eead0;
+
+  /* Tipografia */
+  --font-display: 'Bricolage Grotesque Variable', 'Segoe UI', system-ui, sans-serif;
+  --font-body: 'Atkinson Hyperlegible', 'Segoe UI', system-ui, sans-serif;
+
+  /* Escala de texto pensada para projetor (fluida) */
+  --fs-title: clamp(3.1rem, 8.4vw, 9.2rem);
+  --fs-lead: clamp(1.3rem, 2.3vw, 2.4rem);
+  --fs-button: clamp(1.3rem, 2vw, 2.2rem);
+  --fs-label: clamp(1rem, 1.4vw, 1.5rem);
+  --fs-small: clamp(0.9rem, 1.1vw, 1.15rem);
+
+  /* Espaçamentos */
+  --pad-x: clamp(1.5rem, 6vw, 7rem);
+  --pad-y: clamp(1.25rem, 4vh, 3.5rem);
+}

@@ -8,6 +8,20 @@ Registro cronológico do que foi feito e aprendido. Serve de matéria-prima para
 
 ## Entradas
 
+### 10/10/2026 — Primeiro commit e tela inicial
+**O que foi feito**
+- Primeiro commit no GitHub: toda a documentação do projeto.
+- Criado o projeto base com Vite + React e configurado o build em arquivo único (offline).
+- Desenhada e animada a **tela inicial**: título, átomo com elétrons e rastros, estrelas e linha do tempo dos cinco modelos.
+- Definidos tokens de design, fontes embutidas e o modo leve.
+
+**Aprendizado**
+- Fazer um passo de cada vez (documentar, commitar, só então codar) deixa o histórico limpo.
+- Fontes e imagens precisam estar dentro do projeto para funcionar offline.
+- Filtros de brilho são pesados; vale ter um modo leve desde o começo.
+
+**Próximo passo:** testar a tela no projetor/tela grande e, depois, criar a cena do Dalton (primeiro modelo) com o widget lateral.
+
 ### 10/10/2026 — Ajuste de escopo: animação, widget, laboratório e quiz
 **O que foi feito**
 - O foco passou a ser **muita animação** para prender a atenção dos alunos.

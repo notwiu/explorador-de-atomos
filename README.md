@@ -1,8 +1,8 @@
-# Explorador de Átomos
+# ⚛️ Explorador de Átomos
 
 Ferramenta web de apresentação, cheia de animações, para ensinar a **evolução dos modelos atômicos** em aulas de Química do ensino médio. Feita para ser **projetada em sala** pelo professor.
 
-> **Status:** em planejamento / início do desenvolvimento
+> **Status:** em desenvolvimento. Tela inicial pronta; cenas dos modelos em construção.
 
 ## O que o projeto faz
 
@@ -23,15 +23,14 @@ O projeto nasceu do pedido de um professor de escola pública por um material ma
 
 ## Tecnologias
 
-React · Vite · Framer Motion · Canvas
+React · Vite · Framer Motion · Canvas · SVG
 
 ## Como rodar
 
-> Disponível após a Etapa 1 do [roadmap](docs/roadmap.md).
-
 ```bash
 npm install
-npm run dev
+npm run dev      # abre em http://localhost:5173
+npm run build    # gera dist/index.html (arquivo único, funciona offline)
 ```
 
 ## Documentação

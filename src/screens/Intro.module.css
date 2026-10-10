@@ -1,0 +1,121 @@
+.screen {
+  position: relative;
+  z-index: 1;
+  height: 100%;
+  display: grid;
+  grid-template-rows: 1fr auto;
+  padding: calc(var(--pad-y) + 2.5rem) var(--pad-x) var(--pad-y);
+  gap: clamp(1rem, 3vh, 2.5rem);
+}
+
+.hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(0, 0.85fr);
+  align-items: center;
+  gap: clamp(1rem, 4vw, 5rem);
+  min-height: 0;
+}
+
+.copy {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+  min-width: 0;
+}
+
+/* Título: família condensada e bem pesada, para ler de longe */
+.title {
+  margin: 0;
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-stretch: 78%;
+  font-size: var(--fs-title);
+  line-height: 0.92;
+  letter-spacing: -0.025em;
+}
+
+.mask {
+  display: block;
+  overflow: hidden;
+  padding-bottom: 0.08em;
+  /* evita cortar as hastes inferiores */
+}
+
+.line {
+  display: block;
+}
+
+.lead {
+  max-width: 24ch;
+  margin: clamp(1rem, 3vh, 2rem) 0 0;
+  font-size: var(--fs-lead);
+  line-height: 1.25;
+  color: var(--text-muted);
+}
+
+.actions {
+  margin-top: clamp(1.5rem, 5vh, 3.5rem);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.start {
+  padding: 0.85em 1.7em;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: var(--fs-button);
+  color: var(--bg-deep);
+  background: var(--text);
+  border: 0;
+  border-radius: 999px;
+  cursor: pointer;
+  box-shadow: 0 0 0 0 rgba(255, 180, 84, 0.55);
+  transition: transform 0.2s, box-shadow 0.3s, background 0.2s;
+}
+
+.start:hover {
+  background: var(--c-dalton);
+  transform: translateY(-2px);
+  box-shadow: 0 0 0 10px rgba(255, 180, 84, 0.18);
+}
+
+.start:active {
+  transform: translateY(0) scale(0.98);
+}
+
+.hint {
+  margin: 0;
+  font-size: var(--fs-small);
+  color: var(--text-muted);
+}
+
+.atom {
+  width: min(100%, 64vh);
+  justify-self: center;
+  min-width: 0;
+}
+
+.timeline {
+  padding-top: clamp(0.5rem, 2vh, 1.5rem);
+}
+
+/* Telas estreitas: átomo em cima, texto embaixo */
+@media (max-width: 900px) {
+  .hero {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+    align-content: center;
+  }
+
+  .atom {
+    grid-row: 1;
+    width: min(70vw, 38vh);
+  }
+
+  .copy {
+    grid-row: 2;
+  }
+}

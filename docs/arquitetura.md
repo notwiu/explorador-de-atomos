@@ -114,9 +114,9 @@ A separação entre **conteúdo** (`data/`), **fluxo** (`app/`) e **telas** (`sc
 
 ## 8. Decisões técnicas em aberto
 
-- [ ] CSS Modules ou Tailwind?
-- [ ] JavaScript ou TypeScript?
-- [ ] Framer Motion apenas, ou também GSAP para linhas do tempo complexas?
+- [x] CSS Modules (D13, proposta)
+- [x] JavaScript por enquanto (D14, proposta)
+- [x] Só Framer Motion por enquanto (D15, proposta)
 - [ ] Fotos embutidas no arquivo único ou pasta ao lado?
 
 *(registrar a resposta em [decisoes.md](decisoes.md) quando decidir)*
