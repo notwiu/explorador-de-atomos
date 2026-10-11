@@ -8,6 +8,20 @@ Registro cronológico do que foi feito e aprendido. Serve de matéria-prima para
 
 ## Entradas
 
+### 10/10/2026 — Roda de cartões: a linha do tempo vira um menu de jogo
+**O que foi feito**
+- Ao clicar em "Começar a viagem", agora aparece a linha do tempo em forma de **roda orbital de cartões**: Dalton, Thomson, Rutherford, Bohr, Modelo atual e, por último, o Quiz.
+- Os cartões são clicáveis (estilo jogo): clique gira até o cartão, clique no cartão em destaque abre o item. Setas e roda do mouse também giram.
+- Adaptei o componente que recebi (que usava Tailwind, GSAP e rolagem de página) para o nosso projeto: CSS Modules, Framer Motion e controle por clique e teclado.
+- Cartões com ilustrações provisórias; as fotos entram sozinhas ao colocar os arquivos em `src/assets/photos/`.
+
+**Aprendizado**
+- Um componente pronto raramente serve sem ajuste: o contexto muda (aqui, projetor e apresentação, sem rolagem).
+- Com poucos itens (6), a geometria da roda precisa ser menor do que a do exemplo original.
+- Botões que ficam com foco depois do clique atrapalham atalhos de teclado em apresentações; resolvi evitando que cliques roubem o foco.
+
+**Próximo passo:** testar a roda no projetor, adicionar as fotos e, quando o autor pedir, criar a cena do Dalton.
+
 ### 10/10/2026 — Primeiro commit e tela inicial
 **O que foi feito**
 - Primeiro commit no GitHub: toda a documentação do projeto.

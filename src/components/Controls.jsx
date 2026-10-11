@@ -14,11 +14,11 @@ export default function Controls({ visible, isFullscreen, onFullscreen, lightMod
           exit={{ opacity: 0 }}
           transition={{ duration: 0.3 }}
         >
-          <button type="button" className={styles.btn} onClick={onLight} aria-pressed={lightMode}>
+          <button type="button" className={styles.btn} onClick={onLight} onMouseDown={(e) => e.preventDefault()} aria-pressed={lightMode}>
             <span className={styles.key}>L</span>
             Modo leve: {lightMode ? 'ligado' : 'desligado'}
           </button>
-          <button type="button" className={styles.btn} onClick={onFullscreen} aria-pressed={isFullscreen}>
+          <button type="button" className={styles.btn} onClick={onFullscreen} onMouseDown={(e) => e.preventDefault()} aria-pressed={isFullscreen}>
             <span className={styles.key}>F</span>
             {isFullscreen ? 'Sair da tela cheia' : 'Tela cheia'}
           </button>

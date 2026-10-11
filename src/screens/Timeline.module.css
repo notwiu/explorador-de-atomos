@@ -1,0 +1,28 @@
+.screen {
+  position: relative;
+  z-index: 1;
+  height: 100%;
+}
+
+.header {
+  position: absolute;
+  top: var(--pad-y);
+  left: var(--pad-x);
+  z-index: 300;
+  pointer-events: none;
+}
+
+.title {
+  margin: 0;
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-stretch: 78%;
+  font-size: clamp(1.8rem, 3.6vw, 3.6rem);
+  line-height: 1;
+}
+
+.sub {
+  margin: 0.4rem 0 0;
+  font-size: var(--fs-small);
+  color: var(--text-muted);
+}

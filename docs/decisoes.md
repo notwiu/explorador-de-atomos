@@ -23,6 +23,10 @@ Cada decisão importante fica registrada aqui, com data, motivo e consequências
 | D15 | Animação de interface só com Framer Motion por enquanto | Proposta (confirmar) |
 | D16 | Fontes embutidas: Bricolage Grotesque e Atkinson Hyperlegible | Proposta (confirmar) |
 | D17 | Cores de cada modelo inspiradas nas cores da luz dos átomos | Proposta (confirmar) |
+| D18 | Linha do tempo como roda de cartões clicáveis (estilo jogo) | Ativa |
+| D19 | Roda adaptada: sem rolagem, sem Tailwind/GSAP | Proposta (confirmar) |
+| D20 | Fotos em `src/assets/photos/`, nome do arquivo = id do modelo | Proposta (confirmar) |
+| D21 | O quiz é o sexto cartão da roda | Ativa |
 
 ---
 
@@ -115,13 +119,35 @@ Cada decisão importante fica registrada aqui, com data, motivo e consequências
 - **Data:** 10/10/2026
 - **Decisão:** cada modelo tem uma cor própria (Dalton âmbar, Thomson violeta, Rutherford coral, Bohr ciano, modelo atual verde-água), em referência às cores emitidas por átomos. As cores se repetem na linha do tempo, nos elétrons e nas cenas.
 
+### D18 — Linha do tempo como roda de cartões clicáveis
+- **Data:** 10/10/2026
+- **Contexto:** o autor enviou o componente "orbital image wheel" e quer que, ao clicar em "Começar a viagem", a linha do tempo apareça nesse formato, com as fotos clicáveis, estilo de jogo.
+- **Decisão:** a tela depois da abertura é uma roda de cartões. Clicar na foto abre o modelo e a apresentação.
+- **Substitui em parte:** o fluxo linear "linha do tempo → laboratório → quiz". Agora a roda é o menu central. Onde fica o laboratório está em aberto (veja abaixo).
+
+### D19 — Roda adaptada ao projeto
+- **Data:** 10/10/2026
+- **Contexto:** o componente original usa Tailwind, GSAP/ScrollTrigger, shadcn (`cn`) e um componente de legenda (`MotionSubtitle`), e gira com a rolagem da página. Este projeto usa CSS Modules, Framer Motion, não tem rolagem e é apresentado em projetor.
+- **Decisão:** reescrever em JavaScript mantendo o visual (cartões em arco, desfoque e escurecimento fora do foco, profundidade, botões com os nomes embaixo). A roda gira por clique, setas, roda do mouse e pelos botões. Com só 6 itens, a roda é menor do que a do original, para mostrar o cartão central e os dois vizinhos.
+- **Consequência:** sem dependências novas.
+
+### D20 — Fotos em `src/assets/photos/`
+- **Data:** 10/10/2026
+- **Contexto:** o arquivo final precisa funcionar offline e aberto por duplo clique, e caminhos de `public/` não funcionam assim.
+- **Decisão:** as fotos ficam em `src/assets/photos/`, com o nome do id do modelo (`dalton`, `thomson`, `rutherford`, `bohr`, `quantum`). São detectadas automaticamente e embutidas no arquivo final. Sem foto, o cartão mostra uma ilustração provisória.
+
+### D21 — O quiz é o sexto cartão
+- **Data:** 10/10/2026
+- **Decisão:** o último cartão da roda é o Quiz e abre o quiz com os jogos.
+
 ---
 
 ## Decisões em aberto
 
 | Tema | Opções | Responsável |
 |---|---|---|
-| Confirmar D13 a D17 | Aceitar ou trocar | Willian |
+| Confirmar D13 a D17, D19 e D20 | Aceitar ou trocar | Willian |
+| Onde fica o laboratório (brincar com os modelos)? | Dentro do quiz/jogos, cartão próprio ou dentro de cada cena | Willian |
 | Fotos | Embutidas no arquivo único ou pasta ao lado | Willian |
 | Alternativas do quiz | Ordem fixa ou embaralhada | Willian + professor |
 

@@ -38,8 +38,7 @@
 .mask {
   display: block;
   overflow: hidden;
-  padding-bottom: 0.08em;
-  /* evita cortar as hastes inferiores */
+  padding-bottom: 0.08em; /* evita cortar as hastes inferiores */
 }
 
 .line {
@@ -109,12 +108,10 @@
     grid-template-rows: auto auto;
     align-content: center;
   }
-
   .atom {
     grid-row: 1;
     width: min(70vw, 38vh);
   }
-
   .copy {
     grid-row: 2;
   }

@@ -70,15 +70,15 @@ explorador-de-atomos/
 │  ├─ roadmap.md
 │  ├─ decisoes.md
 │  └─ diario.md
-├─ public/
-│  └─ images/                                # fotos dos cientistas (com crédito)
+├─ public/                                   # arquivos estáticos (evitar: caminhos não funcionam ao abrir por duplo clique)
 └─ src/                                      # criado na Etapa 1
-   ├─ app/            # fluxo geral: abertura → linha do tempo → laboratório → quiz
-   ├─ components/     # Widget lateral, Controles, Barra de progresso, etc.
+   ├─ app/            # fluxo geral: abertura → roda de cartões → cena do modelo ou quiz
+   ├─ components/     # OrbitalWheel, ModelArt, Controles, Widget lateral (futuro), etc.
    ├─ scenes/         # Dalton, Thomson, Rutherford, Bohr, Quantico
    ├─ lab/            # modo laboratório
    ├─ quiz/           # telas e lógica do quiz
    ├─ data/           # models.js, quiz.js (textos e perguntas)
+   ├─ assets/photos/  # fotos dos cientistas (nome do arquivo = id do modelo; com crédito)
    ├─ hooks/          # useKeyboardNav, useFullscreen, useIdleHide, useReducedMotion
    └─ styles/         # tokens de design (cores, tamanhos de fonte)
 ```
@@ -100,7 +100,7 @@ explorador-de-atomos/
 
 **Teclado (obrigatório)**
 - `→`, `Espaço`, `PageDown`: avançar.
-- `←`, `PageUp`: voltar.
+- `←`, `PageUp`: voltar. Na roda de cartões, `←` e `→` giram a roda; `Enter`/`Espaço` abrem o cartão em destaque; `Esc` volta.
 - `F`: tela cheia.
 - `L`: ligar/desligar modo leve.
 - `R`: reiniciar cena (a partir das cenas dos modelos).
@@ -155,8 +155,8 @@ Ao concluir qualquer mudança relevante, **atualize a documentação no mesmo co
 
 ## 10. Estado atual
 
-- **Fase:** Etapa 1 em andamento. Projeto base e **tela inicial** prontos; a linha do tempo ainda é uma tela provisória.
-- **Próximo passo:** testar a tela inicial em tela grande e criar a cena do **Dalton** com o widget lateral (`AtomWidget`).
+- **Fase:** Etapa 1 em andamento. Prontos: projeto base, **tela inicial** e **roda de cartões** (seleção dos modelos e do quiz). Cada cartão abre uma tela provisória.
+- **Próximo passo:** criar a cena do **Dalton** (o autor pede quando for a hora), com o widget lateral (`AtomWidget`).
 - **Ritmo de trabalho:** uma etapa por vez, com commit e documentação a cada passo. Não adiantar cenas que o autor ainda não pediu.
 - Veja `docs/roadmap.md` para o detalhamento.
 

@@ -37,8 +37,10 @@ Feita aos poucos: primeiro o projeto base e o design da tela inicial; o restante
 - [x] Navegação por teclado (`useKeyboardNav`)
 - [x] Tela cheia (`useFullscreen`)
 - [x] Controles que somem sozinhos (`useIdleHide`)
+- [x] **Tela de seleção com roda orbital de cartões** (cinco modelos + quiz), clicável e com teclado
+- [ ] Adicionar as fotos dos cientistas em `src/assets/photos/` (com crédito e licença)
 - [x] Configuração central de desempenho (modo normal e leve)
-- [ ] Fluxo geral completo (abertura → linha do tempo → laboratório → quiz → encerramento); hoje só abertura → placeholder
+- [ ] Fluxo geral completo; hoje: abertura → roda de cartões → tela provisória do item escolhido
 - [ ] Componente `AtomWidget` (foto, nome, ano, texto curto), entra com a cena do Dalton
 - [ ] Barra de progresso discreta
 - [ ] Testar a tela inicial no projetor da escola

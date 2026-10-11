@@ -2,11 +2,11 @@
 
 > Ferramenta web de apresentação, com muita animação, para ensinar e visualizar a evolução dos modelos atômicos em aulas de Química do ensino médio.
 
-**Status:** em desenvolvimento (tela inicial pronta)
+**Status:** em desenvolvimento (tela inicial e roda de cartões prontas)
 **Autor:** Willian
 **Tipo:** trabalho de faculdade com aplicação em escola pública
 **Stack:** React + Vite
-**Última atualização:** 10/10/2026 (v0.3 da documentação)
+**Última atualização:** 10/10/2026 (v0.4 da documentação)
 
 > Este é o documento-síntese. Os detalhes estão nos demais arquivos da pasta `docs/` (veja o índice no [README](../README.md)).
 
@@ -52,8 +52,10 @@ Como ajudar alunos do ensino médio a **enxergar, entender e se interessar** pel
 ## 5. Fluxo da experiência
 
 ```
-Abertura → Linha do tempo (5 cenas) → Laboratório → Quiz → Encerramento
+Abertura → Roda de cartões (menu) → Cena do modelo escolhido ou Quiz
 ```
+
+A **roda de cartões** é o menu central: Dalton, Thomson, Rutherford, Bohr, Modelo atual e, por último, o Quiz. Clicar na foto abre o modelo e a apresentação. O laboratório (brincar com os modelos) ainda precisa ter seu lugar definido neste fluxo.
 
 1. **Abertura:** título animado e botão para começar.
 2. **Linha do tempo:** Dalton, Thomson, Rutherford, Bohr e modelo atual, passo a passo. Cada cena tem experimento animado, widget lateral e uma transição "Por que mudou?".
@@ -198,3 +200,4 @@ Detalhes: [roadmap.md](roadmap.md).
 | 0.1 | 05/10/2026 | Documento inicial: escopo, decisões, conceito de cenas |
 | 0.2 | 10/10/2026 | Inclusão do quiz básico no final, laboratório, widget lateral, ênfase em animação; documentação dividida em vários arquivos |
 | 0.3 | 10/10/2026 | Projeto base (Vite + React) e tela inicial criados; decisões D13 a D17 (estilo, fontes, cores) |
+| 0.4 | 10/10/2026 | Roda de cartões clicáveis (estilo jogo) como linha do tempo; quiz como sexto cartão; decisões D18 a D21 |

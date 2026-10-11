@@ -49,6 +49,6 @@ npm run build    # gera dist/index.html (arquivo único, funciona offline)
 | [Diário](docs/diario.md) | Evolução e ideias de posts |
 | [CHANGELOG](CHANGELOG.md) | Histórico de versões |
 
-## Autor
+## Autores
 
 Willian Teotonio; Kemuel Darckson; Yan Pedro; João Rodrigues

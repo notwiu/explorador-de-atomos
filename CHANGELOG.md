@@ -6,6 +6,12 @@ Formato baseado em [Keep a Changelog](https://keepachangelog.com/pt-BR/1.1.0/).
 ## [Não lançado]
 
 ### Adicionado
+- **Tela de seleção com roda orbital de cartões** (adaptada do componente "orbital image wheel"): ao clicar em "Começar a viagem", aparece a linha do tempo em forma de roda, com Dalton, Thomson, Rutherford, Bohr, Modelo atual e, por último, o Quiz.
+- Cartões clicáveis em estilo de jogo: clicar em um cartão gira a roda até ele; clicar no cartão em destaque (ou Enter) abre o item. Setas e roda do mouse também giram a roda.
+- Ilustrações provisórias nos cartões (uma por modelo e uma para o quiz) enquanto as fotos não são adicionadas.
+- Fotos detectadas automaticamente: basta colocar `dalton.jpg`, `thomson.jpg`, etc. em `src/assets/photos/`.
+- Tela provisória para cada item aberto (as cenas entram uma por vez).
+- `useKeyboardNav` com ações `activate` (Enter/Espaço) e `back` (Esc).
 - Projeto base com Vite + React, configurado para gerar um único `index.html` (`vite-plugin-singlefile`).
 - **Tela inicial (abertura)**: título animado, átomo com três elétrons e rastros, fundo de estrelas e linha do tempo dos cinco modelos que se desenha ao entrar.
 - Tela provisória da linha do tempo (placeholder), só para testar o fluxo.
@@ -18,6 +24,7 @@ Formato baseado em [Keep a Changelog](https://keepachangelog.com/pt-BR/1.1.0/).
 - Documentação em `docs/`: documento completo, escopo e requisitos, experiência e design, arquitetura, conteúdo dos modelos, quiz, roadmap, decisões e diário.
 
 ### Alterado
+- Tela inicial reduzida em cerca de 8% (tamanhos de texto e do átomo), após teste do autor.
 - Documento completo atualizado (v0.2): quiz básico reincluído no final, laboratório, widget lateral e ênfase em animação.
 - Decisão D05 (sem quiz) substituída pela D09 (quiz básico no final).
 

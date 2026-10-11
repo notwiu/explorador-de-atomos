@@ -59,6 +59,40 @@ Encerramento
 
 **Modo leve:** menos estrelas, sem brilhos nem rastros.
 
+## 2.2 Tela de seleção: roda orbital de cartões
+
+**Objetivo:** ser o "menu de jogo" da apresentação. O professor escolhe qual modelo mostrar, e a ordem cronológica é sugerida pelos cartões.
+
+```
+┌────────────────────────────────────────────────────────────────┐
+│ Linha do tempo                                  [L leve][F tela]│
+│ Escolha um cartão para começar                                  │
+│                                                                 │
+│           ╭────────╮                                            │
+│     ╭───╮ │ ATOMO  │ ╭───╮     cartão central em destaque       │
+│     │   │ │ Dalton │ │   │     vizinhos escurecidos e inclinados│
+│     ╰───╯ ╰────────╯ ╰───╯                                     │
+│                                                                 │
+│            Esfera maciça · 1803                                 │
+│  (Dalton)(Thomson)(Rutherford)(Bohr)(Modelo atual)(Quiz)       │
+└────────────────────────────────────────────────────────────────┘
+```
+
+**Cartões (nesta ordem):** Dalton, Thomson, Rutherford, Bohr, Modelo atual e Quiz.
+
+**Interações**
+- Clicar em um cartão fora do foco: a roda gira até ele.
+- Clicar no cartão em destaque (ou Enter/Espaço): abre o modelo e a apresentação.
+- Setas (← →) e roda do mouse: giram a roda.
+- Botões com os nomes embaixo: levam direto ao cartão.
+- Esc: volta para a abertura. Dentro de um item, Esc volta para a roda.
+
+**Cartão:** foto do cientista (ou ilustração provisória), cor do modelo na borda e no brilho, nome e ano. O cartão do Quiz mostra um "?" e o texto "Teste o que você viu".
+
+**Fotos:** ficam em `src/assets/photos/` (`dalton.jpg`, `thomson.jpg`, `rutherford.jpg`, `bohr.jpg`, `quantum.jpg`). Enquanto não houver foto, aparece uma ilustração própria do modelo.
+
+**Modo leve:** sem desfoque nem brilho; os cartões longe do foco ficam apenas mais transparentes.
+
 ## 3. Layout de uma cena
 
 ```

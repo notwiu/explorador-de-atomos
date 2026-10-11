@@ -147,15 +147,15 @@
 
 ## 7. Imagens e créditos
 
-Registrar aqui cada imagem usada. **Preferir domínio público ou licenças livres** (por exemplo, itens do Wikimedia Commons), conferindo a licença de cada arquivo.
+Registrar aqui cada imagem usada. O nome do arquivo deve ser o **id do modelo** (`dalton`, `thomson`, `rutherford`, `bohr`, `quantum`); o site detecta sozinho. **Preferir domínio público ou licenças livres** (por exemplo, itens do Wikimedia Commons), conferindo a licença de cada arquivo.
 
 | Modelo | Arquivo | Fonte (link) | Autor | Licença | Status |
 |---|---|---|---|---|---|
-| Dalton | `public/images/dalton.jpg` | | | | pendente |
-| Thomson | `public/images/thomson.jpg` | | | | pendente |
-| Rutherford | `public/images/rutherford.jpg` | | | | pendente |
-| Bohr | `public/images/bohr.jpg` | | | | pendente |
-| Modelo atual | `public/images/schrodinger.jpg` (ou outra) | | | | pendente |
+| Dalton | `src/assets/photos/dalton.jpg` | | | | pendente |
+| Thomson | `src/assets/photos/thomson.jpg` | | | | pendente |
+| Rutherford | `src/assets/photos/rutherford.jpg` | | | | pendente |
+| Bohr | `src/assets/photos/bohr.jpg` | | | | pendente |
+| Modelo atual | `src/assets/photos/quantum.jpg` (foto de um dos cientistas do modelo) | | | | pendente |
 
 ## 8. Checklist de revisão com o professor
 
