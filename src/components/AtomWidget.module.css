@@ -23,6 +23,11 @@
   background-blend-mode: normal;
 }
 
+/* com foto, a área fica mais alta (retrato) */
+.hasPhoto {
+  height: clamp(170px, 38vh, 420px);
+}
+
 /* camada de cor suave sobre o fundo da mídia */
 .media::before {
   content: '';
@@ -46,12 +51,23 @@
 }
 
 .photo {
+  z-index: 1;
   position: absolute;
   inset: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center 20%;
+  object-position: center 14%;
+}
+
+/* esfumaçado na base da foto, para encontrar o nome sem corte seco */
+.hasPhoto::after {
+  z-index: 2;
+  content: '';
+  position: absolute;
+  inset: auto 0 0 0;
+  height: 28%;
+  background: linear-gradient(rgba(11, 18, 56, 0), rgba(11, 18, 56, 0.9));
 }
 
 .body {

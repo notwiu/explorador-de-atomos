@@ -166,7 +166,7 @@ Registrar aqui cada imagem usada. O nome do arquivo deve ser o **id do modelo** 
 
 | Modelo | Arquivo | Fonte (link) | Autor | Licença | Status |
 |---|---|---|---|---|---|
-| Dalton | `src/assets/photos/dalton.jpg` | | | | pendente |
+| Dalton | `src/assets/photos/dalton.jpg` | enviada pelo autor (origem a confirmar) | a confirmar | a confirmar | **em uso (provisória)**: confirmar fonte, autor e licença antes de publicar |
 | Thomson | `src/assets/photos/thomson.jpg` | | | | pendente |
 | Rutherford | `src/assets/photos/rutherford.jpg` | | | | pendente |
 | Bohr | `src/assets/photos/bohr.jpg` | | | | pendente |

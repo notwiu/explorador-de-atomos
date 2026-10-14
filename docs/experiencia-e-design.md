@@ -96,7 +96,7 @@ Encerramento
 
 Primeira cena pronta. Define o padrão das próximas.
 
-**Layout:** área 3D à esquerda, widget lateral à direita (foto ou ilustração, nome, ano e texto curto), legenda do passo embaixo, pontos de progresso e uma dica de teclas.
+**Layout:** área 3D à esquerda, widget lateral à direita (foto ou ilustração, nome, ano e texto curto), e, numa faixa própria **abaixo** da área 3D, a legenda do passo (título e uma ou duas linhas), pontos de progresso e uma dica de teclas. A legenda é pequena e não cobre o 3D, para não atrapalhar a visualização nem o arrastar dos átomos.
 
 **Passos (8)**
 1. **Do que a matéria é feita?** Um cubo de matéria feito de muitas esferas pequenas.

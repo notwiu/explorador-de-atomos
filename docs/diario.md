@@ -20,7 +20,9 @@ Registro cronológico do que foi feito e aprendido. Serve de matéria-prima para
 - Separar a lógica do 3D da parte visual permitiu testar sem navegador.
 - three.js aumentou o peso do arquivo final (cerca de 1,3 MB), mas continua offline e leve o bastante para uma escola.
 
-**Próximo passo:** testar no projetor/tela grande, adicionar as fotos e, quando o autor pedir, criar a cena do Thomson.
+**Ajustes após o primeiro teste:** a legenda embaixo do 3D estava grande demais e atrapalhava; ficou menor e em uma faixa própria, fora da área 3D. O retrato do Dalton (enviado pelo autor) entrou no widget lateral e no cartão da roda.
+
+**Próximo passo:** testar no projetor/tela grande, registrar a origem da foto do Dalton, adicionar as outras fotos e, quando o autor pedir, criar a cena do Thomson.
 
 ### 10/10/2026 — Roda de cartões: a linha do tempo vira um menu de jogo
 **O que foi feito**

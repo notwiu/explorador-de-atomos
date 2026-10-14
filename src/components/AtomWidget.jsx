@@ -7,7 +7,7 @@ export default function AtomWidget({ model, showNotes, note }) {
   return (
     <div className={styles.wrap} style={{ '--accent': model.accent }}>
       <div className={styles.card}>
-        <div className={styles.media}>
+        <div className={`${styles.media} ${model.photo ? styles.hasPhoto : ''}`}>
           {model.photo ? (
             <img className={styles.photo} src={model.photo} alt={`Retrato de ${model.scientist ?? model.label}`} draggable="false" />
           ) : (

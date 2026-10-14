@@ -36,7 +36,7 @@ Cada cena segue o mesmo padrão: 3D, passos com legenda, widget lateral, notas d
 - [x] Tela inicial (abertura) com animações
 - [x] Roda de cartões (cinco modelos + quiz), clicável e com teclado
 - [x] Navegação por teclado, tela cheia, modo leve, controles que somem sozinhos
-- [ ] Adicionar as fotos dos cientistas em `src/assets/photos/` (com crédito e licença)
+- [ ] Adicionar as fotos dos cientistas em `src/assets/photos/` (com crédito e licença). Dalton já tem foto (falta registrar origem e licença); faltam Thomson, Rutherford, Bohr e modelo atual
 - [ ] Testar tudo no projetor da escola
 
 ## Etapa 2 — Cena do Dalton (3D) ✅

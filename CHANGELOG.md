@@ -6,6 +6,7 @@ Formato baseado em [Keep a Changelog](https://keepachangelog.com/pt-BR/1.1.0/).
 ## [Não lançado]
 
 ### Adicionado
+- Retrato do Dalton (foto enviada pelo autor, em preto e branco) no widget lateral e no cartão da roda. Origem e licença ainda precisam ser registradas em `docs/conteudo-modelos.md`.
 - **Cena do Dalton em 3D** (oito passos): matéria, átomo maciço, elementos, combinação, reação (antes e depois), limitação do modelo e **brincar** (arrastar átomos, encostar para formar compostos, duplo clique para separar).
 - Widget lateral (`AtomWidget`) com foto (ou ilustração provisória), nome, ano, modelo e texto curto; nota do professor com a tecla **N**.
 - Estrutura reaproveitável de cenas: `Stage3D`, `SceneShell`, palco 3D genérico (`src/three/stage.js`), registro de cenas e textos em `src/data/scenes/`.
@@ -30,6 +31,8 @@ Formato baseado em [Keep a Changelog](https://keepachangelog.com/pt-BR/1.1.0/).
 - Documentação em `docs/`: documento completo, escopo e requisitos, experiência e design, arquitetura, conteúdo dos modelos, quiz, roadmap, decisões e diário.
 
 ### Alterado
+- Legenda das cenas menor e em uma faixa própria **abaixo** da área 3D, para não cobrir os átomos nem atrapalhar o arrastar.
+- Widget lateral com foto mais alta, quando há foto, e esfumaçado na base.
 - "Brincar com os modelos" passa a ser um passo dentro de cada cena (em 3D), em vez de um laboratório separado.
 - Peso do arquivo final: cerca de 1,3 MB (antes, cerca de 0,5 MB), por causa do three.js.
 - Tela inicial reduzida em cerca de 8% (tamanhos de texto e do átomo), após teste do autor.
