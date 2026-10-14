@@ -5,7 +5,16 @@
 import { photoFor } from './photos.js'
 
 export const models = [
-  { id: 'dalton', label: 'Dalton', year: 1803, modelName: 'Esfera maciça', accent: 'var(--c-dalton)' },
+  {
+    id: 'dalton',
+    label: 'Dalton',
+    year: 1803,
+    modelName: 'Esfera maciça',
+    accent: 'var(--c-dalton)',
+    scientist: 'John Dalton',
+    shortText:
+      'Para Dalton, toda matéria é feita de átomos: esferas minúsculas, maciças e indivisíveis. Cada elemento tem seus próprios átomos, diferentes dos de outros elementos.',
+  },
   { id: 'thomson', label: 'Thomson', year: 1897, modelName: 'Pudim de passas', accent: 'var(--c-thomson)' },
   { id: 'rutherford', label: 'Rutherford', year: 1911, modelName: 'Modelo nuclear', accent: 'var(--c-rutherford)' },
   { id: 'bohr', label: 'Bohr', year: 1913, modelName: 'Camadas de energia', accent: 'var(--c-bohr)' },

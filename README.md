@@ -2,12 +2,12 @@
 
 Ferramenta web de apresentação, cheia de animações, para ensinar a **evolução dos modelos atômicos** em aulas de Química do ensino médio. Feita para ser **projetada em sala** pelo professor.
 
-> **Status:** em desenvolvimento. Tela inicial pronta; cenas dos modelos em construção.
+> **Status:** em desenvolvimento. Tela inicial, roda de cartões e a cena do Dalton (3D) prontas; as demais cenas em construção.
 
 ## O que o projeto faz
 
-1. **Linha do tempo animada:** Dalton → Thomson → Rutherford → Bohr → modelo atual, em ordem cronológica, passo a passo. Cada modelo tem um widget lateral com foto e um texto curto para o professor ler.
-2. **Laboratório:** hora de brincar com os modelos depois da explicação.
+1. **Roda de cartões:** o menu, com Dalton, Thomson, Rutherford, Bohr, Modelo atual e o Quiz. Clicar no cartão abre o item.
+2. **Cenas em 3D:** cada modelo explicado passo a passo, em ordem cronológica, com widget lateral (foto e texto curto para o professor ler) e um passo final para **brincar** com o modelo.
 3. **Quiz básico:** em tela cheia, com alternativas grandes, para fixar o conteúdo de forma divertida.
 
 ## Por que existe
@@ -23,7 +23,7 @@ O projeto nasceu do pedido de um professor de escola pública por um material ma
 
 ## Tecnologias
 
-React · Vite · Framer Motion · Canvas · SVG
+React · Vite · three.js · Framer Motion · Canvas · SVG
 
 ## Como rodar
 
@@ -49,6 +49,6 @@ npm run build    # gera dist/index.html (arquivo único, funciona offline)
 | [Diário](docs/diario.md) | Evolução e ideias de posts |
 | [CHANGELOG](CHANGELOG.md) | Histórico de versões |
 
-## Autores
+## Autor
 
-Willian Teotonio; Kemuel Darckson; Yan Pedro; João Rodrigues
+Willian Teotonio, Kemuel Darckson, Yan Pedro e João Rodrigues

@@ -8,14 +8,14 @@ Guia para agentes de IA (Claude Code, etc.) e colaboradores que trabalham neste 
 
 Site de apresentação para ensinar **modelos atômicos** a alunos do ensino médio de escola pública. É **projetado em sala pelo professor**; os alunos **não** têm acesso ao site (por enquanto).
 
-O site tem quatro momentos, nesta ordem:
+O site tem estes momentos:
 
-1. **Linha do tempo:** os modelos explicados passo a passo, em ordem cronológica (Dalton, Thomson, Rutherford, Bohr, modelo atual), com **muita animação**.
-2. **Laboratório:** o professor e a turma "brincam" com os modelos.
-3. **Quiz básico:** só para fixar e se divertir, em tela cheia, com opções grandes.
-4. **Encerramento.**
+1. **Abertura.**
+2. **Roda de cartões:** o menu central, com Dalton, Thomson, Rutherford, Bohr, Modelo atual e, por último, o Quiz. Clicar no cartão abre o item.
+3. **Cenas dos modelos:** cada modelo explicado passo a passo, **em 3D**, com **muita animação**. O último passo de cada cena é **brincar** com o modelo em 3D (não existe um laboratório separado).
+4. **Quiz básico:** só para fixar e se divertir, em tela cheia, com opções grandes.
 
-Em todas as cenas da linha do tempo existe um **widget lateral** com foto, nome, ano e um texto curto sobre o modelo, para o professor ler.
+Em todas as cenas existe um **widget lateral** com foto, nome, ano e um texto curto sobre o modelo, para o professor ler.
 
 Detalhes: veja `docs/escopo-e-requisitos.md` e `docs/experiencia-e-design.md`.
 
@@ -28,6 +28,7 @@ Detalhes: veja `docs/escopo-e-requisitos.md` e `docs/experiencia-e-design.md`.
 5. **Não inventar ciência.** Todo conteúdo científico vem de `docs/conteudo-modelos.md`. Se precisar de um fato novo, acrescente lá primeiro, marcado como *a revisar*.
 6. **Sem login, cadastro, backend ou rastreamento.**
 7. **Pequeno e simples.** Evite dependências desnecessárias. Pergunte antes de adicionar uma biblioteca nova.
+   - Em 3D: reaproveitar o palco (`src/three/stage.js`), destruir tudo ao sair da cena (`dispose`) e reaproveitar geometrias/materiais. O modo leve deve reduzir faces, desligar suavização e usar material simples.
 8. **Documentar a cada mudança relevante** (seção 8).
 
 ## 3. Stack
@@ -38,7 +39,8 @@ Detalhes: veja `docs/escopo-e-requisitos.md` e `docs/experiencia-e-design.md`.
 | Linguagem | JavaScript (migrar para TypeScript só se o autor decidir) |
 | Fontes | Bricolage Grotesque (títulos) e Atkinson Hyperlegible (texto), embutidas no projeto |
 | Animação de interface | Framer Motion |
-| Animação pesada (partículas, nuvem de elétrons) | Canvas 2D com `requestAnimationFrame` |
+| Animação pesada 2D (estrelas, partículas) | Canvas 2D com `requestAnimationFrame` |
+| 3D (cenas dos modelos) | three.js direto (sem React Three Fiber), via `src/three/stage.js` |
 | Estilo | CSS Modules, com tokens em `src/styles/tokens.css` (decisão D13) |
 | Distribuição offline | `vite-plugin-singlefile` (gera um único `index.html`) |
 
@@ -74,8 +76,8 @@ explorador-de-atomos/
 └─ src/                                      # criado na Etapa 1
    ├─ app/            # fluxo geral: abertura → roda de cartões → cena do modelo ou quiz
    ├─ components/     # OrbitalWheel, ModelArt, Controles, Widget lateral (futuro), etc.
-   ├─ scenes/         # Dalton, Thomson, Rutherford, Bohr, Quantico
-   ├─ lab/            # modo laboratório
+   ├─ scenes/         # uma pasta por modelo (hoje: dalton/), mais index.js com o registro
+   ├─ three/          # stage.js: palco 3D genérico
    ├─ quiz/           # telas e lógica do quiz
    ├─ data/           # models.js, quiz.js (textos e perguntas)
    ├─ assets/photos/  # fotos dos cientistas (nome do arquivo = id do modelo; com crédito)
@@ -103,6 +105,7 @@ explorador-de-atomos/
 - `←`, `PageUp`: voltar. Na roda de cartões, `←` e `→` giram a roda; `Enter`/`Espaço` abrem o cartão em destaque; `Esc` volta.
 - `F`: tela cheia.
 - `L`: ligar/desligar modo leve.
+- `N`: mostrar/ocultar a nota do professor (nas cenas).
 - `R`: reiniciar cena (a partir das cenas dos modelos).
 - `N`: mostrar/ocultar notas do professor.
 - `1`–`4` ou `A`–`D`: escolher alternativa no quiz.
@@ -147,6 +150,7 @@ Ao concluir qualquer mudança relevante, **atualize a documentação no mesmo co
 ## 9. Definição de pronto (para cada cena ou tela)
 
 - [ ] Funciona só com teclado e com mouse.
+- [ ] Cenas 3D: abre, troca de passo e sai sem erros; avisa se o navegador não tem WebGL.
 - [ ] Legível a 3–5 metros (teste reduzindo o zoom do navegador e afastando-se da tela).
 - [ ] Animação fluida; testada com o **modo leve** ligado e desligado.
 - [ ] Funciona sem internet.
@@ -155,8 +159,8 @@ Ao concluir qualquer mudança relevante, **atualize a documentação no mesmo co
 
 ## 10. Estado atual
 
-- **Fase:** Etapa 1 em andamento. Prontos: projeto base, **tela inicial** e **roda de cartões** (seleção dos modelos e do quiz). Cada cartão abre uma tela provisória.
-- **Próximo passo:** criar a cena do **Dalton** (o autor pede quando for a hora), com o widget lateral (`AtomWidget`).
+- **Fase:** Etapas 1 e 2 concluídas. Prontos: projeto base, **tela inicial**, **roda de cartões** e **cena do Dalton em 3D** (8 passos, com brincar). Os outros cartões abrem uma tela provisória.
+- **Próximo passo:** o autor pede a próxima cena (Thomson). Reaproveitar `Stage3D`, `SceneShell`, `AtomWidget` e o padrão de `src/scenes/dalton/`. Para adicionar uma cena: pasta da cena, textos em `src/data/scenes/`, registro em `src/scenes/index.js`.
 - **Ritmo de trabalho:** uma etapa por vez, com commit e documentação a cada passo. Não adiantar cenas que o autor ainda não pediu.
 - Veja `docs/roadmap.md` para o detalhamento.
 

@@ -6,13 +6,13 @@ Aplicação **100% frontend**, estática, sem backend. Roda no navegador do comp
 
 ```
 ┌─────────────────────────── App (fluxo geral) ───────────────────────────┐
-│ Abertura → Linha do tempo → Laboratório → Quiz → Encerramento            │
+│ Abertura → Roda de cartões → Cena do modelo (3D) ou Quiz                  │
 │                                                                           │
 │  Estado global: etapa atual, passo da cena, modo leve, velocidade, notas │
 └───────────────────────────────────────────────────────────────────────────┘
         │                │                 │              │
    scenes/           lab/              quiz/        components/
- (5 cenas)       (laboratório)     (telas+lógica)  (widget, controles)
+ (cenas 3D)     (reservado)       (telas+lógica)  (widget, controles)
         │                │                 │              │
         └──────── data/ (textos, modelos, perguntas) ───────┘
 ```
@@ -24,7 +24,8 @@ Aplicação **100% frontend**, estática, sem backend. Roda no navegador do comp
 | Framework | React | Componentes reutilizáveis; foco do autor em frontend |
 | Build | Vite | Rápido e simples |
 | Animação de UI | Framer Motion | Transições fluidas e declarativas |
-| Animação pesada | Canvas 2D | Controle de partículas e desempenho |
+| Animação pesada 2D | Canvas 2D | Controle de partículas e desempenho |
+| 3D | three.js (direto, sem React Three Fiber) | Representação 3D de cada modelo; menos dependências |
 | Offline | `vite-plugin-singlefile` | Gera um único `index.html` |
 
 ## 3. Estrutura de pastas
@@ -34,7 +35,6 @@ src/
 ├─ app/            # App.jsx, controle do fluxo e das etapas
 ├─ components/     # AtomWidget, Controls, ProgressBar, TeacherNotes...
 ├─ scenes/         # Dalton, Thomson, Rutherford, Bohr, Quantico
-├─ lab/            # Laboratório: seletor de elemento, comparador, escala
 ├─ quiz/           # QuizScreen, FeedbackScreen, lógica
 ├─ data/           # models.js, quiz.js, elements.js
 ├─ hooks/          # useKeyboardNav, useFullscreen, useIdleHide, useReducedMotion
@@ -63,6 +63,17 @@ Arquivo central (ex.: `src/app/performance.js`) define contagem de partículas, 
 
 ### 4.5 Dados
 Tudo que é conteúdo (textos, anos, créditos, perguntas) fica em `src/data/`, separado dos componentes, para ajustes rápidos após feedback do professor.
+
+### 4.6 Cenas em 3D
+- `src/three/stage.js`: palco 3D genérico (renderizador WebGL, câmera, luzes, arrastar para girar, laço de animação). Devolve `null` se o navegador não tiver WebGL.
+- `src/components/Stage3D.jsx`: cria o palco e o "mundo" da cena e liga ao passo atual; destrói tudo ao sair da cena.
+- `src/components/SceneShell.jsx`: moldura comum das cenas (área 3D, legenda, pontos de progresso, widget lateral).
+- `src/scenes/<modelo>/<Modelo>Scene.jsx` e `<modelo>World.js`: a cena e o seu mundo 3D. O mundo expõe `goTo(passo, opções)` e `dispose()`.
+- `src/scenes/index.js`: registro das cenas prontas. Item da roda sem cena abre a tela provisória.
+- `src/data/scenes/<modelo>.js`: textos de cada passo (título, texto e nota do professor).
+- Animações entre passos usam `animate` do Framer Motion sobre os valores; as cenas não dependem de GSAP.
+- **Estoque de esferas (Dalton):** 125 esferas reaproveitadas em todos os passos. Cada passo define um "alvo" (posição, tamanho e cor) para cada esfera, e elas se transformam de um desenho para o outro.
+- **Desempenho:** modo leve usa esferas com menos faces, material simples, sem suavização de bordas e resolução 1x.
 
 ## 5. Formato dos dados (proposta)
 

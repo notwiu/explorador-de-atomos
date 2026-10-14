@@ -16,8 +16,7 @@ Abertura
 Linha do tempo
    Dalton → Thomson → Rutherford → Bohr → Modelo atual
    (entre cada uma: "Por que mudou?")
-   ↓
-Laboratório
+   Cada cena é em 3D e termina com um passo de "brincar"
    ↓
 Quiz
    ↓
@@ -93,6 +92,28 @@ Encerramento
 
 **Modo leve:** sem desfoque nem brilho; os cartões longe do foco ficam apenas mais transparentes.
 
+## 2.3 Cena do Dalton (3D)
+
+Primeira cena pronta. Define o padrão das próximas.
+
+**Layout:** área 3D à esquerda, widget lateral à direita (foto ou ilustração, nome, ano e texto curto), legenda do passo embaixo, pontos de progresso e uma dica de teclas.
+
+**Passos (8)**
+1. **Do que a matéria é feita?** Um cubo de matéria feito de muitas esferas pequenas.
+2. **O átomo.** Uma esfera cresce até ficar grande, maciça e lisa (a bola de bilhar de Dalton).
+3. **Cada elemento tem seus átomos.** Três elementos (A laranja, B azul, C rosa): iguais dentro do elemento e diferentes entre eles, inclusive no tamanho.
+4. **Átomos se combinam.** Átomos de elementos diferentes se juntam em compostos.
+5. **Reações químicas (antes).** Dois compostos (laranja com azul) e dois átomos rosa.
+6. **Os átomos se rearranjam (depois).** Os parceiros mudam, e são 6 átomos antes e 6 depois.
+7. **O que o modelo não explicava.** A esfera volta sozinha, com um "?" pulsando.
+8. **Hora de brincar.** Doze átomos soltos: arrastar, encostar para formar compostos, duplo clique para separar, R recomeça.
+
+**Controles:** → avança, ← volta (no primeiro passo volta para a roda), R repete o passo, N mostra a nota do professor, Esc volta para a roda, arrastar gira o modelo.
+
+**Movimento:** os mesmos átomos se transformam de um passo para o outro (a matéria "vira" átomos), a câmera balança de leve enquanto ninguém mexe e volta ao lugar quando o passo muda.
+
+**Cores dos átomos:** laranja (A), azul (B) e rosa (C). São cores de elementos de exemplo, não têm relação com as cores dos modelos na roda.
+
 ## 3. Layout de uma cena
 
 ```
@@ -152,18 +173,20 @@ Cada cena usa o mesmo ritmo de cliques, para o professor se acostumar:
 - Alternância entre "foto instantânea" (um ponto) e "longa exposição" (nuvem).
 - Mensagem central: não dá para saber exatamente onde o elétron está, só a região mais provável.
 
-## 6. Laboratório
+## 6. Brincar com os modelos (3D)
 
-Depois da explicação, a turma brinca. Ideias:
+Não existe um laboratório separado. **Brincar é um passo dentro de cada cena**, sempre em 3D:
 
-- **Escolher elemento** (H, He, Li, C, O, entre outros) e ver os modelos se reorganizarem.
-- **Trocar de modelo** com um botão grande ou tecla numérica.
-- **Adicionar/remover partículas** e ver número atômico e carga mudarem.
-- **Comparador:** o mesmo átomo nos cinco modelos lado a lado.
-- **Escala de tamanho:** zoom do mundo cotidiano até o núcleo.
-- **Cores da luz:** salto de elétrons e relação com fogos de artifício e neon.
+- O modelo fica na tela como objeto 3D que o professor gira arrastando com o mouse.
+- O último passo da cena libera a interação: no Dalton, arrastar átomos e encostar uns nos outros para formar compostos.
+- Resposta visual imediata, objetos grandes, nada de menus pequenos.
 
-Regra: tudo com botões grandes e resposta visual imediata.
+**Ideias de "brincar" para as próximas cenas** (a confirmar com o autor):
+- Thomson: espetar elétrons na esfera positiva e equilibrar as cargas.
+- Rutherford: disparar partículas alfa e ver os desvios.
+- Bohr: dar energia ao elétron e ver o salto e a luz colorida.
+- Modelo atual: ver a nuvem de probabilidade se formar.
+- Ideias que sobraram do antigo laboratório: comparar o mesmo átomo nos modelos lado a lado e ver a escala de tamanho do átomo e do núcleo.
 
 ## 7. Quiz
 

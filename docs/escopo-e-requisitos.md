@@ -9,7 +9,7 @@ O professor pediu um jogo/ferramenta sobre modelos atômicos que fosse **mais di
 - Linha do tempo animada com 5 modelos em ordem cronológica.
 - Widget lateral por cena (foto, nome, ano e texto curto).
 - Transições "Por que mudou?" entre os modelos.
-- Laboratório para brincar com os modelos.
+- Representação 3D de cada modelo, com um passo final para brincar com ele.
 - Quiz básico em tela cheia.
 - Navegação por teclado e compatibilidade com apresentadores de slides.
 - Tela cheia, modo leve e controles que somem sozinhos.
@@ -45,9 +45,9 @@ O professor pediu um jogo/ferramenta sobre modelos atômicos que fosse **mais di
 | RF06 | Ajustar velocidade das animações (normal e lenta) |
 | RF07 | Alternar tela cheia |
 | RF08 | Alternar modo leve |
-| RF09 | Laboratório: escolher elemento, trocar de modelo, adicionar/remover partículas |
-| RF10 | Laboratório: comparar o mesmo átomo nos modelos lado a lado |
-| RF11 | Laboratório: mostrar a escala de tamanho do átomo e do núcleo |
+| RF09 | Cada modelo tem uma representação 3D que pode ser girada com o mouse |
+| RF10 | Cada cena termina com um passo de "brincar" com o modelo em 3D |
+| RF11 | Cenas funcionam no modo leve (menos detalhe) e avisam se o 3D não abrir |
 | RF12 | Quiz em tela cheia com uma pergunta por vez |
 | RF13 | Quiz: ao acertar, mostrar tela de acerto com explicação curta |
 | RF14 | Quiz: ao errar, permitir tentar outra alternativa |
@@ -71,7 +71,7 @@ O professor pediu um jogo/ferramenta sobre modelos atômicos que fosse **mais di
 
 - O professor consegue percorrer a linha do tempo inteira só com teclado ou passador.
 - Cada modelo tem animação própria e widget lateral.
-- O laboratório permite trocar de modelo e comparar.
+- Cada cena tem representação 3D e um passo final de brincar.
 - O quiz funciona do início ao fim, com feedback de acerto e nova tentativa.
 - O arquivo único abre sem internet em um computador comum.
 - O professor valida o conteúdo científico.

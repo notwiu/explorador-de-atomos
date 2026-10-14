@@ -10,6 +10,8 @@ import { useEffect, useRef } from 'react'
 //   activate  -> Espaço ou Enter (se não existir, usa next)
 //   fullscreen-> F
 //   light     -> L
+//   restart   -> R
+//   notes     -> N
 export function useKeyboardNav(handlers) {
   const ref = useRef(handlers)
   ref.current = handlers
@@ -35,6 +37,8 @@ export function useKeyboardNav(handlers) {
       else if ((key === ' ' || key === 'Enter') && !onButton) run(h.activate ?? h.next, e)
       else if (key.toLowerCase() === 'f') h.fullscreen?.()
       else if (key.toLowerCase() === 'l') h.light?.()
+      else if (key.toLowerCase() === 'r') h.restart?.()
+      else if (key.toLowerCase() === 'n') h.notes?.()
     }
 
     window.addEventListener('keydown', onKeyDown)

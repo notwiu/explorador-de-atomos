@@ -2,11 +2,11 @@
 
 > Ferramenta web de apresentação, com muita animação, para ensinar e visualizar a evolução dos modelos atômicos em aulas de Química do ensino médio.
 
-**Status:** em desenvolvimento (tela inicial e roda de cartões prontas)
+**Status:** em desenvolvimento (tela inicial, roda de cartões e cena do Dalton em 3D prontas)
 **Autor:** Willian
 **Tipo:** trabalho de faculdade com aplicação em escola pública
 **Stack:** React + Vite
-**Última atualização:** 10/10/2026 (v0.4 da documentação)
+**Última atualização:** 10/10/2026 (v0.5 da documentação)
 
 > Este é o documento-síntese. Os detalhes estão nos demais arquivos da pasta `docs/` (veja o índice no [README](../README.md)).
 
@@ -32,10 +32,10 @@ Como ajudar alunos do ensino médio a **enxergar, entender e se interessar** pel
 
 **Específicos:**
 
-- Apresentar cada modelo em uma cena animada, em **ordem cronológica**.
+- Apresentar cada modelo em uma cena animada e **em 3D**, em **ordem cronológica**.
 - Exibir, ao lado do átomo, um **widget com foto e texto curto** sobre o modelo, para o professor ler.
 - Mostrar *por que* cada modelo foi substituído pelo seguinte.
-- Oferecer um **laboratório** para brincar com os modelos depois da explicação.
+- Permitir **brincar com o modelo em 3D** dentro de cada cena, depois da explicação.
 - Encerrar com um **quiz básico**, em tela cheia, para fixar o conteúdo de forma divertida.
 - Funcionar bem em projetor, em escola pública, inclusive sem internet.
 
@@ -55,11 +55,11 @@ Como ajudar alunos do ensino médio a **enxergar, entender e se interessar** pel
 Abertura → Roda de cartões (menu) → Cena do modelo escolhido ou Quiz
 ```
 
-A **roda de cartões** é o menu central: Dalton, Thomson, Rutherford, Bohr, Modelo atual e, por último, o Quiz. Clicar na foto abre o modelo e a apresentação. O laboratório (brincar com os modelos) ainda precisa ter seu lugar definido neste fluxo.
+A **roda de cartões** é o menu central: Dalton, Thomson, Rutherford, Bohr, Modelo atual e, por último, o Quiz. Clicar na foto abre o modelo e a apresentação. Brincar com os modelos acontece **dentro de cada cena**, em 3D (não existe um laboratório separado).
 
 1. **Abertura:** título animado e botão para começar.
 2. **Linha do tempo:** Dalton, Thomson, Rutherford, Bohr e modelo atual, passo a passo. Cada cena tem experimento animado, widget lateral e uma transição "Por que mudou?".
-3. **Laboratório:** o professor e a turma brincam com os modelos (escolher elemento, trocar de modelo, adicionar partículas, comparar lado a lado, ver a escala).
+3. **Brincar:** o último passo de cada cena é interativo, em 3D (no Dalton, arrastar átomos e encostar para formar compostos).
 4. **Quiz:** perguntas básicas em tela cheia, alternativas grandes, feedback com explicação e nova tentativa em caso de erro.
 5. **Encerramento:** resumo da linha do tempo.
 
@@ -87,7 +87,7 @@ A animação é o grande diferencial. Princípios: movimento com significado (ca
 
 ## 6. Quiz
 
-Quiz **básico**, só para fixar e brincar, depois de todo o conteúdo e do laboratório.
+Quiz **básico**, só para fixar e brincar, depois de todo o conteúdo.
 
 - Tela cheia, uma pergunta por vez, alternativas grandes.
 - **Acertou:** tela informando o acerto e uma explicação curta.
@@ -107,7 +107,7 @@ Detalhes e banco inicial de perguntas: [quiz.md](quiz.md).
 | 5 | **Muita animação** como prioridade | Chamar atenção e despertar interesse |
 | 6 | **Widget lateral** com foto e texto curto | O professor pode ler e a turma associa o rosto ao modelo |
 | 7 | **Ordem cronológica**, passo a passo | Mostra a evolução da ciência |
-| 8 | **Laboratório** após a explicação | Permitir que a turma brinque com os modelos |
+| 8 | **Brincar dentro de cada cena**, em 3D, após a explicação (no lugar de um laboratório separado) | Permitir que a turma brinque com o modelo de forma visual |
 | 9 | **Quiz básico no final** (revisão de decisão anterior) | Fixar o conteúdo e divertir; a decisão inicial era não ter quiz |
 | 10 | Quiz em **tela cheia**, com nova tentativa após erro | Pensado para projeção e para não punir o erro |
 
@@ -122,7 +122,7 @@ Registro completo e histórico: [decisoes.md](decisoes.md).
 - Exibir o widget lateral em cada cena.
 - Reiniciar a cena atual e ajustar a velocidade das animações.
 - Alternar tela cheia e modo leve.
-- Modo laboratório com troca de modelo e elemento.
+- Representação 3D de cada modelo, que pode ser girada com o mouse, e passo final de "brincar".
 - Quiz com feedback de acerto, explicação e nova tentativa.
 - Notas do professor opcionais, por atalho de teclado.
 
@@ -154,13 +154,15 @@ Estrutura de pastas e detalhes: [arquitetura.md](arquitetura.md).
 | Etapa | Entrega |
 |---|---|
 | 1 | Projeto base e **tela inicial** (feitos); fluxo geral completo e widget lateral entram com as cenas |
-| 2 | Cena do **Rutherford** (define o padrão visual) |
-| 3 | Cenas de Bohr e Thomson |
-| 4 | Cenas de Dalton e do modelo atual |
-| 5 | Laboratório |
-| 6 | Quiz |
-| 7 | Polimento para projetor, modo leve e build offline |
-| 8 | Validação com o professor e ajustes |
+| 2 | Cena do **Dalton** em 3D (feita; define o padrão das cenas) |
+| 3 | Cena do Thomson |
+| 4 | Cena do Rutherford |
+| 5 | Cena do Bohr |
+| 6 | Cena do modelo atual |
+| 7 | Quiz |
+| 8 | Extras opcionais (comparador lado a lado, escala de tamanho) |
+| 9 | Polimento para projetor, modo leve e build offline |
+| 10 | Validação com o professor e ajustes |
 
 Detalhes: [roadmap.md](roadmap.md).
 
@@ -201,3 +203,4 @@ Detalhes: [roadmap.md](roadmap.md).
 | 0.2 | 10/10/2026 | Inclusão do quiz básico no final, laboratório, widget lateral, ênfase em animação; documentação dividida em vários arquivos |
 | 0.3 | 10/10/2026 | Projeto base (Vite + React) e tela inicial criados; decisões D13 a D17 (estilo, fontes, cores) |
 | 0.4 | 10/10/2026 | Roda de cartões clicáveis (estilo jogo) como linha do tempo; quiz como sexto cartão; decisões D18 a D21 |
+| 0.5 | 11/10/2026 | Tudo em 3D (three.js); "brincar" passa a ser um passo dentro de cada cena, sem laboratório separado; cena do Dalton criada; decisões D22 a D24 |

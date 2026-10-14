@@ -6,6 +6,12 @@ Formato baseado em [Keep a Changelog](https://keepachangelog.com/pt-BR/1.1.0/).
 ## [Não lançado]
 
 ### Adicionado
+- **Cena do Dalton em 3D** (oito passos): matéria, átomo maciço, elementos, combinação, reação (antes e depois), limitação do modelo e **brincar** (arrastar átomos, encostar para formar compostos, duplo clique para separar).
+- Widget lateral (`AtomWidget`) com foto (ou ilustração provisória), nome, ano, modelo e texto curto; nota do professor com a tecla **N**.
+- Estrutura reaproveitável de cenas: `Stage3D`, `SceneShell`, palco 3D genérico (`src/three/stage.js`), registro de cenas e textos em `src/data/scenes/`.
+- Teclas **R** (repetir o passo) e **N** (nota do professor).
+- Aviso quando o navegador não consegue abrir o 3D; modo leve também para o 3D.
+- three.js como dependência.
 - **Tela de seleção com roda orbital de cartões** (adaptada do componente "orbital image wheel"): ao clicar em "Começar a viagem", aparece a linha do tempo em forma de roda, com Dalton, Thomson, Rutherford, Bohr, Modelo atual e, por último, o Quiz.
 - Cartões clicáveis em estilo de jogo: clicar em um cartão gira a roda até ele; clicar no cartão em destaque (ou Enter) abre o item. Setas e roda do mouse também giram a roda.
 - Ilustrações provisórias nos cartões (uma por modelo e uma para o quiz) enquanto as fotos não são adicionadas.
@@ -24,6 +30,8 @@ Formato baseado em [Keep a Changelog](https://keepachangelog.com/pt-BR/1.1.0/).
 - Documentação em `docs/`: documento completo, escopo e requisitos, experiência e design, arquitetura, conteúdo dos modelos, quiz, roadmap, decisões e diário.
 
 ### Alterado
+- "Brincar com os modelos" passa a ser um passo dentro de cada cena (em 3D), em vez de um laboratório separado.
+- Peso do arquivo final: cerca de 1,3 MB (antes, cerca de 0,5 MB), por causa do three.js.
 - Tela inicial reduzida em cerca de 8% (tamanhos de texto e do átomo), após teste do autor.
 - Documento completo atualizado (v0.2): quiz básico reincluído no final, laboratório, widget lateral e ênfase em animação.
 - Decisão D05 (sem quiz) substituída pela D09 (quiz básico no final).

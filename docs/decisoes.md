@@ -13,7 +13,7 @@ Cada decisão importante fica registrada aqui, com data, motivo e consequências
 | D05 | Sem quiz | **Substituída** pela D09 |
 | D06 | Muita animação como prioridade | Ativa |
 | D07 | Widget lateral com foto e texto curto | Ativa |
-| D08 | Explicação em ordem cronológica, seguida de laboratório | Ativa |
+| D08 | Explicação em ordem cronológica, seguida de laboratório | Substituída em parte pela D23 |
 | D09 | Quiz básico no final | Ativa |
 | D10 | Quiz em tela cheia, com nova tentativa após erro | Ativa |
 | D11 | Funcionar offline em arquivo único | Ativa |
@@ -27,6 +27,9 @@ Cada decisão importante fica registrada aqui, com data, motivo e consequências
 | D19 | Roda adaptada: sem rolagem, sem Tailwind/GSAP | Proposta (confirmar) |
 | D20 | Fotos em `src/assets/photos/`, nome do arquivo = id do modelo | Proposta (confirmar) |
 | D21 | O quiz é o sexto cartão da roda | Ativa |
+| D22 | Tudo em 3D, com three.js direto (sem React Three Fiber) | Ativa |
+| D23 | "Brincar" é um passo dentro de cada cena, não um laboratório separado | Ativa |
+| D24 | Cena do Dalton: oito passos, com elementos genéricos A, B e C | Proposta (confirmar) |
 
 ---
 
@@ -123,7 +126,7 @@ Cada decisão importante fica registrada aqui, com data, motivo e consequências
 - **Data:** 10/10/2026
 - **Contexto:** o autor enviou o componente "orbital image wheel" e quer que, ao clicar em "Começar a viagem", a linha do tempo apareça nesse formato, com as fotos clicáveis, estilo de jogo.
 - **Decisão:** a tela depois da abertura é uma roda de cartões. Clicar na foto abre o modelo e a apresentação.
-- **Substitui em parte:** o fluxo linear "linha do tempo → laboratório → quiz". Agora a roda é o menu central. Onde fica o laboratório está em aberto (veja abaixo).
+- **Substitui em parte:** o fluxo linear "linha do tempo → laboratório → quiz". Agora a roda é o menu central. O lugar do laboratório foi resolvido na D23.
 
 ### D19 — Roda adaptada ao projeto
 - **Data:** 10/10/2026
@@ -140,14 +143,31 @@ Cada decisão importante fica registrada aqui, com data, motivo e consequências
 - **Data:** 10/10/2026
 - **Decisão:** o último cartão da roda é o Quiz e abre o quiz com os jogos.
 
+### D22 — Tudo em 3D com three.js
+- **Data:** 11/10/2026
+- **Contexto:** o autor quer tudo em 3D, com uma representação 3D de cada modelo para mostrar.
+- **Decisão:** usar three.js direto (WebGL), com um palco genérico reaproveitado por todas as cenas (`src/three/stage.js`). Sem React Three Fiber, para manter poucas dependências e controle sobre o desempenho.
+- **Consequência:** o arquivo final passou de cerca de 0,5 MB para cerca de 1,3 MB (three.js é a maior parte). Continua funcionando offline. Computadores sem WebGL mostram uma mensagem em vez da cena.
+
+### D23 — "Brincar" dentro de cada cena
+- **Data:** 11/10/2026
+- **Contexto:** o autor esclareceu que brincar com os modelos deve ser algo visual dentro dos modelos, em 3D.
+- **Decisão:** não haverá um laboratório separado. O último passo de cada cena é interativo.
+- **Substitui em parte:** D08.
+- **Consequência:** comparador lado a lado e escala de tamanho viram extras opcionais (etapa 8 do roadmap).
+
+### D24 — Cena do Dalton
+- **Data:** 11/10/2026
+- **Decisão:** oito passos (matéria, átomo, elementos, combinação, reação antes e depois, limitação, brincar). Os elementos são exemplos genéricos A (laranja), B (azul) e C (rosa), sem fórmulas modernas, para ficar fiel à ideia de Dalton. A reação mostra dois compostos A+B e dois átomos C, que trocam de parceiros (6 átomos antes e depois).
+- **Consequência:** os textos precisam de revisão do professor.
+
 ---
 
 ## Decisões em aberto
 
 | Tema | Opções | Responsável |
 |---|---|---|
-| Confirmar D13 a D17, D19 e D20 | Aceitar ou trocar | Willian |
-| Onde fica o laboratório (brincar com os modelos)? | Dentro do quiz/jogos, cartão próprio ou dentro de cada cena | Willian |
+| Confirmar D13 a D17, D19, D20 e D24 | Aceitar ou trocar | Willian |
 | Fotos | Embutidas no arquivo único ou pasta ao lado | Willian |
 | Alternativas do quiz | Ordem fixa ou embaralhada | Willian + professor |
 

@@ -33,6 +33,21 @@
 
 **Animação:** esferas coloridas se combinando em moléculas simples.
 
+**Passos da cena (texto exibido; espelha `src/data/scenes/dalton.js`):**
+
+| # | Título | Texto | Nota do professor |
+|---|---|---|---|
+| 1 | Do que a matéria é feita? | Se dividirmos a matéria em pedaços cada vez menores, o que encontramos no final? | Deixe a turma arriscar respostas antes de avançar. |
+| 2 | O átomo | Dalton propôs que toda matéria é feita de átomos: esferas minúsculas, maciças e indivisíveis. | Pergunte à turma: se tudo é feito de átomos, como as substâncias diferentes se formam? |
+| 3 | Cada elemento tem seus átomos | Átomos do mesmo elemento são iguais entre si. Átomos de elementos diferentes são diferentes. | |
+| 4 | Átomos se combinam | Átomos de elementos diferentes se juntam e formam as substâncias compostas. | |
+| 5 | Reações químicas | Duas substâncias compostas (átomo laranja com azul) e dois átomos rosa. O que acontece quando reagem? | Peça à turma que preveja o resultado antes de avançar. |
+| 6 | Os átomos se rearranjam | Mudam de parceiros, mas nenhum átomo é criado nem destruído: 6 antes, 6 depois. | |
+| 7 | O que o modelo não explicava | Os fenômenos elétricos e a existência de partículas menores que o átomo. | Deixe a pergunta no ar: o que mais poderia haver dentro do átomo? |
+| 8 | Hora de brincar | Arraste os átomos e encoste um no outro para formar compostos. Clique duas vezes para separar. | Peça a alguém da turma que monte um composto e explique o que fez. |
+
+*(Os elementos A, B e C da cena são exemplos genéricos, sem nome real, de propósito: representam a ideia de Dalton sem atribuir fórmulas modernas. Revisar com o professor.)*
+
 ---
 
 ## 2. Thomson — pudim de passas
@@ -138,7 +153,7 @@
 
 ---
 
-## 6. Fatos de apoio (laboratório e escala)
+## 6. Fatos de apoio (escala e extras)
 
 - O átomo é quase todo espaço vazio: o núcleo é cerca de 100 mil vezes menor que o átomo em diâmetro **[a revisar]**.
 - Analogia sugerida: se o átomo fosse um estádio de futebol, o núcleo seria do tamanho de um grão pequeno no centro **[a revisar]**.

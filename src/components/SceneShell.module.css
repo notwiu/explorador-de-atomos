@@ -1,0 +1,118 @@
+.scene {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) clamp(270px, 27vw, 540px);
+}
+
+.view {
+  position: relative;
+  min-width: 0;
+  min-height: 0;
+}
+
+.stage {
+  position: absolute;
+  inset: 0;
+}
+
+.chip {
+  position: absolute;
+  top: var(--pad-y);
+  left: var(--pad-x);
+  display: flex;
+  align-items: baseline;
+  gap: 0.9rem;
+  pointer-events: none;
+}
+
+.chipName {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-stretch: 78%;
+  font-size: clamp(1.6rem, 3vw, 3rem);
+  line-height: 1;
+  color: var(--accent);
+}
+
+.chipStep {
+  font-size: var(--fs-small);
+  color: var(--text-muted);
+}
+
+.caption {
+  position: absolute;
+  left: var(--pad-x);
+  right: var(--pad-x);
+  bottom: var(--pad-y);
+  pointer-events: none; /* deixa arrastar os átomos por baixo */
+}
+
+.title {
+  margin: 0;
+  max-width: 22ch;
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-stretch: 80%;
+  font-size: clamp(1.9rem, 3.8vw, 4rem);
+  line-height: 1;
+  text-shadow: 0 2px 18px rgba(6, 10, 36, 0.8);
+}
+
+.text {
+  margin: 0.5rem 0 0;
+  max-width: 38ch;
+  font-size: var(--fs-lead);
+  line-height: 1.25;
+  color: var(--text);
+  text-shadow: 0 2px 14px rgba(6, 10, 36, 0.9);
+}
+
+.dots {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: clamp(0.8rem, 2vh, 1.4rem);
+}
+
+.dot {
+  width: 0.7rem;
+  height: 0.7rem;
+  border-radius: 50%;
+  background: rgba(238, 242, 255, 0.25);
+  transition: background 0.3s, transform 0.3s;
+}
+
+.dot[data-state='done'] {
+  background: rgba(238, 242, 255, 0.7);
+}
+
+.dot[data-state='current'] {
+  background: var(--accent);
+  transform: scale(1.5);
+}
+
+.hint {
+  margin: 0.6rem 0 0;
+  font-size: var(--fs-small);
+  color: var(--text-muted);
+}
+
+.side {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: calc(var(--pad-y) + 2.6rem) var(--pad-x) var(--pad-y) 0;
+  min-height: 0;
+}
+
+@media (max-width: 800px) {
+  .scene {
+    grid-template-columns: 1fr;
+  }
+  .side {
+    display: none;
+  }
+}

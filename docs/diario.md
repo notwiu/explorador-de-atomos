@@ -8,6 +8,20 @@ Registro cronológico do que foi feito e aprendido. Serve de matéria-prima para
 
 ## Entradas
 
+### 11/10/2026 — Cena do Dalton em 3D
+**O que foi feito**
+- Esclarecido que "brincar com os modelos" é algo visual **dentro de cada modelo**, em 3D, e não um laboratório separado.
+- Criada a **cena do Dalton em 3D** com oito passos: um cubo de matéria vira uma única esfera (o átomo maciço), depois aparecem três elementos, os átomos se combinam, reagem trocando de parceiros e, por fim, o professor e a turma brincam arrastando átomos.
+- Criada a base reaproveitável das próximas cenas: palco 3D, moldura de cena, widget lateral, notas do professor e teclas de atalho.
+- Testes automáticos da lógica do 3D e do fluxo de telas (sem placa de vídeo), todos passando.
+
+**Aprendizado**
+- Reaproveitar o mesmo conjunto de esferas em todos os passos deixou a transição "matéria vira átomos" fluida e o código simples.
+- Separar a lógica do 3D da parte visual permitiu testar sem navegador.
+- three.js aumentou o peso do arquivo final (cerca de 1,3 MB), mas continua offline e leve o bastante para uma escola.
+
+**Próximo passo:** testar no projetor/tela grande, adicionar as fotos e, quando o autor pedir, criar a cena do Thomson.
+
 ### 10/10/2026 — Roda de cartões: a linha do tempo vira um menu de jogo
 **O que foi feito**
 - Ao clicar em "Começar a viagem", agora aparece a linha do tempo em forma de **roda orbital de cartões**: Dalton, Thomson, Rutherford, Bohr, Modelo atual e, por último, o Quiz.

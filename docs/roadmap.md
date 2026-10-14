@@ -7,94 +7,94 @@ Legenda: ✅ concluído · 🔄 em andamento · ⬜ pendente
 | Etapa | Entrega | Status |
 |---|---|---|
 | 0 | Planejamento e documentação | ✅ |
-| 1 | Projeto base e tela inicial | 🔄 |
-| 2 | Cena do Rutherford | ⬜ |
-| 3 | Cenas de Bohr e Thomson | ⬜ |
-| 4 | Cenas de Dalton e modelo atual | ⬜ |
-| 5 | Laboratório | ⬜ |
-| 6 | Quiz | ⬜ |
-| 7 | Polimento, modo leve e build offline | ⬜ |
-| 8 | Validação com o professor e ajustes | ⬜ |
+| 1 | Projeto base, tela inicial e roda de cartões | ✅ |
+| 2 | Cena do **Dalton** em 3D (define o padrão das cenas) | ✅ |
+| 3 | Cena do Thomson | ⬜ |
+| 4 | Cena do Rutherford | ⬜ |
+| 5 | Cena do Bohr | ⬜ |
+| 6 | Cena do modelo atual | ⬜ |
+| 7 | Quiz | ⬜ |
+| 8 | Extras opcionais (comparador, escala de tamanho) | ⬜ |
+| 9 | Polimento, modo leve e build offline | ⬜ |
+| 10 | Validação com o professor e ajustes | ⬜ |
+
+Cada cena segue o mesmo padrão: 3D, passos com legenda, widget lateral, notas do professor e um passo final de "brincar".
 
 ---
 
 ## Etapa 0 — Planejamento e documentação ✅
 
 - [x] Entender o pedido do professor
-- [x] Definir formato (linha do tempo + laboratório + quiz)
+- [x] Definir formato (linha do tempo + quiz; brincar dentro de cada modelo)
 - [x] Escolher stack (React + Vite)
 - [x] Criar `AGENT.md`, `README.md` e documentação em `docs/`
 
-## Etapa 1 — Projeto base e tela inicial 🔄
+## Etapa 1 — Projeto base, tela inicial e roda de cartões ✅
 
-Feita aos poucos: primeiro o projeto base e o design da tela inicial; o restante entra junto com as cenas.
-
-- [x] Criar projeto Vite + React
-- [x] Configurar `vite-plugin-singlefile`
-- [x] Definir estilo (CSS Modules) e registrar em `decisoes.md`
-- [x] Tokens de design (cores, fontes, tamanhos de texto)
-- [x] **Tela inicial (abertura)** com animações
-- [x] Navegação por teclado (`useKeyboardNav`)
-- [x] Tela cheia (`useFullscreen`)
-- [x] Controles que somem sozinhos (`useIdleHide`)
-- [x] **Tela de seleção com roda orbital de cartões** (cinco modelos + quiz), clicável e com teclado
+- [x] Projeto Vite + React, build em arquivo único (offline)
+- [x] Tokens de design, fontes embutidas, CSS Modules
+- [x] Tela inicial (abertura) com animações
+- [x] Roda de cartões (cinco modelos + quiz), clicável e com teclado
+- [x] Navegação por teclado, tela cheia, modo leve, controles que somem sozinhos
 - [ ] Adicionar as fotos dos cientistas em `src/assets/photos/` (com crédito e licença)
-- [x] Configuração central de desempenho (modo normal e leve)
-- [ ] Fluxo geral completo; hoje: abertura → roda de cartões → tela provisória do item escolhido
-- [ ] Componente `AtomWidget` (foto, nome, ano, texto curto), entra com a cena do Dalton
-- [ ] Barra de progresso discreta
-- [ ] Testar a tela inicial no projetor da escola
+- [ ] Testar tudo no projetor da escola
 
-## Etapa 2 — Cena do Rutherford ⬜
+## Etapa 2 — Cena do Dalton (3D) ✅
 
-- [ ] Canvas com canhão de partículas alfa e folha de ouro
-- [ ] Desvios realistas (a maioria passa, poucas desviam)
-- [ ] Zoom até o núcleo
-- [ ] Widget lateral preenchido
-- [ ] Passos por clique (pergunta, experimento, observação, modelo)
-- [ ] Teste em projetor/tela grande
-- [ ] **Mostrar ao professor e coletar feedback**
+- [x] Palco 3D genérico (`stage.js`), moldura de cena (`SceneShell`) e widget lateral (`AtomWidget`)
+- [x] Oito passos: matéria, átomo, elementos, combinação, reação (antes e depois), limitação e brincar
+- [x] Brincar: arrastar átomos, encostar para formar compostos, duplo clique para separar
+- [x] Notas do professor (N), repetir passo (R), voltar à roda (Esc)
+- [x] Modo leve e aviso quando o navegador não abre o 3D
+- [ ] Testar em tela grande/projetor e ajustar tamanhos, cores e velocidade
+- [ ] Revisar os textos com o professor
 
-## Etapa 3 — Bohr e Thomson ⬜
+## Etapa 3 — Cena do Thomson ⬜
 
-- [ ] Bohr: camadas, saltos, emissão de luz colorida
-- [ ] Bohr: ponte com fogos de artifício e neon
-- [ ] Thomson: raios catódicos e desvio do feixe
-- [ ] Thomson: esfera positiva com elétrons
-- [ ] Transições "Por que mudou?"
+- [ ] Esfera positiva com elétrons (pudim de passas) em 3D
+- [ ] Raios catódicos e desvio do feixe
+- [ ] Transição "Por que mudou?"
+- [ ] Brincar (ideia: espetar elétrons e equilibrar as cargas)
 
-## Etapa 4 — Dalton e modelo atual ⬜
+## Etapa 4 — Cena do Rutherford ⬜
 
-- [ ] Dalton: esferas formando moléculas
-- [ ] Modelo atual: nuvem de pontos, foto instantânea vs longa exposição
-- [ ] Conferir textos com `conteudo-modelos.md`
+- [ ] Canhão de partículas alfa e folha de ouro em 3D
+- [ ] Desvios (a maioria passa, poucas desviam), zoom até o núcleo
+- [ ] Brincar (ideia: controlar a quantidade de partículas)
 
-## Etapa 5 — Laboratório ⬜
+## Etapa 5 — Cena do Bohr ⬜
 
-- [ ] Seletor de elemento
-- [ ] Troca de modelo
-- [ ] Adicionar/remover partículas
-- [ ] Comparador lado a lado
-- [ ] Escala de tamanho (zoom até o núcleo)
+- [ ] Camadas, saltos de elétron e emissão de luz colorida
+- [ ] Ponte com fogos de artifício e neon
+- [ ] Brincar (ideia: dar energia ao elétron)
 
-## Etapa 6 — Quiz ⬜
+## Etapa 6 — Cena do modelo atual ⬜
+
+- [ ] Nuvem de probabilidade, foto instantânea vs longa exposição
+- [ ] Brincar
+
+## Etapa 7 — Quiz ⬜
 
 - [ ] Tela de pergunta em tela cheia com alternativas grandes
 - [ ] Seleção por clique e por tecla
-- [ ] Tela de acerto com explicação
-- [ ] Nova tentativa após erro
+- [ ] Tela de acerto com explicação e nova tentativa após erro
 - [ ] Tela final
 - [ ] Perguntas em `src/data/quiz.js`
 
-## Etapa 7 — Polimento ⬜
+## Etapa 8 — Extras opcionais ⬜
+
+- [ ] Comparador: o mesmo átomo nos cinco modelos, lado a lado
+- [ ] Escala de tamanho: do mundo cotidiano até o núcleo
+
+## Etapa 9 — Polimento ⬜
 
 - [ ] Modo leve revisado em computador simples
 - [ ] Contraste e fontes testados no projetor
-- [ ] Respeito a `prefers-reduced-motion`
+- [ ] Peso do arquivo final revisado
 - [ ] Build offline em arquivo único testado sem internet
 - [ ] Imagens e créditos finalizados
 
-## Etapa 8 — Validação ⬜
+## Etapa 10 — Validação ⬜
 
 - [ ] Apresentar ao professor
 - [ ] Ajustar conteúdo e ritmo conforme feedback

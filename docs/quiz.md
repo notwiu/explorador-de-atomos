@@ -45,7 +45,7 @@ acerto      (mensagem leve: "Quase! Tente outra.")
 **Tela final**
 - Mensagem de encerramento.
 - Resumo leve (ex.: "Você acertou X de primeira"), opcional.
-- Botão para reiniciar o quiz ou voltar ao laboratório.
+- Botão para reiniciar o quiz ou voltar à linha do tempo.
 
 ## 4. Regras
 
