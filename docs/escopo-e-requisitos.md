@@ -31,7 +31,7 @@ O professor pediu um jogo/ferramenta sobre modelos atômicos que fosse **mais di
 |---|---|
 | Professor | Usa e controla o site em sala |
 | Alunos | Assistem à projeção e participam oralmente |
-| Autor (Willian) | Desenvolve e mantém |
+| Autores (Willian, Kemuel, Yan e João) | Desenvolvem e mantêm |
 
 ## 5. Requisitos funcionais
 

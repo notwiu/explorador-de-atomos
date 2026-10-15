@@ -77,7 +77,7 @@ explorador-de-atomos/
    ├─ app/            # fluxo geral: abertura → roda de cartões → cena do modelo ou quiz
    ├─ components/     # OrbitalWheel, ModelArt, Controles, Widget lateral (futuro), etc.
    ├─ scenes/         # uma pasta por modelo (hoje: dalton/), mais index.js com o registro
-   ├─ three/          # stage.js: palco 3D genérico
+   ├─ three/          # stage.js (palco 3D genérico) e helpers.js (rótulos, brilhos, utilidades)
    ├─ quiz/           # telas e lógica do quiz
    ├─ data/           # models.js, quiz.js (textos e perguntas)
    ├─ assets/photos/  # fotos dos cientistas (nome do arquivo = id do modelo; com crédito)
@@ -159,8 +159,8 @@ Ao concluir qualquer mudança relevante, **atualize a documentação no mesmo co
 
 ## 10. Estado atual
 
-- **Fase:** Etapas 1 e 2 concluídas. Prontos: projeto base, **tela inicial**, **roda de cartões** e **cena do Dalton em 3D** (8 passos, com brincar). Os outros cartões abrem uma tela provisória.
-- **Próximo passo:** o autor pede a próxima cena (Thomson). Reaproveitar `Stage3D`, `SceneShell`, `AtomWidget` e o padrão de `src/scenes/dalton/`. Para adicionar uma cena: pasta da cena, textos em `src/data/scenes/`, registro em `src/scenes/index.js`.
+- **Fase:** Etapas 1 a 3 concluídas. Prontos: projeto base, **tela inicial**, **roda de cartões** e as cenas do **Dalton** (8 passos) e do **Thomson** (9 passos), ambas em 3D e com brincar. Os outros cartões abrem uma tela provisória.
+- **Próximo passo:** o autor pede a próxima cena (Rutherford). Reaproveitar `Stage3D`, `SceneShell`, `AtomWidget`, `src/three/helpers.js` e o padrão de `src/scenes/dalton/` e `src/scenes/thomson/`. Para adicionar uma cena: pasta da cena, textos em `src/data/scenes/`, registro em `src/scenes/index.js` e dados do widget em `src/data/models.js`.
 - **Ritmo de trabalho:** uma etapa por vez, com commit e documentação a cada passo. Não adiantar cenas que o autor ainda não pediu.
 - Veja `docs/roadmap.md` para o detalhamento.
 

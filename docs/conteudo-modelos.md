@@ -73,6 +73,22 @@
 
 **Animação:** tubo de raios catódicos com feixe desviado; elétrons incrustados numa esfera positiva.
 
+**Passos da cena (texto exibido; espelha `src/data/scenes/thomson.js`):**
+
+| # | Título | Texto | Nota do professor |
+|---|---|---|---|
+| 1 | Por que mudar o modelo? | O modelo de Dalton não explicava os fenômenos elétricos nem a existência de partículas menores que o átomo. | Pergunte à turma: como investigar o que existe dentro de algo tão pequeno? |
+| 2 | O tubo de raios catódicos | Thomson estudou uma placa metálica dentro de um tubo de vidro quase sem ar, ligada a uma fonte de eletricidade. | |
+| 3 | Um feixe misterioso | Ligada à eletricidade, a placa (cátodo) emite um feixe que faz a tela do tubo brilhar. | Na vida real o feixe quase não se vê: o brilho aparece onde ele atinge a tela. Aqui ele foi desenhado para ficar visível. |
+| 4 | O feixe se desvia | Perto de uma placa positiva, o feixe se curva em direção a ela. Então o feixe tem carga negativa. | Pergunte: por que o feixe se curva para a placa positiva? (Cargas opostas se atraem.) |
+| 5 | Partículas minúsculas e negativas | O feixe é feito de partículas muito leves, de carga negativa: os elétrons. Elas estavam dentro dos átomos. | Com metais diferentes na placa, Thomson obteve sempre o mesmo resultado: os elétrons fazem parte de todos os átomos. |
+| 6 | E a carga positiva? | O átomo é neutro, mas tem elétrons negativos. Algo positivo precisa equilibrar. Thomson imaginou uma esfera positiva. | Pergunte à turma: se o átomo é neutro e tem elétrons negativos, onde está a carga positiva? |
+| 7 | Pudim de passas | Uma esfera positiva com elétrons negativos espalhados, como passas num pudim. A carga positiva equilibra a negativa. | |
+| 8 | O que o modelo não explicava | Faltava saber como a carga positiva realmente está distribuída. O experimento de Rutherford mostraria que ela não está espalhada pelo átomo todo. | Deixe a pergunta no ar: será que a carga positiva ocupa o átomo inteiro? |
+| 9 | Hora de brincar | Arraste os elétrons para dentro da esfera até a carga total ficar zero. Passou de zero? Tire um elétron. | Peça a alguém da turma que equilibre a carga e explique por que o átomo fica neutro. |
+
+*(O passo 1 usa a limitação do modelo de Dalton como "por que mudou". As mesmas partículas aparecem com qualquer metal na placa: é isso que mostra que os elétrons fazem parte de todos os átomos. A carga da esfera na cena é +8, um número de exemplo. Revisar com o professor.)*
+
 ---
 
 ## 3. Rutherford — modelo nuclear

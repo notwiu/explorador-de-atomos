@@ -6,6 +6,8 @@ Formato baseado em [Keep a Changelog](https://keepachangelog.com/pt-BR/1.1.0/).
 ## [Não lançado]
 
 ### Adicionado
+- **Cena do Thomson em 3D** (nove passos): tubo de raios catódicos (cátodo, ânodo, placas e tela), feixe que se desvia para a placa positiva, zoom nos elétrons, esfera positiva e pudim de passas, limitação do modelo e **brincar** (arrastar elétrons para dentro da esfera e equilibrar a carga total).
+- `src/three/helpers.js` com ferramentas 3D compartilhadas (rótulos, brilhos, números repetíveis, liberação de memória).
 - Retrato do Dalton (foto enviada pelo autor, em preto e branco) no widget lateral e no cartão da roda. Origem e licença ainda precisam ser registradas em `docs/conteudo-modelos.md`.
 - **Cena do Dalton em 3D** (oito passos): matéria, átomo maciço, elementos, combinação, reação (antes e depois), limitação do modelo e **brincar** (arrastar átomos, encostar para formar compostos, duplo clique para separar).
 - Widget lateral (`AtomWidget`) com foto (ou ilustração provisória), nome, ano, modelo e texto curto; nota do professor com a tecla **N**.
@@ -31,6 +33,8 @@ Formato baseado em [Keep a Changelog](https://keepachangelog.com/pt-BR/1.1.0/).
 - Documentação em `docs/`: documento completo, escopo e requisitos, experiência e design, arquitetura, conteúdo dos modelos, quiz, roadmap, decisões e diário.
 
 ### Alterado
+- README e documentação: "Autor" virou "Autores" (Willian Teotonio, Kemuel Darckson, Yan Pedro e João Rodrigues).
+- Cena do Dalton passou a usar os helpers compartilhados; corrigido o caso de o arraste ser interrompido pelo teclado e a câmera ficar travada.
 - Legenda das cenas menor e em uma faixa própria **abaixo** da área 3D, para não cobrir os átomos nem atrapalhar o arrastar.
 - Widget lateral com foto mais alta, quando há foto, e esfumaçado na base.
 - "Brincar com os modelos" passa a ser um passo dentro de cada cena (em 3D), em vez de um laboratório separado.

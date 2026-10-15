@@ -15,7 +15,16 @@ export const models = [
     shortText:
       'Para Dalton, toda matéria é feita de átomos: esferas minúsculas, maciças e indivisíveis. Cada elemento tem seus próprios átomos, diferentes dos de outros elementos.',
   },
-  { id: 'thomson', label: 'Thomson', year: 1897, modelName: 'Pudim de passas', accent: 'var(--c-thomson)' },
+{
+    id: 'thomson',
+    label: 'Thomson',
+    year: 1897,
+    modelName: 'Pudim de passas',
+    accent: 'var(--c-thomson)',
+    scientist: 'J. J. Thomson',
+    shortText:
+      'Thomson descobriu o elétron e mostrou que o átomo não é indivisível. Ele imaginou uma esfera positiva com elétrons negativos espalhados, como passas num pudim.',
+  },
   { id: 'rutherford', label: 'Rutherford', year: 1911, modelName: 'Modelo nuclear', accent: 'var(--c-rutherford)' },
   { id: 'bohr', label: 'Bohr', year: 1913, modelName: 'Camadas de energia', accent: 'var(--c-bohr)' },
   { id: 'quantum', label: 'Modelo atual', year: 1926, modelName: 'Orbitais', accent: 'var(--c-quantum)' },

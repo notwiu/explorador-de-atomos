@@ -9,7 +9,7 @@ Legenda: ✅ concluído · 🔄 em andamento · ⬜ pendente
 | 0 | Planejamento e documentação | ✅ |
 | 1 | Projeto base, tela inicial e roda de cartões | ✅ |
 | 2 | Cena do **Dalton** em 3D (define o padrão das cenas) | ✅ |
-| 3 | Cena do Thomson | ⬜ |
+| 3 | Cena do **Thomson** em 3D | ✅ |
 | 4 | Cena do Rutherford | ⬜ |
 | 5 | Cena do Bohr | ⬜ |
 | 6 | Cena do modelo atual | ⬜ |
@@ -49,12 +49,16 @@ Cada cena segue o mesmo padrão: 3D, passos com legenda, widget lateral, notas d
 - [ ] Testar em tela grande/projetor e ajustar tamanhos, cores e velocidade
 - [ ] Revisar os textos com o professor
 
-## Etapa 3 — Cena do Thomson ⬜
+## Etapa 3 — Cena do Thomson (3D) ✅
 
-- [ ] Esfera positiva com elétrons (pudim de passas) em 3D
-- [ ] Raios catódicos e desvio do feixe
-- [ ] Transição "Por que mudou?"
-- [ ] Brincar (ideia: espetar elétrons e equilibrar as cargas)
+- [x] Tubo de raios catódicos em 3D: cátodo, ânodo, placas de desvio e tela
+- [x] Feixe que faz a tela brilhar e se curva em direção à placa positiva
+- [x] Zoom nos elétrons (partículas minúsculas e negativas)
+- [x] Esfera positiva e elétrons entrando: pudim de passas
+- [x] Passo "Por que mudar o modelo?" (limitação do Dalton) e "O que o modelo não explicava"
+- [x] Brincar: arrastar elétrons para dentro da esfera e equilibrar a carga total
+- [ ] Foto do Thomson em `src/assets/photos/thomson.jpg` (com origem e licença)
+- [ ] Testar em tela grande/projetor e revisar os textos com o professor
 
 ## Etapa 4 — Cena do Rutherford ⬜
 

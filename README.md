@@ -2,7 +2,7 @@
 
 Ferramenta web de apresentação, cheia de animações, para ensinar a **evolução dos modelos atômicos** em aulas de Química do ensino médio. Feita para ser **projetada em sala** pelo professor.
 
-> **Status:** em desenvolvimento. Tela inicial, roda de cartões e a cena do Dalton (3D) prontas; as demais cenas em construção.
+> **Status:** em desenvolvimento. Tela inicial, roda de cartões e as cenas do Dalton e do Thomson (3D) prontas; as demais cenas em construção.
 
 ## O que o projeto faz
 
@@ -49,6 +49,6 @@ npm run build    # gera dist/index.html (arquivo único, funciona offline)
 | [Diário](docs/diario.md) | Evolução e ideias de posts |
 | [CHANGELOG](CHANGELOG.md) | Histórico de versões |
 
-## Autor
+## Autores
 
 Willian Teotonio, Kemuel Darckson, Yan Pedro e João Rodrigues

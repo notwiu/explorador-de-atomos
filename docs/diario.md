@@ -8,6 +8,21 @@ Registro cronológico do que foi feito e aprendido. Serve de matéria-prima para
 
 ## Entradas
 
+### 15/10/2026 — Cena do Thomson em 3D
+**O que foi feito**
+- Criada a **cena do Thomson** em 3D com nove passos: o modelo de Dalton e a pergunta, o tubo de raios catódicos, o feixe, o desvio em direção à placa positiva, o zoom nos elétrons, a esfera positiva, o pudim de passas, a limitação do modelo e o brincar.
+- No brincar, o aluno arrasta elétrons para dentro da esfera e vê a carga total mudar (positiva, negativa ou neutra com um anel luminoso).
+- As ferramentas 3D em comum (rótulos, brilhos) foram para `src/three/helpers.js`, e a cena do Dalton passou a usá-las.
+- Testes automáticos da lógica do 3D e do fluxo de telas, todos passando (sem placa de vídeo).
+- Autores atualizados no README: Willian Teotonio, Kemuel Darckson, Yan Pedro e João Rodrigues.
+
+**Aprendizado**
+- Descrever a cena por poucos parâmetros por passo (tamanho do feixe, desvio, quanto do átomo aparece) tornou as transições simples e fáceis de ajustar.
+- Os testes encontraram dois problemas antes de chegarem à sala: elétrons que ficavam sobrepostos ao soltar e uma câmera que podia ficar travada se o arraste fosse interrompido pelo teclado.
+- Em ciência, vale avisar quando a imagem é uma simplificação: o feixe real quase não se vê, e a nota do professor explica isso.
+
+**Próximo passo:** testar no projetor, adicionar a foto do Thomson e, quando pedirem, criar a cena do Rutherford.
+
 ### 11/10/2026 — Cena do Dalton em 3D
 **O que foi feito**
 - Esclarecido que "brincar com os modelos" é algo visual **dentro de cada modelo**, em 3D, e não um laboratório separado.

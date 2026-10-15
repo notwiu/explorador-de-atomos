@@ -30,6 +30,8 @@ Cada decisão importante fica registrada aqui, com data, motivo e consequências
 | D22 | Tudo em 3D, com three.js direto (sem React Three Fiber) | Ativa |
 | D23 | "Brincar" é um passo dentro de cada cena, não um laboratório separado | Ativa |
 | D24 | Cena do Dalton: oito passos, com elementos genéricos A, B e C | Proposta (confirmar) |
+| D25 | Cena do Thomson: nove passos, com o experimento do tubo e o feixe desenhado visível | Proposta (confirmar) |
+| D26 | Ferramentas 3D compartilhadas e cenas descritas por parâmetros | Ativa |
 
 ---
 
@@ -161,13 +163,24 @@ Cada decisão importante fica registrada aqui, com data, motivo e consequências
 - **Decisão:** oito passos (matéria, átomo, elementos, combinação, reação antes e depois, limitação, brincar). Os elementos são exemplos genéricos A (laranja), B (azul) e C (rosa), sem fórmulas modernas, para ficar fiel à ideia de Dalton. A reação mostra dois compostos A+B e dois átomos C, que trocam de parceiros (6 átomos antes e depois).
 - **Consequência:** os textos precisam de revisão do professor.
 
+### D25 — Cena do Thomson
+- **Data:** 15/10/2026
+- **Contexto:** pedido de uma cena com o mesmo nível de qualidade do Dalton.
+- **Decisão:** nove passos: (1) por que mudar o modelo, (2) o tubo de raios catódicos, (3) o feixe, (4) o desvio, (5) os elétrons, (6) a carga positiva, (7) o pudim de passas, (8) o que o modelo não explicava, (9) brincar. O brincar é arrastar elétrons para dentro da esfera até a carga total ficar zero (com a esfera mudando de cor se sobrar ou faltar carga).
+- **Cuidados científicos:** o feixe é desenhado visível para facilitar, e a nota do professor avisa que na vida real ele quase não se vê (o brilho aparece onde atinge a tela). O desvio é na direção da placa positiva, pois o feixe é negativo. A carga da esfera na cena (+8) é um número de exemplo.
+- **Consequência:** os textos precisam de revisão do professor.
+
+### D26 — Ferramentas 3D compartilhadas
+- **Data:** 15/10/2026
+- **Decisão:** rótulos 3D, brilhos, números repetíveis e liberação de memória foram para `src/three/helpers.js`. Cada cena descreve seu estado com poucos parâmetros por passo e anima de um passo para o outro, o que facilita criar as próximas cenas.
+
 ---
 
 ## Decisões em aberto
 
 | Tema | Opções | Responsável |
 |---|---|---|
-| Confirmar D13 a D17, D19, D20 e D24 | Aceitar ou trocar | Willian |
+| Confirmar D13 a D17, D19, D20, D24 e D25 | Aceitar ou trocar | Autores |
 | Fotos | Embutidas no arquivo único ou pasta ao lado | Willian |
 | Alternativas do quiz | Ordem fixa ou embaralhada | Willian + professor |
 

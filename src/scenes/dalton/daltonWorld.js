@@ -1,5 +1,6 @@
 import * as THREE from 'three'
 import { animate } from 'framer-motion'
+import { clamp, smooth, mulberry32, makeLabel } from '../../three/helpers.js'
 
 // Mundo 3D da cena do Dalton.
 //
@@ -30,20 +31,6 @@ const elementOf = (i) => (i < 4 ? 'A' : i < 8 ? 'B' : i < 12 ? 'C' : null)
 const v = (x, y, z) => new THREE.Vector3(x, y, z)
 const col = (hex) => new THREE.Color(hex)
 const HIDE = () => ({ pos: null, scale: 0, color: null }) // some, mantendo posição e cor
-const clamp = (x, a, b) => Math.min(b, Math.max(a, x))
-const smooth = (x) => x * x * (3 - 2 * x)
-
-function mulberry32(seed) {
-  let a = seed
-  return () => {
-    a |= 0
-    a = (a + 0x6d2b79f5) | 0
-    let t = Math.imul(a ^ (a >>> 15), 1 | a)
-    t = (t + Math.imul(t ^ (t >>> 7), 61 | t)) ^ t
-    return ((t ^ (t >>> 14)) >>> 0) / 4294967296
-  }
-}
-
 // ---------- Desenhos (alvos de cada passo) ----------
 
 const allHidden = () => Array.from({ length: N }, HIDE)
@@ -180,30 +167,6 @@ const LABELS = [
   { key: 'q', text: '?', color: '#ffffff', pos: v(1.7, 1.9, 0), size: [1.2, 1.2], steps: [6] },
 ]
 
-function makeLabel({ text, color, size }) {
-  const canvas = document.createElement('canvas')
-  canvas.width = 1024
-  canvas.height = Math.round((1024 * size[1]) / size[0])
-  const ctx = canvas.getContext('2d')
-  if (ctx) {
-    const fontSize = Math.round(canvas.height * 0.62)
-    ctx.font = `800 ${fontSize}px "Bricolage Grotesque Variable", "Atkinson Hyperlegible", sans-serif`
-    ctx.textAlign = 'center'
-    ctx.textBaseline = 'middle'
-    ctx.fillStyle = color
-    ctx.shadowColor = 'rgba(0,0,0,0.5)'
-    ctx.shadowBlur = 12
-    ctx.fillText(text, canvas.width / 2, canvas.height / 2 + fontSize * 0.04)
-  }
-  const texture = new THREE.CanvasTexture(canvas)
-  texture.colorSpace = THREE.SRGBColorSpace
-  const material = new THREE.SpriteMaterial({ map: texture, transparent: true, opacity: 0, depthTest: false })
-  const sprite = new THREE.Sprite(material)
-  sprite.scale.set(size[0], size[1], 1)
-  sprite.renderOrder = 10
-  return sprite
-}
-
 // ---------- O mundo ----------
 
 export function createDaltonWorld(stage, { reduced = false } = {}) {
@@ -316,6 +279,7 @@ export function createDaltonWorld(stage, { reduced = false } = {}) {
     step = target
     interactive = false
     hoverGroup = null
+    if (dragging) controls.enabled = true // arraste interrompido
     dragging = null
     atoms.forEach((a) => (a.group = a.i))
     bobAmp = BOB[target]
@@ -540,10 +504,10 @@ export function createDaltonWorld(stage, { reduced = false } = {}) {
   function onDragEnd() {
     window.removeEventListener('pointermove', onDragMove)
     window.removeEventListener('pointerup', onDragEnd)
+    controls.enabled = true
     if (!dragging) return
     const gid = dragging.gid
     dragging = null
-    controls.enabled = true
     if (!tryBond(gid)) resolveOverlap(gid)
     setCursor('grab')
   }

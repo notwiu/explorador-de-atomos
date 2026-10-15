@@ -114,6 +114,25 @@ Primeira cena pronta. Define o padrão das próximas.
 
 **Cores dos átomos:** laranja (A), azul (B) e rosa (C). São cores de elementos de exemplo, não têm relação com as cores dos modelos na roda.
 
+## 2.4 Cena do Thomson (3D)
+
+Segue o mesmo padrão do Dalton (área 3D, widget lateral, legenda numa faixa própria, notas do professor, teclas).
+
+**Passos (9)**
+1. **Por que mudar o modelo?** A esfera maciça de Dalton aparece com um "?" pulsando.
+2. **O tubo de raios catódicos.** A esfera some e surge um tubo de vidro com cátodo, ânodo, placas e tela, com os nomes das partes.
+3. **Um feixe misterioso.** O cátodo brilha, o feixe cresce até a tela e uma mancha acende.
+4. **O feixe se desvia.** As placas ficam carregadas (+ em cima, − embaixo) e o feixe se curva para a placa positiva.
+5. **Partículas minúsculas e negativas.** Zoom nas partículas do feixe: os elétrons, que ficam maiores.
+6. **E a carga positiva?** O tubo some e surge uma esfera positiva, com sinais de mais espalhados.
+7. **Pudim de passas.** Os elétrons entram na esfera, um a um. Aparece "Carga total: 0 (neutro)".
+8. **O que o modelo não explicava.** A esfera com um "?" pulsando.
+9. **Hora de brincar.** Cinco elétrons dentro e sete soltos: arrastar para dentro ou para fora. A carga total aparece em cima (positiva em rosa, negativa em azul, neutra em verde-água com um anel luminoso), e a esfera muda de cor.
+
+**Câmera:** olha um pouco de lado para mostrar a profundidade do tubo e balança de leve; ao arrastar, o professor gira o modelo.
+
+**Cores:** violeta (cor do Thomson) na esfera, rosa para positivo e azul para negativo nas placas e na carga, ciano para os elétrons.
+
 ## 3. Layout de uma cena
 
 ```

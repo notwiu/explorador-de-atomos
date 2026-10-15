@@ -71,6 +71,8 @@ Tudo que é conteúdo (textos, anos, créditos, perguntas) fica em `src/data/`, 
 - `src/scenes/<modelo>/<Modelo>Scene.jsx` e `<modelo>World.js`: a cena e o seu mundo 3D. O mundo expõe `goTo(passo, opções)` e `dispose()`.
 - `src/scenes/index.js`: registro das cenas prontas. Item da roda sem cena abre a tela provisória.
 - `src/data/scenes/<modelo>.js`: textos de cada passo (título, texto e nota do professor).
+- `src/three/helpers.js`: ferramentas compartilhadas (rótulos 3D, brilhos, números repetíveis, liberação de memória).
+- **Cenas por parâmetros (Thomson):** o estado da cena é um conjunto de números (quanto do tubo aparece, tamanho do feixe, desvio, etc.). Cada passo define os valores e a transição anima de um conjunto para outro.
 - Animações entre passos usam `animate` do Framer Motion sobre os valores; as cenas não dependem de GSAP.
 - **Estoque de esferas (Dalton):** 125 esferas reaproveitadas em todos os passos. Cada passo define um "alvo" (posição, tamanho e cor) para cada esfera, e elas se transformam de um desenho para o outro.
 - **Desempenho:** modo leve usa esferas com menos faces, material simples, sem suavização de bordas e resolução 1x.
