@@ -36,7 +36,7 @@ Cada cena segue o mesmo padrão: 3D, passos com legenda, widget lateral, notas d
 - [x] Tela inicial (abertura) com animações
 - [x] Roda de cartões (cinco modelos + quiz), clicável e com teclado
 - [x] Navegação por teclado, tela cheia, modo leve, controles que somem sozinhos
-- [ ] Adicionar as fotos dos cientistas em `src/assets/photos/` (com crédito e licença). Dalton já tem foto (falta registrar origem e licença); faltam Thomson, Rutherford, Bohr e modelo atual
+- [ ] Adicionar as fotos dos cientistas em `src/assets/photos/` (com crédito e licença). Dalton e Thomson já têm foto (falta registrar origem e licença); faltam Rutherford, Bohr e modelo atual
 - [ ] Testar tudo no projetor da escola
 
 ## Etapa 2 — Cena do Dalton (3D) ✅
@@ -57,7 +57,7 @@ Cada cena segue o mesmo padrão: 3D, passos com legenda, widget lateral, notas d
 - [x] Esfera positiva e elétrons entrando: pudim de passas
 - [x] Passo "Por que mudar o modelo?" (limitação do Dalton) e "O que o modelo não explicava"
 - [x] Brincar: arrastar elétrons para dentro da esfera e equilibrar a carga total
-- [ ] Foto do Thomson em `src/assets/photos/thomson.jpg` (com origem e licença)
+- [x] Foto do Thomson em `src/assets/photos/thomson.jpg` (falta registrar origem e licença; se houver versão maior, trocar)
 - [ ] Testar em tela grande/projetor e revisar os textos com o professor
 
 ## Etapa 4 — Cena do Rutherford ⬜

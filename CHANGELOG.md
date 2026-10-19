@@ -6,6 +6,7 @@ Formato baseado em [Keep a Changelog](https://keepachangelog.com/pt-BR/1.1.0/).
 ## [Não lançado]
 
 ### Adicionado
+- Foto do Thomson (enviada pelo autor, em preto e branco) no widget lateral e no cartão da roda. Origem e licença ainda precisam ser registradas em `docs/conteudo-modelos.md`.
 - **Cena do Thomson em 3D** (nove passos): tubo de raios catódicos (cátodo, ânodo, placas e tela), feixe que se desvia para a placa positiva, zoom nos elétrons, esfera positiva e pudim de passas, limitação do modelo e **brincar** (arrastar elétrons para dentro da esfera e equilibrar a carga total).
 - `src/three/helpers.js` com ferramentas 3D compartilhadas (rótulos, brilhos, números repetíveis, liberação de memória).
 - Retrato do Dalton (foto enviada pelo autor, em preto e branco) no widget lateral e no cartão da roda. Origem e licença ainda precisam ser registradas em `docs/conteudo-modelos.md`.

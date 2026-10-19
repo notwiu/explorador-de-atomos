@@ -21,7 +21,9 @@ Registro cronológico do que foi feito e aprendido. Serve de matéria-prima para
 - Os testes encontraram dois problemas antes de chegarem à sala: elétrons que ficavam sobrepostos ao soltar e uma câmera que podia ficar travada se o arraste fosse interrompido pelo teclado.
 - Em ciência, vale avisar quando a imagem é uma simplificação: o feixe real quase não se vê, e a nota do professor explica isso.
 
-**Próximo passo:** testar no projetor, adicionar a foto do Thomson e, quando pedirem, criar a cena do Rutherford.
+**Ajuste:** a foto do Thomson (enviada pelo autor) entrou no widget lateral e no cartão da roda.
+
+**Próximo passo:** testar no projetor, registrar a origem das fotos e, quando pedirem, criar a cena do Rutherford.
 
 ### 11/10/2026 — Cena do Dalton em 3D
 **O que foi feito**
