@@ -2,11 +2,11 @@
 
 > Ferramenta web de apresentação, com muita animação, para ensinar e visualizar a evolução dos modelos atômicos em aulas de Química do ensino médio.
 
-**Status:** em desenvolvimento (tela inicial, roda de cartões e cenas do Dalton e do Thomson em 3D prontas)
+**Status:** em desenvolvimento (tela inicial, roda de cartões e cenas do Dalton, do Thomson e do Rutherford em 3D prontas)
 **Autores:** Willian Teotonio, Kemuel Darckson, Yan Pedro e João Rodrigues
 **Tipo:** trabalho de faculdade com aplicação em escola pública
 **Stack:** React + Vite
-**Última atualização:** 10/10/2026 (v0.6 da documentação)
+**Última atualização:** 20/10/2026 (v0.7 da documentação)
 
 > Este é o documento-síntese. Os detalhes estão nos demais arquivos da pasta `docs/` (veja o índice no [README](../README.md)).
 
@@ -156,7 +156,7 @@ Estrutura de pastas e detalhes: [arquitetura.md](arquitetura.md).
 | 1 | Projeto base e **tela inicial** (feitos); fluxo geral completo e widget lateral entram com as cenas |
 | 2 | Cena do **Dalton** em 3D (feita; define o padrão das cenas) |
 | 3 | Cena do **Thomson** em 3D (feita) |
-| 4 | Cena do Rutherford |
+| 4 | Cena do **Rutherford** em 3D (feita) |
 | 5 | Cena do Bohr |
 | 6 | Cena do modelo atual |
 | 7 | Quiz |
@@ -205,3 +205,4 @@ Detalhes: [roadmap.md](roadmap.md).
 | 0.4 | 10/10/2026 | Roda de cartões clicáveis (estilo jogo) como linha do tempo; quiz como sexto cartão; decisões D18 a D21 |
 | 0.5 | 11/10/2026 | Tudo em 3D (three.js); "brincar" passa a ser um passo dentro de cada cena, sem laboratório separado; cena do Dalton criada; decisões D22 a D24 |
 | 0.6 | 15/10/2026 | Cena do Thomson em 3D (tubo de raios catódicos, esfera positiva e brincar de equilibrar cargas); decisões D25 e D26; autores atualizados |
+| 0.7 | 20/10/2026 | Cena do Rutherford em 3D (experimento da folha de ouro, zoom no átomo, núcleo e brincar de disparar partículas alfa); decisões D27 e D28 |

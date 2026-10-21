@@ -73,6 +73,8 @@ Tudo que é conteúdo (textos, anos, créditos, perguntas) fica em `src/data/`, 
 - `src/data/scenes/<modelo>.js`: textos de cada passo (título, texto e nota do professor).
 - `src/three/helpers.js`: ferramentas compartilhadas (rótulos 3D, brilhos, números repetíveis, liberação de memória).
 - **Cenas por parâmetros (Thomson):** o estado da cena é um conjunto de números (quanto do tubo aparece, tamanho do feixe, desvio, etc.). Cada passo define os valores e a transição anima de um conjunto para outro.
+- **Física (Rutherford):** `scatterPath(b, phi)` integra o movimento da partícula alfa repelida pelo núcleo e devolve os pontos, os tempos, o ângulo de desvio e a classe (passou, desviou ou voltou). Fica exportada e é testada.
+- **Pool de partículas (Rutherford):** 64 partículas e 90 brilhos reaproveitados; cada partícula tem um rastro (linha) que cresce enquanto ela se move e some aos poucos.
 - Animações entre passos usam `animate` do Framer Motion sobre os valores; as cenas não dependem de GSAP.
 - **Estoque de esferas (Dalton):** 125 esferas reaproveitadas em todos os passos. Cada passo define um "alvo" (posição, tamanho e cor) para cada esfera, e elas se transformam de um desenho para o outro.
 - **Desempenho:** modo leve usa esferas com menos faces, material simples, sem suavização de bordas e resolução 1x.

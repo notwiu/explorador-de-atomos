@@ -8,6 +8,20 @@ Registro cronológico do que foi feito e aprendido. Serve de matéria-prima para
 
 ## Entradas
 
+### 20/10/2026 — Cena do Rutherford em 3D
+**O que foi feito**
+- Criada a **cena do Rutherford** em 3D com nove passos: a previsão do modelo de Thomson, o experimento da folha de ouro, o zoom até o átomo, o núcleo, o modelo planetário, a limitação e o brincar.
+- No brincar, o aluno clica ou arrasta para disparar partículas alfa e vê o que acontece conforme mira longe do núcleo, perto ou bem no centro. Um contador mostra quantas passaram, desviaram e voltaram.
+- As trajetórias dentro do átomo são calculadas com a repulsão entre cargas positivas, então o desvio muda de forma realista conforme o ponto de mira.
+- Testes automáticos (física, lógica do 3D, cliques e fluxo de telas), todos passando.
+
+**Aprendizado**
+- Simular a física em vez de desenhar caminhos "à mão" deixa a cena mais honesta e ainda mais bonita: o núcleo "pulsa" quando uma partícula passa perto.
+- O desenho precisa avisar o que está fora de escala (o núcleo real é muito menor); a nota do professor explica isso.
+- Erro meu durante a entrega: um comando apagou a pasta de código da entrega antes de eu conferir a origem. Recuperei tudo pelo zip anterior e refiz os testes. Lição: conferir que a origem existe antes de apagar qualquer coisa.
+
+**Próximo passo:** testar no projetor, adicionar a foto do Rutherford e, quando pedirem, criar a cena do Bohr.
+
 ### 15/10/2026 — Cena do Thomson em 3D
 **O que foi feito**
 - Criada a **cena do Thomson** em 3D com nove passos: o modelo de Dalton e a pergunta, o tubo de raios catódicos, o feixe, o desvio em direção à placa positiva, o zoom nos elétrons, a esfera positiva, o pudim de passas, a limitação do modelo e o brincar.

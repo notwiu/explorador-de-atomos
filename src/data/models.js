@@ -25,7 +25,16 @@ export const models = [
     shortText:
       'Thomson descobriu o elétron e mostrou que o átomo não é indivisível. Ele imaginou uma esfera positiva com elétrons negativos espalhados, como passas num pudim.',
   },
-  { id: 'rutherford', label: 'Rutherford', year: 1911, modelName: 'Modelo nuclear', accent: 'var(--c-rutherford)' },
+  {
+    id: 'rutherford',
+    label: 'Rutherford',
+    year: 1911,
+    modelName: 'Modelo nuclear',
+    accent: 'var(--c-rutherford)',
+    scientist: 'Ernest Rutherford',
+    shortText:
+      'Rutherford disparou partículas contra uma folha de ouro finíssima. A maioria atravessou, mas algumas desviaram. Conclusão: o átomo tem um núcleo minúsculo, denso e positivo, e é quase todo espaço vazio.',
+  },
   { id: 'bohr', label: 'Bohr', year: 1913, modelName: 'Camadas de energia', accent: 'var(--c-bohr)' },
   { id: 'quantum', label: 'Modelo atual', year: 1926, modelName: 'Orbitais', accent: 'var(--c-quantum)' },
 ]

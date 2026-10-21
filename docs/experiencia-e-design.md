@@ -133,6 +133,25 @@ Segue o mesmo padrão do Dalton (área 3D, widget lateral, legenda numa faixa pr
 
 **Cores:** violeta (cor do Thomson) na esfera, rosa para positivo e azul para negativo nas placas e na carga, ciano para os elétrons.
 
+## 2.5 Cena do Rutherford (3D)
+
+Segue o mesmo padrão das outras cenas.
+
+**Passos (9)**
+1. **Por que mudar o modelo?** O pudim de Thomson, com partículas que o atravessam quase em linha reta ("Previsão: atravessam").
+2. **O experimento da folha de ouro.** Surgem a fonte de partículas alfa (bloco com um furo), a folha de ouro e uma tela esférica que brilha, com os nomes das partes.
+3. **A maioria atravessa.** Um fluxo de partículas; os brilhos na tela aparecem à frente da folha.
+4. **Mas algumas desviam.** Brilhos também nas laterais e, bem de vez em quando, do lado da fonte (partículas que voltam).
+5. **O átomo é quase todo vazio.** Zoom: a folha cresce e some, e surge um átomo de ouro com um núcleo minúsculo e elétrons distantes. As partículas passam longe do centro e seguem em frente.
+6. **Um núcleo pequeno, denso e positivo.** Partículas passam perto e são repelidas (o núcleo "pulsa"); as de frente voltam.
+7. **O modelo de Rutherford.** Órbitas dos elétrons como planetas, com os nomes "Núcleo (+)" e "Elétrons (−)".
+8. **O que o modelo não explicava.** Um elétron espirala até o núcleo, com um "?" pulsando.
+9. **Hora de brincar.** Uma área de pontaria (um círculo): clicar ou arrastar dispara partículas na direção do ponto. A contagem mostra quantas passaram, desviaram e voltaram.
+
+**Câmera:** no laboratório ela olha um pouco de lado e se desloca para enquadrar fonte, folha e tela; no átomo, volta ao centro. Botão direito do mouse gira no passo de brincar.
+
+**Cores:** coral nas partículas alfa e no núcleo, ciano nos elétrons e na tela, dourado na folha, violeta no modelo de Thomson.
+
 ## 3. Layout de uma cena
 
 ```

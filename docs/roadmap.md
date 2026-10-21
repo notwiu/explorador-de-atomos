@@ -10,7 +10,7 @@ Legenda: ✅ concluído · 🔄 em andamento · ⬜ pendente
 | 1 | Projeto base, tela inicial e roda de cartões | ✅ |
 | 2 | Cena do **Dalton** em 3D (define o padrão das cenas) | ✅ |
 | 3 | Cena do **Thomson** em 3D | ✅ |
-| 4 | Cena do Rutherford | ⬜ |
+| 4 | Cena do **Rutherford** em 3D | ✅ |
 | 5 | Cena do Bohr | ⬜ |
 | 6 | Cena do modelo atual | ⬜ |
 | 7 | Quiz | ⬜ |
@@ -60,11 +60,17 @@ Cada cena segue o mesmo padrão: 3D, passos com legenda, widget lateral, notas d
 - [x] Foto do Thomson em `src/assets/photos/thomson.jpg` (falta registrar origem e licença; se houver versão maior, trocar)
 - [ ] Testar em tela grande/projetor e revisar os textos com o professor
 
-## Etapa 4 — Cena do Rutherford ⬜
+## Etapa 4 — Cena do Rutherford (3D) ✅
 
-- [ ] Canhão de partículas alfa e folha de ouro em 3D
-- [ ] Desvios (a maioria passa, poucas desviam), zoom até o núcleo
-- [ ] Brincar (ideia: controlar a quantidade de partículas)
+- [x] Previsão do modelo de Thomson: partículas atravessariam quase sem desviar
+- [x] Experimento 3D: fonte de partículas alfa, folha de ouro e tela que brilha (cintilações)
+- [x] A maioria atravessa; algumas desviam e pouquíssimas voltam
+- [x] Zoom até um átomo de ouro (a folha cresce e some), núcleo minúsculo e elétrons distantes
+- [x] Trajetórias calculadas com a repulsão entre cargas positivas (espalhamento de Rutherford)
+- [x] Modelo planetário com órbitas e a limitação (o elétron cairia no núcleo)
+- [x] Brincar: clicar ou arrastar para disparar partículas alfa, com contador (passaram, desviaram, voltaram)
+- [ ] Foto do Rutherford em `src/assets/photos/rutherford.jpg` (com origem e licença)
+- [ ] Testar em tela grande/projetor e revisar os textos com o professor
 
 ## Etapa 5 — Cena do Bohr ⬜
 

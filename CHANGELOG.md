@@ -6,6 +6,8 @@ Formato baseado em [Keep a Changelog](https://keepachangelog.com/pt-BR/1.1.0/).
 ## [Não lançado]
 
 ### Adicionado
+- **Cena do Rutherford em 3D** (nove passos): previsão do modelo de Thomson, experimento da folha de ouro (fonte de partículas alfa, folha e tela que brilha), zoom até um átomo de ouro, núcleo, modelo planetário, limitação (o elétron cairia no núcleo) e **brincar** (clicar ou arrastar para disparar partículas alfa, com contagem de quantas passaram, desviaram e voltaram).
+- Trajetórias das partículas dentro do átomo calculadas com a física do espalhamento (repulsão entre cargas positivas).
 - Foto do Thomson (enviada pelo autor, em preto e branco) no widget lateral e no cartão da roda. Origem e licença ainda precisam ser registradas em `docs/conteudo-modelos.md`.
 - **Cena do Thomson em 3D** (nove passos): tubo de raios catódicos (cátodo, ânodo, placas e tela), feixe que se desvia para a placa positiva, zoom nos elétrons, esfera positiva e pudim de passas, limitação do modelo e **brincar** (arrastar elétrons para dentro da esfera e equilibrar a carga total).
 - `src/three/helpers.js` com ferramentas 3D compartilhadas (rótulos, brilhos, números repetíveis, liberação de memória).

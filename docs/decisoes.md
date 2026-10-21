@@ -32,6 +32,8 @@ Cada decisão importante fica registrada aqui, com data, motivo e consequências
 | D24 | Cena do Dalton: oito passos, com elementos genéricos A, B e C | Proposta (confirmar) |
 | D25 | Cena do Thomson: nove passos, com o experimento do tubo e o feixe desenhado visível | Proposta (confirmar) |
 | D26 | Ferramentas 3D compartilhadas e cenas descritas por parâmetros | Ativa |
+| D27 | Cena do Rutherford: nove passos, com física do espalhamento e duas escalas (laboratório e átomo) | Proposta (confirmar) |
+| D28 | No brincar do Rutherford, clique e arraste disparam partículas; botão direito gira a câmera | Proposta (confirmar) |
 
 ---
 
@@ -174,13 +176,25 @@ Cada decisão importante fica registrada aqui, com data, motivo e consequências
 - **Data:** 15/10/2026
 - **Decisão:** rótulos 3D, brilhos, números repetíveis e liberação de memória foram para `src/three/helpers.js`. Cada cena descreve seu estado com poucos parâmetros por passo e anima de um passo para o outro, o que facilita criar as próximas cenas.
 
+### D27 — Cena do Rutherford
+- **Data:** 20/10/2026
+- **Decisão:** nove passos: (1) por que mudar o modelo (previsão do Thomson), (2) o experimento, (3) a maioria atravessa, (4) algumas desviam e poucas voltam, (5) o átomo é quase todo vazio, (6) o núcleo, (7) o modelo planetário, (8) o que o modelo não explicava, (9) brincar.
+- **Duas escalas:** o laboratório (fonte, folha e tela que brilha) e o átomo, ligados por um zoom. Dentro do átomo, as trajetórias são **calculadas** com a repulsão entre cargas positivas (a partícula é repelida com uma força que diminui com o quadrado da distância), então o desvio depende de por onde a partícula passa: longe quase não desvia, perto desvia, de frente volta. No laboratório as trajetórias são desenhadas (maioria reta, algumas desviadas, poucas de volta).
+- **Cuidados científicos:** o desenho está fora de escala (o núcleo real é muito menor), e a nota do professor diz isso. As partículas alfa são positivas e vêm de uma fonte radioativa. O brilho na tela representa as cintilações observadas.
+- **Consequência:** os textos precisam de revisão do professor.
+
+### D28 — Controles do brincar no Rutherford
+- **Data:** 20/10/2026
+- **Decisão:** no último passo, clicar ou arrastar dispara partículas alfa na direção do ponto mirado (quanto mais perto do centro, maior o desvio); o botão direito do mouse gira a câmera; R zera a contagem.
+- **Consequência:** nesse passo, arrastar com o botão esquerdo não gira a câmera.
+
 ---
 
 ## Decisões em aberto
 
 | Tema | Opções | Responsável |
 |---|---|---|
-| Confirmar D13 a D17, D19, D20, D24 e D25 | Aceitar ou trocar | Autores |
+| Confirmar D13 a D17, D19, D20, D24, D25, D27 e D28 | Aceitar ou trocar | Autores |
 | Fotos | Embutidas no arquivo único ou pasta ao lado | Willian |
 | Alternativas do quiz | Ordem fixa ou embaralhada | Willian + professor |
 

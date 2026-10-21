@@ -115,6 +115,22 @@
 
 **Animação:** canhão de partículas, folha de ouro, desvios, zoom no núcleo.
 
+**Passos da cena (texto exibido; espelha `src/data/scenes/rutherford.js`):**
+
+| # | Título | Texto | Nota do professor |
+|---|---|---|---|
+| 1 | Por que mudar o modelo? | No modelo de Thomson, a carga positiva está espalhada pelo átomo todo. Partículas positivas atiradas contra ele deveriam atravessar quase sem desviar. | Pergunte à turma: o que vocês acham que aconteceria com as partículas se o átomo fosse um pudim maciço? |
+| 2 | O experimento da folha de ouro | Rutherford, com Geiger e Marsden, apontou partículas alfa (positivas) para uma folha de ouro finíssima, cercada por uma tela que brilha onde uma partícula bate. | As partículas alfa saem de um material radioativo. Cada brilho na tela (uma pequena cintilação) mostra onde uma partícula chegou. |
+| 3 | A maioria atravessa | Quase todas as partículas atravessaram a folha sem se desviar. O átomo é, em grande parte, espaço vazio. | |
+| 4 | Mas algumas desviam | Algumas partículas se desviaram, e pouquíssimas voltaram. Isso não era esperado pelo modelo de Thomson. | Rutherford comparou o resultado a atirar uma bala de canhão num lenço de papel e ela voltar. |
+| 5 | O átomo é quase todo vazio | De perto, num átomo de ouro: quase todas as partículas passam longe do centro e seguem em frente. | O desenho está fora de escala: o núcleo real é muito menor, cerca de 100 mil vezes menor que o átomo. Se o átomo fosse um estádio de futebol, o núcleo seria um grão pequeno no centro. |
+| 6 | Um núcleo pequeno, denso e positivo | Partículas que passam perto do centro são repelidas, e as que vêm de frente voltam. Cargas positivas se repelem: o centro é minúsculo, denso e positivo. | Pergunte: por que a partícula alfa é empurrada para longe do núcleo? (Cargas de mesmo sinal se repelem.) |
+| 7 | O modelo de Rutherford | O átomo tem um núcleo minúsculo, denso e positivo, com os elétrons ao redor, longe dele, como planetas em volta do Sol. | Por isso o modelo é chamado de nuclear ou planetário. Lembre que o desenho está fora de escala. |
+| 8 | O que o modelo não explicava | Pelas leis da física da época, o elétron em órbita perderia energia e cairia no núcleo. O modelo também não explicava as cores da luz emitida pelos átomos. | Deixe a pergunta no ar: por que os átomos são estáveis? Bohr vai propor uma resposta. |
+| 9 | Hora de brincar | Clique ou arraste para disparar partículas alfa. Mire longe do núcleo ou bem no centro e veja o que acontece. | Peça à turma para tentar fazer a partícula voltar. Onde é preciso mirar? |
+
+*(O passo 1 usa a limitação do modelo de Thomson como "por que mudou". Na cena, a tela que brilha, a fonte de partículas e a folha não estão em escala real. Dentro do átomo, as trajetórias são calculadas com a repulsão entre cargas positivas, mas as distâncias são ilustrativas. A comparação da "bala de canhão num lenço de papel" e a analogia do estádio estão ligadas a lembranças e a ordens de grandeza: revisar com o professor.)*
+
 ---
 
 ## 4. Bohr — camadas de energia
