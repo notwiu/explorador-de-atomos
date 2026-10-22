@@ -159,8 +159,8 @@ Ao concluir qualquer mudança relevante, **atualize a documentação no mesmo co
 
 ## 10. Estado atual
 
-- **Fase:** Etapas 1 a 4 concluídas. Prontos: projeto base, **tela inicial**, **roda de cartões** e as cenas do **Dalton** (8 passos), do **Thomson** (9) e do **Rutherford** (9), todas em 3D e com brincar. Os outros cartões abrem uma tela provisória.
-- **Próximo passo:** o autor pede a próxima cena (Bohr). Reaproveitar `Stage3D`, `SceneShell`, `AtomWidget`, `src/three/helpers.js` e o padrão de `src/scenes/dalton/`, `thomson/` e `rutherford/` (a cena do Rutherford tem trajetórias calculadas e partículas em pool). Para adicionar uma cena: pasta da cena, textos em `src/data/scenes/`, registro em `src/scenes/index.js` e dados do widget em `src/data/models.js`.
+- **Fase:** Etapas 1 a 5 concluídas. Prontos: projeto base, **tela inicial**, **roda de cartões** e as cenas do **Dalton** (8 passos), do **Thomson** (9), do **Rutherford** (9) e do **Bohr** (9), todas em 3D e com brincar. Os cartões do modelo atual e do quiz abrem uma tela provisória.
+- **Próximo passo:** o autor pede a próxima cena (modelo atual, quântico). Reaproveitar `Stage3D`, `SceneShell`, `AtomWidget`, `src/three/helpers.js` e o padrão das cenas em `src/scenes/`. Para adicionar uma cena: pasta da cena, textos em `src/data/scenes/`, registro em `src/scenes/index.js` e dados do widget em `src/data/models.js`. Depois vem o quiz (Etapa 7).
 - **Ritmo de trabalho:** uma etapa por vez, com commit e documentação a cada passo. Não adiantar cenas que o autor ainda não pediu.
 - Veja `docs/roadmap.md` para o detalhamento.
 

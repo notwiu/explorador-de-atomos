@@ -34,6 +34,8 @@ Cada decisão importante fica registrada aqui, com data, motivo e consequências
 | D26 | Ferramentas 3D compartilhadas e cenas descritas por parâmetros | Ativa |
 | D27 | Cena do Rutherford: nove passos, com física do espalhamento e duas escalas (laboratório e átomo) | Proposta (confirmar) |
 | D28 | No brincar do Rutherford, clique e arraste disparam partículas; botão direito gira a câmera | Proposta (confirmar) |
+| D29 | Cena do Bohr: átomo de hidrogênio, nove passos, com a luz visível das quedas até a camada 2 | Proposta (confirmar) |
+| D30 | No brincar do Bohr, o clique em camada ou nível move o elétron e o espectro se forma | Proposta (confirmar) |
 
 ---
 
@@ -188,13 +190,25 @@ Cada decisão importante fica registrada aqui, com data, motivo e consequências
 - **Decisão:** no último passo, clicar ou arrastar dispara partículas alfa na direção do ponto mirado (quanto mais perto do centro, maior o desvio); o botão direito do mouse gira a câmera; R zera a contagem.
 - **Consequência:** nesse passo, arrastar com o botão esquerdo não gira a câmera.
 
+### D29 — Cena do Bohr
+- **Data:** 21/10/2026
+- **Decisão:** nove passos: (1) por que mudar o modelo, (2) camadas de energia, (3) ganhar energia e saltar, (4) voltar emitindo luz, (5) a cor depende do salto, (6) fogos de artifício e neon, (7) o modelo de Bohr, (8) o que o modelo não explicava, (9) brincar.
+- **Base científica:** átomo de hidrogênio. A luz visível vem das quedas até a camada 2 (série de Balmer): 3→2 vermelha, 4→2 azul-esverdeada, 5→2 azul e 6→2 violeta. Quedas até a camada 1 emitem ultravioleta, e até a 3 ou acima, infravermelho (invisíveis). O fóton absorvido ao subir tem a mesma energia do que sai ao descer.
+- **Cuidados científicos:** o desenho está fora de escala (distâncias das camadas e alturas da escada). Nos fogos, as cores seguem o teste da chama (sódio amarelo, cobre verde, estrôncio vermelho, potássio lilás), que é uma simplificação.
+- **Consequência:** os textos e as cores precisam de revisão do professor.
+
+### D30 — Controles do brincar no Bohr
+- **Data:** 21/10/2026
+- **Decisão:** clicar numa camada (anel) ou num nível da escada move o elétron até lá, com o fóton de entrada ou de saída e a cor certa. Até 2 pedidos ficam na fila. O espectro do hidrogênio vai ganhando as linhas que o aluno descobrir. Arrastar o fundo gira a câmera. R recomeça.
+- **Consequência:** as camadas e os níveis têm áreas de clique invisíveis maiores que o desenho, para facilitar a mira no projetor.
+
 ---
 
 ## Decisões em aberto
 
 | Tema | Opções | Responsável |
 |---|---|---|
-| Confirmar D13 a D17, D19, D20, D24, D25, D27 e D28 | Aceitar ou trocar | Autores |
+| Confirmar D13 a D17, D19, D20, D24, D25, D27 a D30 | Aceitar ou trocar | Autores |
 | Fotos | Embutidas no arquivo único ou pasta ao lado | Willian |
 | Alternativas do quiz | Ordem fixa ou embaralhada | Willian + professor |
 

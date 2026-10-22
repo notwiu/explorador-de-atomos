@@ -159,6 +159,31 @@
 
 **Animação:** camadas luminosas, saltos com flash, fótons coloridos.
 
+**Passos da cena (texto exibido; espelha `src/data/scenes/bohr.js`):**
+
+| # | Título | Texto | Nota do professor |
+|---|---|---|---|
+| 1 | Por que mudar o modelo? | O modelo de Rutherford não explicava por que os elétrons não caem no núcleo, nem as cores da luz emitida pelos átomos. | Lembre a pergunta deixada no ar na cena anterior: por que os átomos são estáveis? |
+| 2 | Camadas de energia | Bohr propôs que os elétrons só podem ocupar certas camadas, cada uma com uma energia definida. Nelas, o elétron não perde energia. | O desenho está fora de escala. A escada à direita mostra a mesma ideia: cada camada é um nível de energia. |
+| 3 | Ganhando energia, o elétron salta | Ao absorver energia, o elétron salta para uma camada mais externa. | Aqui o elétron começa na camada 2. No hidrogênio, a de menor energia é a 1, mas a luz visível vem das quedas até a camada 2. |
+| 4 | Ao voltar, ele emite luz | Quando o elétron volta para uma camada mais interna, devolve a energia em forma de luz. | A energia que entrou sai como luz: é a mesma quantidade. |
+| 5 | A cor depende do salto | Cada salto entre camadas emite uma luz de cor diferente. Os saltos do hidrogênio até a camada 2 formam o espectro que vemos. | Esses quatro saltos são as linhas visíveis do hidrogênio: vermelha, azul-esverdeada, azul e violeta. Há outras linhas, mas invisíveis (ultravioleta e infravermelho). |
+| 6 | Fogos de artifício e neon | Cada elemento emite cores próprias quando seus elétrons saltam e voltam. É por isso que os fogos de artifício e as luzes de neon têm cores diferentes. | Pergunte à turma: por que cada fogo de artifício tem uma cor diferente? Exemplos do teste da chama: sódio (amarelo), cobre (verde), estrôncio (vermelho) e potássio (lilás). |
+| 7 | O modelo de Bohr | Os elétrons ficam em camadas com energias definidas. Ao ganhar energia, o elétron salta para uma camada mais externa; ao voltar, devolve essa energia em forma de luz. | Esse modelo funciona muito bem para o hidrogênio, o átomo mais simples. |
+| 8 | O que o modelo não explicava | Funciona bem para o hidrogênio, mas não explica átomos com mais elétrons nem o comportamento ondulatório dos elétrons. | Deixe a pergunta no ar: onde exatamente está o elétron? O próximo modelo responde de um jeito surpreendente. |
+| 9 | Hora de brincar | Clique numa camada (ou num nível da escada) para mover o elétron. Veja a luz que ele emite e como o espectro vai se formando. | Peça à turma para descobrir quais saltos emitem luz visível. Dica: são os que terminam na camada 2. |
+
+**Dados usados na cena (hidrogênio, série de Balmer; a revisar com o professor):**
+
+| Salto | Cor | Comprimento de onda |
+|---|---|---|
+| 3 → 2 | vermelha | cerca de 656 nm |
+| 4 → 2 | azul-esverdeada | cerca de 486 nm |
+| 5 → 2 | azul | cerca de 434 nm |
+| 6 → 2 | violeta | cerca de 410 nm |
+
+Saltos que terminam na camada 1 emitem ultravioleta, e os que terminam na 3 ou acima emitem infravermelho (invisíveis). As distâncias das camadas e as alturas da escada de energia são ilustrativas, fora de escala. As cores dos fogos seguem o teste da chama (sódio, cobre, estrôncio e potássio).
+
 ---
 
 ## 5. Modelo atual — modelo quântico (orbitais)
@@ -200,7 +225,7 @@ Registrar aqui cada imagem usada. O nome do arquivo deve ser o **id do modelo** 
 |---|---|---|---|---|---|
 | Dalton | `src/assets/photos/dalton.jpg` | enviada pelo autor (origem a confirmar) | a confirmar | a confirmar | **em uso (provisória)**: confirmar fonte, autor e licença antes de publicar |
 | Thomson | `src/assets/photos/thomson.jpg` | enviada pelo autor (origem a confirmar; imagem pequena, 340 × 375 px) | a confirmar | a confirmar | **em uso (provisória)**: confirmar fonte, autor e licença antes de publicar |
-| Rutherford | `src/assets/photos/rutherford.jpg` | | | | pendente |
+| Rutherford | `src/assets/photos/rutherford.jpg` | enviada pelo autor (origem a confirmar; retrato em cores, 250 × 336 px) | a confirmar | a confirmar | **em uso (provisória)**: confirmar fonte, autor e licença antes de publicar |
 | Bohr | `src/assets/photos/bohr.jpg` | | | | pendente |
 | Modelo atual | `src/assets/photos/quantum.jpg` (foto de um dos cientistas do modelo) | | | | pendente |
 

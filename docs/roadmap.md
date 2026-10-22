@@ -11,7 +11,7 @@ Legenda: ✅ concluído · 🔄 em andamento · ⬜ pendente
 | 2 | Cena do **Dalton** em 3D (define o padrão das cenas) | ✅ |
 | 3 | Cena do **Thomson** em 3D | ✅ |
 | 4 | Cena do **Rutherford** em 3D | ✅ |
-| 5 | Cena do Bohr | ⬜ |
+| 5 | Cena do **Bohr** em 3D | ✅ |
 | 6 | Cena do modelo atual | ⬜ |
 | 7 | Quiz | ⬜ |
 | 8 | Extras opcionais (comparador, escala de tamanho) | ⬜ |
@@ -36,7 +36,7 @@ Cada cena segue o mesmo padrão: 3D, passos com legenda, widget lateral, notas d
 - [x] Tela inicial (abertura) com animações
 - [x] Roda de cartões (cinco modelos + quiz), clicável e com teclado
 - [x] Navegação por teclado, tela cheia, modo leve, controles que somem sozinhos
-- [ ] Adicionar as fotos dos cientistas em `src/assets/photos/` (com crédito e licença). Dalton e Thomson já têm foto (falta registrar origem e licença); faltam Rutherford, Bohr e modelo atual
+- [ ] Adicionar as fotos dos cientistas em `src/assets/photos/` (com crédito e licença). Dalton, Thomson e Rutherford já têm foto (falta registrar origem e licença); faltam Bohr e modelo atual
 - [ ] Testar tudo no projetor da escola
 
 ## Etapa 2 — Cena do Dalton (3D) ✅
@@ -69,14 +69,20 @@ Cada cena segue o mesmo padrão: 3D, passos com legenda, widget lateral, notas d
 - [x] Trajetórias calculadas com a repulsão entre cargas positivas (espalhamento de Rutherford)
 - [x] Modelo planetário com órbitas e a limitação (o elétron cairia no núcleo)
 - [x] Brincar: clicar ou arrastar para disparar partículas alfa, com contador (passaram, desviaram, voltaram)
-- [ ] Foto do Rutherford em `src/assets/photos/rutherford.jpg` (com origem e licença)
+- [x] Foto do Rutherford em `src/assets/photos/rutherford.jpg` (falta registrar origem e licença)
 - [ ] Testar em tela grande/projetor e revisar os textos com o professor
 
-## Etapa 5 — Cena do Bohr ⬜
+## Etapa 5 — Cena do Bohr (3D) ✅
 
-- [ ] Camadas, saltos de elétron e emissão de luz colorida
-- [ ] Ponte com fogos de artifício e neon
-- [ ] Brincar (ideia: dar energia ao elétron)
+- [x] Átomo de hidrogênio com camadas de energia e escada de níveis
+- [x] Elétron que absorve um fóton e salta para uma camada externa
+- [x] Elétron que volta e emite luz, com a cor certa para cada salto (hidrogênio)
+- [x] Espectro do hidrogênio se formando conforme os saltos acontecem
+- [x] Fogos de artifício com as cores de sódio, cobre, estrôncio e potássio (teste da chama)
+- [x] Limitação: átomos com mais elétrons e a nuvem difusa (ponte para o modelo atual)
+- [x] Brincar: clicar numa camada ou num nível da escada para mover o elétron
+- [ ] Foto do Bohr em `src/assets/photos/bohr.jpg` (com origem e licença)
+- [ ] Testar em tela grande/projetor e revisar os textos e as cores com o professor
 
 ## Etapa 6 — Cena do modelo atual ⬜
 

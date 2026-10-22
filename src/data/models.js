@@ -35,7 +35,16 @@ export const models = [
     shortText:
       'Rutherford disparou partículas contra uma folha de ouro finíssima. A maioria atravessou, mas algumas desviaram. Conclusão: o átomo tem um núcleo minúsculo, denso e positivo, e é quase todo espaço vazio.',
   },
-  { id: 'bohr', label: 'Bohr', year: 1913, modelName: 'Camadas de energia', accent: 'var(--c-bohr)' },
+  {
+    id: 'bohr',
+    label: 'Bohr',
+    year: 1913,
+    modelName: 'Camadas de energia',
+    accent: 'var(--c-bohr)',
+    scientist: 'Niels Bohr',
+    shortText:
+      'Bohr propôs que os elétrons ficam em camadas com energias definidas. Ao ganhar energia, o elétron salta para uma camada mais externa; ao voltar, devolve essa energia em forma de luz.',
+  },
   { id: 'quantum', label: 'Modelo atual', year: 1926, modelName: 'Orbitais', accent: 'var(--c-quantum)' },
 ]
 

@@ -152,6 +152,27 @@ Segue o mesmo padrão das outras cenas.
 
 **Cores:** coral nas partículas alfa e no núcleo, ciano nos elétrons e na tela, dourado na folha, violeta no modelo de Thomson.
 
+## 2.6 Cena do Bohr (3D)
+
+Segue o mesmo padrão das outras cenas. O átomo fica inclinado para mostrar as camadas em perspectiva, com uma **escada de energia** à direita (cada camada é um nível).
+
+**Passos (9)**
+1. **Por que mudar o modelo?** O átomo de Rutherford: o elétron espirala até o núcleo, com um "?" pulsando.
+2. **Camadas de energia.** As seis camadas aparecem uma a uma, com números, e o elétron se acomoda na camada 2. A escada mostra a mesma ideia.
+3. **Ganhando energia, o elétron salta.** Um fóton azul chega ao elétron, que salta da camada 2 para a 5 (o marcador sobe na escada).
+4. **Ao voltar, ele emite luz.** O elétron cai da camada 5 para a 2 e emite um fóton azul, uma onda que se afasta do átomo.
+5. **A cor depende do salto.** Os saltos 3→2, 4→2, 5→2 e 6→2 se repetem sozinhos, e o **espectro do hidrogênio** ganha uma linha de cada cor (vermelha, azul-esverdeada, azul e violeta).
+6. **Fogos de artifício e neon.** Foguetes sobem e explodem nas cores de sódio (amarelo), cobre (verde), estrôncio (vermelho) e potássio (lilás), com o nome do elemento.
+7. **O modelo de Bohr.** Núcleo, camadas e escada, com os nomes.
+8. **O que o modelo não explicava.** Surgem mais elétrons (átomo maior) e uma nuvem difusa de pontos sobre as camadas, com um "?".
+9. **Hora de brincar.** Clicar numa camada ou num nível da escada move o elétron até lá, com a luz correspondente. O espectro vai ganhando linhas, e um texto no alto diz qual foi o salto e se a luz é visível ou invisível.
+
+**Luz:** os fótons são ondas coloridas; os invisíveis (ultravioleta e infravermelho) aparecem em tom pálido e mais fracos.
+
+**Câmera:** o enquadramento se desloca para a direita nos passos com a escada e volta ao centro nos fogos e na limitação.
+
+**Cores:** ciano (cor do Bohr) nas camadas e no elétron, coral no núcleo.
+
 ## 3. Layout de uma cena
 
 ```

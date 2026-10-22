@@ -8,6 +8,20 @@ Registro cronológico do que foi feito e aprendido. Serve de matéria-prima para
 
 ## Entradas
 
+### 21/10/2026 — Cena do Bohr em 3D
+**O que foi feito**
+- Criada a **cena do Bohr** em 3D com nove passos: o elétron de Rutherford que cairia no núcleo, as camadas de energia, o salto ao absorver um fóton, a volta emitindo luz, o espectro do hidrogênio, os fogos de artifício, o modelo, a limitação e o brincar.
+- No brincar, o aluno clica numa camada (ou num nível da escada) e vê o fóton entrar ou sair, o elétron saltar e o espectro ganhar linhas.
+- Adicionada a foto do Rutherford ao projeto.
+- Testes automáticos (regras da luz, saltos, cliques nas camadas e na escada, fogos e fluxo de telas), todos passando.
+
+**Aprendizado**
+- Os testes mostraram que a escada de energia ficava por cima da camada mais externa na hora do clique; afastei a escada e aumentei as áreas de clique.
+- Usar uma fila de ações para o elétron (esperar, subir, descer) deixou o passo automático e o brincar com o mesmo código.
+- Dar cor certa a cada salto (série de Balmer do hidrogênio) conecta o modelo ao que se vê em fogos de artifício e luzes de neon.
+
+**Próximo passo:** testar no projetor, adicionar a foto do Bohr e, quando pedirem, criar a cena do modelo atual.
+
 ### 20/10/2026 — Cena do Rutherford em 3D
 **O que foi feito**
 - Criada a **cena do Rutherford** em 3D com nove passos: a previsão do modelo de Thomson, o experimento da folha de ouro, o zoom até o átomo, o núcleo, o modelo planetário, a limitação e o brincar.
