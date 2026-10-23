@@ -173,6 +173,13 @@ Segue o mesmo padrão das outras cenas. O átomo fica inclinado para mostrar as 
 
 **Cores:** ciano (cor do Bohr) nas camadas e no elétron, coral no núcleo.
 
+**Ajuste de layout (21/10/2026, após o primeiro teste):** a cena estava grande demais e havia coisas "entrando" uma na outra (por exemplo, os nomes dos níveis da escada ficavam sobrepostos, e alguns saíam da tela). O que mudou:
+- A câmera ficou cerca de 20% mais longe: o átomo ocupa cerca de 34% da largura da área 3D (antes, cerca de 43%).
+- Os níveis da escada ficam sempre a mais de 0,5 de distância, com os nomes ao lado, e a escada ficou mais afastada do átomo.
+- Os números das camadas ficaram menores e espalhados, sem ficar um sobre o outro.
+- "Núcleo (+)" ficou fora do átomo, ligado ao núcleo por uma linha; o espectro desceu; os textos do alto e de baixo têm cada um o seu lugar.
+- Verificação automática: para cada passo, em três proporções de tela (1,3, 1,6 e 1,9) e com a câmera balançando, nenhum texto fica sobre outro texto, sobre o átomo, a escada ou o espectro, nem fora da tela (antes: 447 ocorrências; agora: 0). Os fogos de artifício ficam de fora, por serem passageiros.
+
 ## 3. Layout de uma cena
 
 ```

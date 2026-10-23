@@ -53,11 +53,13 @@ export function makeLabel({ text, color, size, depthTest = false }) {
   sprite.renderOrder = 10
   sprite.visible = false
   sprite.userData.canvas = canvas
+  sprite.userData.text = text
   return sprite
 }
 
 // Troca o texto (e a cor) de um rótulo já criado
 export function setLabel(sprite, text, color) {
+  sprite.userData.text = text
   drawLabel(sprite.userData.canvas, text, color)
   sprite.material.map.needsUpdate = true
 }

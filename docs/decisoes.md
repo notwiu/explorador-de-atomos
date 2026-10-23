@@ -36,6 +36,7 @@ Cada decisão importante fica registrada aqui, com data, motivo e consequências
 | D28 | No brincar do Rutherford, clique e arraste disparam partículas; botão direito gira a câmera | Proposta (confirmar) |
 | D29 | Cena do Bohr: átomo de hidrogênio, nove passos, com a luz visível das quedas até a camada 2 | Proposta (confirmar) |
 | D30 | No brincar do Bohr, o clique em camada ou nível move o elétron e o espectro se forma | Proposta (confirmar) |
+| D31 | Verificação automática de sobreposição de textos nas cenas 3D | Ativa |
 
 ---
 
@@ -202,13 +203,19 @@ Cada decisão importante fica registrada aqui, com data, motivo e consequências
 - **Decisão:** clicar numa camada (anel) ou num nível da escada move o elétron até lá, com o fóton de entrada ou de saída e a cor certa. Até 2 pedidos ficam na fila. O espectro do hidrogênio vai ganhando as linhas que o aluno descobrir. Arrastar o fundo gira a câmera. R recomeça.
 - **Consequência:** as camadas e os níveis têm áreas de clique invisíveis maiores que o desenho, para facilitar a mira no projetor.
 
+### D31 — Verificação de layout nas cenas 3D
+- **Data:** 23/10/2026
+- **Contexto:** no primeiro teste da cena do Bohr, o autor viu tudo grande demais e partes entrando uma na outra, mesmo diminuindo o zoom do navegador (o zoom do navegador não muda o espaçamento dentro da cena).
+- **Decisão:** além de diminuir a cena (câmera mais longe) e aumentar os espaços, passamos a **verificar o layout automaticamente**: projetamos cada texto na tela e conferimos sobreposições com outros textos, com o átomo, a escada e o espectro e com as bordas, em três proporções de tela e com a câmera balançando.
+- **Consequência:** as próximas cenas (modelo atual) devem passar na mesma verificação. Regra prática: nomes com pelo menos 0,5 de distância vertical entre si e longe das formas que não são deles.
+
 ---
 
 ## Decisões em aberto
 
 | Tema | Opções | Responsável |
 |---|---|---|
-| Confirmar D13 a D17, D19, D20, D24, D25, D27 a D30 | Aceitar ou trocar | Autores |
+| Confirmar D13 a D17, D19, D20, D24, D25, D27 a D31 | Aceitar ou trocar | Autores |
 | Fotos | Embutidas no arquivo único ou pasta ao lado | Willian |
 | Alternativas do quiz | Ordem fixa ou embaralhada | Willian + professor |
 

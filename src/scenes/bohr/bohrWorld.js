@@ -23,17 +23,22 @@ export const STEP_COUNT = 9
 
 const PLAY_STEP = 8
 const LEVELS = 6
-const TILT = 1.0 // inclinação do átomo, para enxergar as camadas em perspectiva
+const TILT = 0.9 // inclinação do átomo, para enxergar as camadas em perspectiva
 const RUTHERFORD_R = 2.5
-const LADDER_X = 4.7
+const LADDER_X = 5.9
+const ZOOM = 1.22 // a câmera fica mais longe: tudo menor e com mais espaço entre as partes
 const CAMERA_AZIMUTH = 0.45
-const BOUND_Y = 3.1
 
 const C = { coral: '#ff7a6b', cyan: '#7ee7ff', pale: '#cfd6ff' }
 
 // Distância da camada n ao núcleo e altura do nível n na escada (desenhos fora de escala)
-export const radiusOf = (n) => 0.6 + 0.45 * (n - 1)
-export const ladderY = (n) => -2.4 + 4.8 * (1 - 1 / n)
+export const radiusOf = (n) => 0.55 + 0.45 * (n - 1)
+// Alturas dos níveis na escada (as diferenças diminuem para cima, mas sempre cabem os nomes)
+const LADDER = [-2.7, -1.2, -0.2, 0.6, 1.25, 1.8]
+export const ladderY = (n) => {
+  const i = clamp(Math.floor(n) - 1, 0, LEVELS - 2)
+  return lerp(LADDER[i], LADDER[i + 1], clamp(n - 1 - i, 0, 1))
+}
 
 // Luz visível do hidrogênio (série de Balmer): salto de `hi` até a camada 2
 const BALMER = {
@@ -42,7 +47,7 @@ const BALMER = {
   5: { color: '#6b8bff', name: 'azul', nm: 434, line: 1 },
   6: { color: '#b36bff', name: 'violeta', nm: 410, line: 0 },
 }
-const SPECTRUM = { x: 0.9, y: -3.05, width: 5.0 }
+const SPECTRUM = { x: 0, y: -3.9, width: 5.4 }
 const lineX = (nm) => SPECTRUM.x - SPECTRUM.width / 2 + (SPECTRUM.width * (nm - 400)) / 300
 
 // Descreve a luz de um salto entre as camadas `lo` (baixa) e `hi` (alta)
@@ -91,14 +96,14 @@ const P0 = {
 
 const STEP_PARAMS = [
   { atom: 1, rutherford: 1, fall: 1, q: 1, nuLabel: 1 },
-  { atom: 1, shells: 6, shellLabel: 1, shellTitle: 1, ladder: 1, camX: 1 },
-  { atom: 1, shells: 6, shellLabel: 1, ladder: 1, info: 1, camX: 1 },
-  { atom: 1, shells: 6, shellLabel: 1, ladder: 1, info: 1, camX: 1 },
-  { atom: 1, shells: 6, shellLabel: 1, ladder: 1, spectrum: 1, info: 1, camX: 1 },
+  { atom: 1, shells: 6, shellLabel: 1, shellTitle: 1, ladder: 1, camX: 1.6 },
+  { atom: 1, shells: 6, shellLabel: 1, ladder: 1, info: 1, camX: 1.6 },
+  { atom: 1, shells: 6, shellLabel: 1, ladder: 1, info: 1, camX: 1.6 },
+  { atom: 1, shells: 6, shellLabel: 1, ladder: 1, spectrum: 1, info: 1, camX: 1.6 },
   { fw: 1 },
-  { atom: 1, shells: 6, shellLabel: 1, shellTitle: 1, nuLabel: 1, ladder: 1, camX: 1 },
+  { atom: 1, shells: 6, shellLabel: 1, shellTitle: 1, nuLabel: 1, ladder: 1, camX: 1.6 },
   { atom: 1, shells: 6, shellLabel: 1, more: 1, cloud: 1, q: 1 },
-  { atom: 1, shells: 6, shellLabel: 1, ladder: 1, spectrum: 1, info: 1, hint: 1, camX: 1 },
+  { atom: 1, shells: 6, shellLabel: 1, ladder: 1, spectrum: 1, info: 1, hint: 1, camX: 1.6 },
 ]
 
 const WINDOW = {
@@ -163,8 +168,9 @@ export function createBohrWorld(stage, { reduced = false } = {}) {
     hitGeo.rotateX(Math.PI / 2)
     const hit = new THREE.Mesh(hitGeo, new THREE.MeshBasicMaterial({ visible: false, side: THREE.DoubleSide }))
     hit.userData.n = n
-    const label = makeLabel({ text: String(n), color: C.cyan, size: [0.8, 0.55] })
-    label.position.set(r * Math.cos(0.35), 0, r * Math.sin(0.35))
+    const label = makeLabel({ text: String(n), color: C.cyan, size: [0.5, 0.4] })
+    const a = 0.2 + 0.34 * i
+    label.position.set(r * Math.cos(a), 0, r * Math.sin(a))
     atom.add(ring, hit, label)
     return { n, ring, mat, hit, label }
   })
@@ -173,8 +179,8 @@ export function createBohrWorld(stage, { reduced = false } = {}) {
   const makeElectron = () => {
     const mat = new THREE.MeshStandardMaterial({ color: C.cyan, emissive: new THREE.Color(C.cyan), emissiveIntensity: 0.8, roughness: 0.3, transparent: true })
     const mesh = new THREE.Mesh(sphereGeo, mat)
-    mesh.scale.setScalar(0.12)
-    const glow = makeGlow('rgba(126,231,255,1)', 0.8)
+    mesh.scale.setScalar(0.1)
+    const glow = makeGlow('rgba(126,231,255,1)', 0.65)
     atom.add(mesh, glow)
     return { mesh, mat, glow, angle: 0 }
   }
@@ -210,27 +216,27 @@ export function createBohrWorld(stage, { reduced = false } = {}) {
   const levelLines = Array.from({ length: LEVELS }, (_, i) => {
     const n = i + 1
     const mat = new THREE.MeshBasicMaterial({ color: C.cyan, transparent: true, opacity: 0 })
-    const line = new THREE.Mesh(new THREE.BoxGeometry(1.4, 0.05, 0.05), mat)
+    const line = new THREE.Mesh(new THREE.BoxGeometry(1.2, 0.05, 0.05), mat)
     line.position.y = ladderY(n)
-    const hit = new THREE.Mesh(new THREE.BoxGeometry(2.6, 0.4, 0.4), new THREE.MeshBasicMaterial({ visible: false }))
-    hit.position.set(0.55, ladderY(n), 0)
+    const hit = new THREE.Mesh(new THREE.BoxGeometry(2.4, 0.46, 0.4), new THREE.MeshBasicMaterial({ visible: false }))
+    hit.position.set(0.5, ladderY(n), 0)
     hit.userData.n = n
-    const label = makeLabel({ text: `n = ${n}`, color: C.cyan, size: [1.3, 0.5] })
-    label.position.set(1.25, ladderY(n), 0)
+    const label = makeLabel({ text: `n = ${n}`, color: C.cyan, size: [1.0, 0.42] })
+    label.position.set(1.15, ladderY(n), 0)
     ladder.add(line, hit, label)
     return { n, mat, line, hit, label }
   })
-  const marker = makeGlow('rgba(126,231,255,1)', 0.9)
+  const marker = makeGlow('rgba(126,231,255,1)', 0.7)
   ladder.add(marker)
   const markerDot = new THREE.Mesh(sphereGeo, new THREE.MeshBasicMaterial({ color: '#ffffff', transparent: true }))
-  markerDot.scale.setScalar(0.09)
+  markerDot.scale.setScalar(0.08)
   ladder.add(markerDot)
   const arrowGeo = new THREE.BufferGeometry().setFromPoints([v(0.95, 0, 0), v(0.95, 1, 0)])
   const arrowMat = new THREE.LineBasicMaterial({ color: C.cyan, transparent: true, opacity: 0, blending: THREE.AdditiveBlending, depthWrite: false })
   const arrow = new THREE.Line(arrowGeo, arrowMat)
   ladder.add(arrow)
-  const ladderTitle = makeLabel({ text: 'Energia', color: '#ffffff', size: [1.8, 0.55] })
-  ladderTitle.position.set(0.2, 2.95, 0)
+  const ladderTitle = makeLabel({ text: 'Energia', color: '#ffffff', size: [1.7, 0.48] })
+  ladderTitle.position.set(0.2, 2.55, 0)
   ladder.add(ladderTitle)
 
   // ----- Espectro do hidrogênio -----
@@ -249,8 +255,8 @@ export function createBohrWorld(stage, { reduced = false } = {}) {
       spectrum.add(mesh)
       return { mat, mesh, seen: false, glow: 0 }
     })
-  const specLabel = makeLabel({ text: 'Espectro do hidrogênio (luz visível)', color: '#ffffff', size: [5.4, 0.5] })
-  specLabel.position.set(0, 0.5, 0)
+  const specLabel = makeLabel({ text: 'Espectro do hidrogênio (luz visível)', color: '#ffffff', size: [6.0, 0.45] })
+  specLabel.position.set(0, 0.55, 0)
   spectrum.add(specLabel)
 
   // ----- Textos 3D -----
@@ -259,16 +265,21 @@ export function createBohrWorld(stage, { reduced = false } = {}) {
     root.add(label)
     return label
   }
-  const rutherfordLabel = place(makeLabel({ text: 'Modelo de Rutherford', color: C.coral, size: [5.6, 0.75] }), 0, -3.0)
-  const qLabel = place(makeLabel({ text: '?', color: '#ffffff', size: [1.2, 1.2] }), 0.9, 1.2)
-  const nuLabel = place(makeLabel({ text: 'Núcleo (+)', color: '#ffd9d2', size: [3.0, 0.6] }), 0, 0.85)
-  const shellTitle = place(makeLabel({ text: 'Camadas (níveis de energia)', color: C.cyan, size: [6.4, 0.62] }), -1.2, -3.0)
-  const infoLabel = place(makeLabel({ text: '', color: '#ffffff', size: [5.8, 0.62] }), SPECTRUM.x, BOUND_Y)
-  const hintLabel = place(makeLabel({ text: 'Clique numa camada ou num nível', color: '#ffffff', size: [6.2, 0.55] }), -1.2, 2.45)
+  const rutherfordLabel = place(makeLabel({ text: 'Modelo de Rutherford', color: C.coral, size: [5.2, 0.6] }), 0, -3.6)
+  const qLabel = place(makeLabel({ text: '?', color: '#ffffff', size: [1.0, 1.0] }), 0, 2.4)
+  const nuLabel = place(makeLabel({ text: 'Núcleo (+)', color: '#ffd9d2', size: [2.6, 0.5] }), -3.9, 2.95)
+  const shellTitle = place(makeLabel({ text: 'Camadas (níveis de energia)', color: C.cyan, size: [6.0, 0.55] }), -0.6, -3.7)
+  const infoLabel = place(makeLabel({ text: '', color: '#ffffff', size: [8.4, 0.5] }), 1.6, 3.8)
+  const hintLabel = place(makeLabel({ text: 'Clique numa camada ou num nível', color: '#ffffff', size: [6.2, 0.5] }), 0, 3.15)
+
+  // linha que liga o nome "Núcleo (+)" ao núcleo
+  const leaderMat = new THREE.LineBasicMaterial({ color: '#ffd9d2', transparent: true, opacity: 0, depthWrite: false })
+  const leader = new THREE.Line(new THREE.BufferGeometry().setFromPoints([v(-3.15, 2.72, 0), v(-0.28, 0.1, 0)]), leaderMat)
+  root.add(leader)
 
   // ----- Fótons (ondas de luz) -----
   const WAVE_N = 36
-  const waveLength = 1.5
+  const waveLength = 1.3
   const photons = Array.from({ length: 6 }, () => {
     const geo = new THREE.BufferGeometry()
     geo.setAttribute('position', new THREE.BufferAttribute(new Float32Array(WAVE_N * 3), 3))
@@ -276,13 +287,13 @@ export function createBohrWorld(stage, { reduced = false } = {}) {
     const line = new THREE.Line(geo, mat)
     line.frustumCulled = false
     line.visible = false
-    const head = makeGlow('rgba(255,255,255,1)', 0.55)
+    const head = makeGlow('rgba(255,255,255,1)', 0.45)
     root.add(line, head)
     return { geo, mat, line, head, active: false, mode: 'out', pos: v(0, 0, 0), dir: v(1, 0, 0), age: 0, onArrive: null, info: null }
   })
 
   const flashes = Array.from({ length: 6 }, () => {
-    const s = makeGlow('rgba(255,255,255,1)', 0.7)
+    const s = makeGlow('rgba(255,255,255,1)', 0.6)
     root.add(s)
     return { sprite: s, age: 1, active: false }
   })
@@ -307,7 +318,7 @@ export function createBohrWorld(stage, { reduced = false } = {}) {
     return { sprite, active: false, t: 0, x: 0, z: 0, y1: 0, element: ELEMENTS[0] }
   })
   const fwLabels = [0, 1].map(() => {
-    const l = makeLabel({ text: '', color: '#ffffff', size: [4.8, 0.62] })
+    const l = makeLabel({ text: '', color: '#ffffff', size: [4.8, 0.5] })
     root.add(l)
     return { sprite: l, age: 9, active: false }
   })
@@ -343,7 +354,9 @@ export function createBohrWorld(stage, { reduced = false } = {}) {
   }
   controls.addEventListener?.('start', onStart)
 
-  const homePosition = (camX) => v(camX + Math.sin(CAMERA_AZIMUTH) * stage.home.z, stage.home.y, Math.cos(CAMERA_AZIMUTH) * stage.home.z)
+  const homePosition = (camX) =>
+    v(camX + Math.sin(CAMERA_AZIMUTH) * stage.home.z * ZOOM, stage.home.y * ZOOM, Math.cos(CAMERA_AZIMUTH) * stage.home.z * ZOOM)
+  controls.maxDistance = Math.max(controls.maxDistance ?? 18, 30)
 
   const tmp = v(0, 0, 0)
   function electronWorld(target = v(0, 0, 0)) {
@@ -394,7 +407,7 @@ export function createBohrWorld(stage, { reduced = false } = {}) {
     if (u.lengthSq() < 1e-4) u.set(0, 1, 0)
     u.normalize()
     const arr = p.geo.attributes.position.array
-    const amp = 0.14
+    const amp = 0.11
     for (let i = 0; i < WAVE_N; i++) {
       const s = (i / (WAVE_N - 1)) * waveLength
       const env = Math.sin((Math.PI * i) / (WAVE_N - 1))
@@ -439,7 +452,7 @@ export function createBohrWorld(stage, { reduced = false } = {}) {
       p.mat.opacity = 0.9 * alpha
       p.head.material.opacity = alpha
       p.head.position.copy(p.pos)
-      p.head.scale.setScalar(0.5 + 0.08 * Math.sin(t * 12))
+      p.head.scale.setScalar(0.4 + 0.06 * Math.sin(t * 12))
       drawWave(p, t)
     }
     for (const f of flashes) {
@@ -457,8 +470,8 @@ export function createBohrWorld(stage, { reduced = false } = {}) {
   // ----- Saltos do elétron -----
   function setArrow(a, b, color) {
     const pos = arrowGeo.attributes.position
-    pos.setXYZ(0, 0.95, ladderY(a), 0)
-    pos.setXYZ(1, 0.95, ladderY(b), 0)
+    pos.setXYZ(0, 0.8, ladderY(a), 0)
+    pos.setXYZ(1, 0.8, ladderY(b), 0)
     pos.needsUpdate = true
     arrowMat.color.set(color)
     arrowFade = 1
@@ -480,7 +493,7 @@ export function createBohrWorld(stage, { reduced = false } = {}) {
       beginJump(a.to, { silent: true })
     } else if (a.type === 'up') {
       a.info = photonInfo(level, a.to)
-      setInfo(`Absorve energia: salto ${level} → ${a.to} (${a.info.text})`, a.info.color)
+      setInfo(`Absorve ${a.info.text}: salto ${level} → ${a.to}`, a.info.color)
       const origin = electronWorld(v(0, 0, 0)).add(v(-3.4, 2.6, 1.6))
       spawnPhoton({ mode: 'in', info: a.info, from: origin, onArrive: () => beginJump(a.to, a) })
     } else if (a.type === 'down') {
@@ -567,9 +580,9 @@ export function createBohrWorld(stage, { reduced = false } = {}) {
     const r = rockets.find((x) => !x.active) ?? rockets[0]
     r.active = true
     r.t = 0
-    r.x = (rnd() * 2 - 1) * 3.0
+    r.x = (rnd() * 2 - 1) * 4.4
     r.z = (rnd() * 2 - 1) * 1.2
-    r.y1 = 0.3 + rnd() * 1.6
+    r.y1 = 0.2 + rnd() * 2.2
     r.element = ELEMENTS[fwIndex % ELEMENTS.length]
     fwIndex += 1
     r.sprite.visible = true
@@ -598,7 +611,7 @@ export function createBohrWorld(stage, { reduced = false } = {}) {
     lab.active = true
     lab.age = 0
     setLabel(lab.sprite, r.element.text, r.element.color)
-    lab.sprite.position.set(r.x, r.y1 + 1.5, r.z)
+    lab.sprite.position.set(r.x, r.y1 + 1.4, r.z)
     flashAt(v(r.x, r.y1, r.z), r.element.color, 1.6)
   }
 
@@ -611,7 +624,7 @@ export function createBohrWorld(stage, { reduced = false } = {}) {
     for (const r of rockets) {
       if (!r.active) continue
       r.t += dt / 0.6
-      const y = lerp(-3.0, r.y1, smooth(clamp(r.t, 0, 1)))
+      const y = lerp(-3.6, r.y1, smooth(clamp(r.t, 0, 1)))
       r.sprite.position.set(r.x, y, r.z)
       r.sprite.material.opacity = P.fw
       if (r.t >= 1) {
@@ -795,11 +808,11 @@ export function createBohrWorld(stage, { reduced = false } = {}) {
     atom.visible = as > 0.01
     atom.scale.setScalar(0.5 + 0.5 * as)
     nucleusPulse = Math.max(0, nucleusPulse - dt * 3)
-    nucleus.scale.setScalar(0.2 * (1 + 0.35 * p.more) * (1 + 0.5 * nucleusPulse))
+    nucleus.scale.setScalar(0.17 * (1 + 0.35 * p.more) * (1 + 0.5 * nucleusPulse))
     nucleusMat.opacity = as
     nucleusGlow.visible = as > 0.01
     nucleusGlow.material.opacity = as * (0.5 + 0.2 * Math.sin(t * 2.2) + 0.4 * nucleusPulse)
-    nucleusGlow.scale.setScalar((1.8 + 0.8 * nucleusPulse) * (1 + 0.3 * p.more))
+    nucleusGlow.scale.setScalar((1.5 + 0.7 * nucleusPulse) * (1 + 0.3 * p.more))
 
     // camadas
     const cloudDim = 1 - 0.65 * p.cloud
@@ -841,7 +854,7 @@ export function createBohrWorld(stage, { reduced = false } = {}) {
     electron.mat.opacity = as
     electron.glow.visible = as > 0.01
     electron.glow.material.opacity = as * 0.9
-    electron.glow.scale.setScalar(0.8 + 0.1 * Math.sin(t * 6))
+    electron.glow.scale.setScalar(0.65 + 0.08 * Math.sin(t * 6))
 
     // elétrons extras (átomo com mais elétrons)
     extras.forEach((x, k) => {
@@ -867,8 +880,10 @@ export function createBohrWorld(stage, { reduced = false } = {}) {
     }
     setOp(rutherfordLabel, p.rutherford * as)
     setOp(qLabel, p.q * as)
-    qLabel.position.set(p.more > 0.5 ? 2.4 : 0.9, (p.more > 0.5 ? 2.0 : 1.2) + Math.sin(t * 2) * 0.1, 0)
+    qLabel.position.set(p.more > 0.5 ? 3.9 : 0, (p.more > 0.5 ? 1.9 : 2.4) + Math.sin(t * 2) * 0.1, 0)
     setOp(nuLabel, p.nuLabel * as)
+    leaderMat.opacity = p.nuLabel * as * 0.7
+    leader.visible = leaderMat.opacity > 0.01
     setOp(shellTitle, p.shellTitle * clamp(p.shells / 6, 0, 1))
     setOp(infoLabel, p.info)
     setOp(hintLabel, p.hint)
@@ -910,7 +925,7 @@ export function createBohrWorld(stage, { reduced = false } = {}) {
     controls.target.x = p.camX
     if (!userMoved && !reduced && !interactive) {
       const az = CAMERA_AZIMUTH + Math.sin(t * 0.35) * 0.22
-      camera.position.set(p.camX + Math.sin(az) * stage.home.z, stage.home.y, Math.cos(az) * stage.home.z)
+      camera.position.set(p.camX + Math.sin(az) * stage.home.z * ZOOM, stage.home.y * ZOOM, Math.cos(az) * stage.home.z * ZOOM)
     }
   })
 

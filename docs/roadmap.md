@@ -36,7 +36,7 @@ Cada cena segue o mesmo padrão: 3D, passos com legenda, widget lateral, notas d
 - [x] Tela inicial (abertura) com animações
 - [x] Roda de cartões (cinco modelos + quiz), clicável e com teclado
 - [x] Navegação por teclado, tela cheia, modo leve, controles que somem sozinhos
-- [ ] Adicionar as fotos dos cientistas em `src/assets/photos/` (com crédito e licença). Dalton, Thomson e Rutherford já têm foto (falta registrar origem e licença); faltam Bohr e modelo atual
+- [ ] Adicionar as fotos dos cientistas em `src/assets/photos/` (com crédito e licença). Dalton, Thomson, Rutherford e Bohr já têm foto (falta registrar origem e licença); falta o modelo atual
 - [ ] Testar tudo no projetor da escola
 
 ## Etapa 2 — Cena do Dalton (3D) ✅
@@ -81,7 +81,8 @@ Cada cena segue o mesmo padrão: 3D, passos com legenda, widget lateral, notas d
 - [x] Fogos de artifício com as cores de sódio, cobre, estrôncio e potássio (teste da chama)
 - [x] Limitação: átomos com mais elétrons e a nuvem difusa (ponte para o modelo atual)
 - [x] Brincar: clicar numa camada ou num nível da escada para mover o elétron
-- [ ] Foto do Bohr em `src/assets/photos/bohr.jpg` (com origem e licença)
+- [x] Ajuste de layout após o primeiro teste: tudo menor, com mais espaço entre as partes e sem textos sobrepostos (verificado automaticamente)
+- [x] Foto do Bohr em `src/assets/photos/bohr.jpg` (falta registrar origem e licença)
 - [ ] Testar em tela grande/projetor e revisar os textos e as cores com o professor
 
 ## Etapa 6 — Cena do modelo atual ⬜

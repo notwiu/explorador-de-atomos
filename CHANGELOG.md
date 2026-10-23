@@ -38,6 +38,8 @@ Formato baseado em [Keep a Changelog](https://keepachangelog.com/pt-BR/1.1.0/).
 - Documentação em `docs/`: documento completo, escopo e requisitos, experiência e design, arquitetura, conteúdo dos modelos, quiz, roadmap, decisões e diário.
 
 ### Alterado
+- **Cena do Bohr com layout ajustado** (depois do primeiro teste): câmera mais longe (tudo cerca de 20% menor), escada de energia com níveis bem espaçados e mais longe do átomo, números das camadas menores e espalhados, nome do núcleo fora do átomo (com uma linha), espectro mais embaixo e textos curtos. Verificação automática: de 447 sobreposições para 0.
+- Foto do Bohr (enviada pelo autor, em preto e branco) no widget lateral e no cartão da roda.
 - README e documentação: "Autor" virou "Autores" (Willian Teotonio, Kemuel Darckson, Yan Pedro e João Rodrigues).
 - Cena do Dalton passou a usar os helpers compartilhados; corrigido o caso de o arraste ser interrompido pelo teclado e a câmera ficar travada.
 - Legenda das cenas menor e em uma faixa própria **abaixo** da área 3D, para não cobrir os átomos nem atrapalhar o arrastar.

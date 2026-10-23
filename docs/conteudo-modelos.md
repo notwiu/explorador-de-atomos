@@ -226,7 +226,7 @@ Registrar aqui cada imagem usada. O nome do arquivo deve ser o **id do modelo** 
 | Dalton | `src/assets/photos/dalton.jpg` | enviada pelo autor (origem a confirmar) | a confirmar | a confirmar | **em uso (provisória)**: confirmar fonte, autor e licença antes de publicar |
 | Thomson | `src/assets/photos/thomson.jpg` | enviada pelo autor (origem a confirmar; imagem pequena, 340 × 375 px) | a confirmar | a confirmar | **em uso (provisória)**: confirmar fonte, autor e licença antes de publicar |
 | Rutherford | `src/assets/photos/rutherford.jpg` | enviada pelo autor (origem a confirmar; retrato em cores, 250 × 336 px) | a confirmar | a confirmar | **em uso (provisória)**: confirmar fonte, autor e licença antes de publicar |
-| Bohr | `src/assets/photos/bohr.jpg` | | | | pendente |
+| Bohr | `src/assets/photos/bohr.jpg` | enviada pelo autor (origem a confirmar; retrato em preto e branco, 250 × 346 px) | a confirmar | a confirmar | **em uso (provisória)**: confirmar fonte, autor e licença antes de publicar |
 | Modelo atual | `src/assets/photos/quantum.jpg` (foto de um dos cientistas do modelo) | | | | pendente |
 
 ## 8. Checklist de revisão com o professor

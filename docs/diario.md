@@ -20,7 +20,11 @@ Registro cronológico do que foi feito e aprendido. Serve de matéria-prima para
 - Usar uma fila de ações para o elétron (esperar, subir, descer) deixou o passo automático e o brincar com o mesmo código.
 - Dar cor certa a cada salto (série de Balmer do hidrogênio) conecta o modelo ao que se vê em fogos de artifício e luzes de neon.
 
-**Próximo passo:** testar no projetor, adicionar a foto do Bohr e, quando pedirem, criar a cena do modelo atual.
+**Ajuste após o primeiro teste (23/10/2026):** o autor achou a cena do Bohr grande demais, com coisas entrando umas nas outras. A causa principal: os níveis da escada de energia ficavam muito próximos (os nomes se sobrepunham) e os números das camadas se empilhavam. Diminuí tudo cerca de 20%, espacei os níveis, afastei a escada, espalhei os números e reposicionei os textos. Para ter certeza, criei uma **verificação automática de layout** (projeta cada texto na tela e confere sobreposições): antes eram 447 ocorrências, agora são 0. A foto do Bohr (enviada pelo autor) entrou no widget e no cartão da roda.
+
+**Aprendizado:** diminuir o zoom do navegador não resolve sobreposição dentro de uma cena 3D, porque tudo diminui junto; é preciso mudar o espaçamento da própria cena. E vale medir em vez de adivinhar.
+
+**Próximo passo:** testar no projetor e, quando pedirem, criar a cena do modelo atual.
 
 ### 20/10/2026 — Cena do Rutherford em 3D
 **O que foi feito**
