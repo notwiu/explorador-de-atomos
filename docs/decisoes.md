@@ -37,6 +37,8 @@ Cada decisão importante fica registrada aqui, com data, motivo e consequências
 | D29 | Cena do Bohr: átomo de hidrogênio, nove passos, com a luz visível das quedas até a camada 2 | Proposta (confirmar) |
 | D30 | No brincar do Bohr, o clique em camada ou nível move o elétron e o espectro se forma | Proposta (confirmar) |
 | D31 | Verificação automática de sobreposição de textos nas cenas 3D | Ativa |
+| D32 | Cena do modelo atual: nove passos, com pontos sorteados com a probabilidade real dos orbitais | Proposta (confirmar) |
+| D33 | A "foto do elétron" é uma analogia e o brincar tem os orbitais 1s, 2s e 2p | Proposta (confirmar) |
 
 ---
 
@@ -209,13 +211,24 @@ Cada decisão importante fica registrada aqui, com data, motivo e consequências
 - **Decisão:** além de diminuir a cena (câmera mais longe) e aumentar os espaços, passamos a **verificar o layout automaticamente**: projetamos cada texto na tela e conferimos sobreposições com outros textos, com o átomo, a escada e o espectro e com as bordas, em três proporções de tela e com a câmera balançando.
 - **Consequência:** as próximas cenas (modelo atual) devem passar na mesma verificação. Regra prática: nomes com pelo menos 0,5 de distância vertical entre si e longe das formas que não são deles.
 
+### D32 — Cena do modelo atual
+- **Data:** 27/10/2026
+- **Decisão:** nove passos: (1) por que mudar o modelo, (2) o elétron também é onda, (3) não existe trajetória exata, (4) uma foto mostra um ponto, (5) muitas fotos formam uma nuvem, (6) o orbital, (7) orbitais têm formas diferentes, (8) o modelo atual, (9) brincar.
+- **Base científica:** os pontos são sorteados de verdade com a probabilidade dos orbitais 1s, 2s e 2p do hidrogênio (1s: e^(−2r); 2s: (2 − r)² e^(−r), com casca sem pontos em r = 2; 2p: r² cos²θ e^(−r), com dois lóbulos). A superfície transparente envolve cerca de 90% dos pontos (medido por sorteio). A onda estacionária do passo 2 usa dois comprimentos de onda numa camada (ideia de de Broglie).
+- **Cuidados:** o orbital 1s é ampliado nas cenas de ensino, e as formas s e p não estão na mesma escala. Os orbitais d e f são citados, mas não mostrados.
+
+### D33 — A "foto" do elétron e o brincar
+- **Data:** 27/10/2026
+- **Decisão:** a "foto instantânea" e a "longa exposição" são analogias (e a nota do professor avisa isso). No brincar, clicar tira uma foto (um ponto), segurar faz uma longa exposição, e os botões trocam entre 1s, 2s e 2p; o botão direito gira a câmera e R zera.
+- **Consequência:** o 2s e o 2p ficam bem maiores que o 1s, o que ajuda a mostrar que orbitais mais externos ocupam mais espaço.
+
 ---
 
 ## Decisões em aberto
 
 | Tema | Opções | Responsável |
 |---|---|---|
-| Confirmar D13 a D17, D19, D20, D24, D25, D27 a D31 | Aceitar ou trocar | Autores |
+| Confirmar D13 a D17, D19, D20, D24, D25, D27 a D33 | Aceitar ou trocar | Autores |
 | Fotos | Embutidas no arquivo único ou pasta ao lado | Willian |
 | Alternativas do quiz | Ordem fixa ou embaralhada | Willian + professor |
 

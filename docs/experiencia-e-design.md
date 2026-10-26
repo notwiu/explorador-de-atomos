@@ -180,6 +180,25 @@ Segue o mesmo padrão das outras cenas. O átomo fica inclinado para mostrar as 
 - "Núcleo (+)" ficou fora do átomo, ligado ao núcleo por uma linha; o espectro desceu; os textos do alto e de baixo têm cada um o seu lugar.
 - Verificação automática: para cada passo, em três proporções de tela (1,3, 1,6 e 1,9) e com a câmera balançando, nenhum texto fica sobre outro texto, sobre o átomo, a escada ou o espectro, nem fora da tela (antes: 447 ocorrências; agora: 0). Os fogos de artifício ficam de fora, por serem passageiros.
 
+## 2.7 Cena do modelo atual (3D)
+
+Última cena dos modelos. Segue o mesmo padrão e passou na verificação automática de layout.
+
+**Passos (9)**
+1. **Por que mudar o modelo?** O átomo de Bohr, com o elétron girando numa camada e um "?".
+2. **O elétron também é uma onda.** A bolinha se transforma numa onda estacionária em volta da camada (dois comprimentos de onda).
+3. **Não existe trajetória exata.** O elétron aparece "borrado", em vários lugares ao mesmo tempo, com a pergunta "Onde está o elétron?".
+4. **Uma foto mostra um ponto.** A cada segundo, uma "foto" mostra um único ponto, num lugar diferente, com um clarão; o contador diz "Foto n: um ponto".
+5. **Muitas fotos formam uma nuvem.** Os pontos se acumulam (longa exposição) até formar a nuvem do orbital 1s, mais densa perto do núcleo.
+6. **O orbital.** A nuvem ganha uma superfície transparente que envolve cerca de 90% dos pontos, com o nome "Orbital 1s".
+7. **Orbitais têm formas diferentes.** À esquerda, o orbital s (esfera); à direita, os três orbitais p (halteres em três cores, um para cada eixo).
+8. **O modelo atual.** Núcleo e nuvem, com os nomes e linhas ligando aos elementos.
+9. **Hora de brincar.** Clique para fotografar (um ponto), segure para uma longa exposição e escolha o orbital nos botões à esquerda (1s, 2s ou 2p). O contador mostra os pontos.
+
+**Cores:** verde-água (cor do modelo atual) no 1s, ciano no 2s, âmbar no 2p; no passo 7, os três halteres são coral, âmbar e violeta.
+
+**Desempenho:** até 6000 pontos por nuvem (3000 no modo leve), desenhados como pontos macios e aditivos.
+
 ## 3. Layout de uma cena
 
 ```

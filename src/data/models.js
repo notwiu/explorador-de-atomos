@@ -45,7 +45,16 @@ export const models = [
     shortText:
       'Bohr propôs que os elétrons ficam em camadas com energias definidas. Ao ganhar energia, o elétron salta para uma camada mais externa; ao voltar, devolve essa energia em forma de luz.',
   },
-  { id: 'quantum', label: 'Modelo atual', year: 1926, modelName: 'Orbitais', accent: 'var(--c-quantum)' },
+  {
+    id: 'quantum',
+    label: 'Modelo atual',
+    year: 1926,
+    modelName: 'Orbitais',
+    accent: 'var(--c-quantum)',
+    scientist: 'Modelo quântico',
+    shortText:
+      'No modelo atual, não dá para saber exatamente onde o elétron está. Só dá para calcular a região onde ele tem mais chance de ser encontrado: o orbital, uma nuvem de probabilidade.',
+  },
 ]
 
 // A última "foto" da roda é o quiz.

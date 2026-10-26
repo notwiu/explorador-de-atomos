@@ -159,8 +159,8 @@ Ao concluir qualquer mudança relevante, **atualize a documentação no mesmo co
 
 ## 10. Estado atual
 
-- **Fase:** Etapas 1 a 5 concluídas. Prontos: projeto base, **tela inicial**, **roda de cartões** e as cenas do **Dalton** (8 passos), do **Thomson** (9), do **Rutherford** (9) e do **Bohr** (9), todas em 3D e com brincar. Os cartões do modelo atual e do quiz abrem uma tela provisória.
-- **Próximo passo:** o autor pede a próxima cena (modelo atual, quântico). Reaproveitar `Stage3D`, `SceneShell`, `AtomWidget`, `src/three/helpers.js` e o padrão das cenas em `src/scenes/`. Para adicionar uma cena: pasta da cena, textos em `src/data/scenes/`, registro em `src/scenes/index.js` e dados do widget em `src/data/models.js`. Depois vem o quiz (Etapa 7).
+- **Fase:** Etapas 1 a 6 concluídas. Prontos: projeto base, **tela inicial**, **roda de cartões** e as cinco cenas dos modelos, todas em 3D e com brincar: **Dalton** (8 passos), **Thomson** (9), **Rutherford** (9), **Bohr** (9) e **modelo atual** (9). O cartão do quiz abre uma tela provisória.
+- **Próximo passo:** **Quiz** (Etapa 7), em tela cheia, com opções grandes, acerto com explicação e nova tentativa após erro (veja `docs/quiz.md`). Reaproveitar o fluxo do `App.jsx` (o quiz entra como cena do item `quiz` em `src/scenes/index.js` ou como tela própria). Depois, polimento e validação com o professor.
 - **Ritmo de trabalho:** uma etapa por vez, com commit e documentação a cada passo. Não adiantar cenas que o autor ainda não pediu.
 - Veja `docs/roadmap.md` para o detalhamento.
 

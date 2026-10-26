@@ -6,6 +6,8 @@ Formato baseado em [Keep a Changelog](https://keepachangelog.com/pt-BR/1.1.0/).
 ## [Não lançado]
 
 ### Adicionado
+- **Cena do modelo atual (orbitais) em 3D** (nove passos): o elétron como onda estacionária, a incerteza, a "foto instantânea" (um ponto por foto), a "longa exposição" (os pontos formam a nuvem), o orbital com a superfície que envolve 90% dos pontos, as formas s e p, o modelo atual e **brincar** (clicar para fotografar o elétron, segurar para longa exposição e trocar entre os orbitais 1s, 2s e 2p).
+- Pontos sorteados com a probabilidade real dos orbitais do hidrogênio (testada estatisticamente).
 - Foto do Rutherford (enviada pelo autor, retrato em cores) no widget lateral e no cartão da roda. Origem e licença ainda precisam ser registradas em `docs/conteudo-modelos.md`.
 - **Cena do Bohr em 3D** (nove passos): átomo de hidrogênio com camadas e escada de energia, fóton absorvido e elétron que salta, elétron que volta e emite luz, espectro do hidrogênio se formando, fogos de artifício (teste da chama), limitação do modelo e **brincar** (clicar numa camada ou num nível para mover o elétron).
 - **Cena do Rutherford em 3D** (nove passos): previsão do modelo de Thomson, experimento da folha de ouro (fonte de partículas alfa, folha e tela que brilha), zoom até um átomo de ouro, núcleo, modelo planetário, limitação (o elétron cairia no núcleo) e **brincar** (clicar ou arrastar para disparar partículas alfa, com contagem de quantas passaram, desviaram e voltaram).

@@ -2,10 +2,12 @@ import DaltonScene from './dalton/DaltonScene.jsx'
 import ThomsonScene from './thomson/ThomsonScene.jsx'
 import RutherfordScene from './rutherford/RutherfordScene.jsx'
 import BohrScene from './bohr/BohrScene.jsx'
+import QuantumScene from './quantum/QuantumScene.jsx'
 import { daltonSteps } from '../data/scenes/dalton.js'
 import { thomsonSteps } from '../data/scenes/thomson.js'
 import { rutherfordSteps } from '../data/scenes/rutherford.js'
 import { bohrSteps } from '../data/scenes/bohr.js'
+import { quantumSteps } from '../data/scenes/quantum.js'
 
 // Cenas prontas. Um item da roda que não estiver aqui abre a tela provisória.
 // Para adicionar uma cena nova: criar a pasta da cena, os textos em src/data/scenes/
@@ -15,4 +17,5 @@ export const sceneRegistry = {
   thomson: { Component: ThomsonScene, steps: thomsonSteps },
   rutherford: { Component: RutherfordScene, steps: rutherfordSteps },
   bohr: { Component: BohrScene, steps: bohrSteps },
+  quantum: { Component: QuantumScene, steps: quantumSteps },
 }

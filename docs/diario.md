@@ -8,6 +8,19 @@ Registro cronológico do que foi feito e aprendido. Serve de matéria-prima para
 
 ## Entradas
 
+### 27/10/2026 — Cena do modelo atual (orbitais) em 3D
+**O que foi feito**
+- Criada a **cena do modelo atual** em 3D, a quinta e última cena de modelo, com nove passos: do átomo de Bohr ao elétron como onda, depois a incerteza, a "foto instantânea", a "longa exposição" que forma a nuvem, o orbital, as formas s e p, o modelo atual e o brincar.
+- Os pontos da nuvem são sorteados com a probabilidade real dos orbitais do hidrogênio. Conferi por estatística: raios médios (1,5 a0 no 1s, 6 a0 no 2s e 5 a0 no 2p), a casca vazia do 2s, os lóbulos do 2p nos eixos e o raio que envolve 90% dos pontos.
+- No brincar, o aluno "fotografa" o elétron com cliques e segura para ver a nuvem se formar; troca de orbital nos botões e compara os tamanhos e as formas.
+- Verificação automática de layout (sem textos sobrepostos) e testes de lógica e de fluxo de telas, todos passando.
+
+**Aprendizado**
+- A ideia "uma foto, um ponto; muitas fotos, uma nuvem" é uma boa analogia para a probabilidade, desde que a nota do professor avise que é uma analogia.
+- Sortear de verdade (em vez de desenhar uma nuvem bonita) deixa a cena honesta e ainda mostra coisas como a casca vazia do 2s.
+
+**Próximo passo:** o quiz (Etapa 7), em tela cheia, e depois o polimento e a validação com o professor.
+
 ### 21/10/2026 — Cena do Bohr em 3D
 **O que foi feito**
 - Criada a **cena do Bohr** em 3D com nove passos: o elétron de Rutherford que cairia no núcleo, as camadas de energia, o salto ao absorver um fóton, a volta emitindo luz, o espectro do hidrogênio, os fogos de artifício, o modelo, a limitação e o brincar.

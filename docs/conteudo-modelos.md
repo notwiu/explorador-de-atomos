@@ -208,6 +208,22 @@ Saltos que terminam na camada 1 emitem ultravioleta, e os que terminam na 3 ou a
 
 **Animação:** pontos surgindo aos poucos, formando a nuvem; alternância entre "foto instantânea" e "longa exposição".
 
+**Passos da cena (texto exibido; espelha `src/data/scenes/quantum.js`):**
+
+| # | Título | Texto | Nota do professor |
+|---|---|---|---|
+| 1 | Por que mudar o modelo? | O modelo de Bohr funciona bem para o hidrogênio, mas não explica átomos com mais elétrons nem o comportamento ondulatório dos elétrons. | Retome a pergunta deixada no ar na cena anterior: onde exatamente está o elétron? |
+| 2 | O elétron também é uma onda | Em 1924, de Broglie propôs que o elétron também se comporta como uma onda. Isso mudou a forma de pensar o átomo. | Pouco depois, experimentos mostraram que elétrons realmente produzem padrões de onda. |
+| 3 | Não existe trajetória exata | Pelo princípio da incerteza, de Heisenberg (1927), não dá para saber, ao mesmo tempo e com exatidão, a posição e o movimento do elétron. | Isso não é falta de instrumento: é uma característica da natureza no mundo dos átomos. |
+| 4 | Uma foto mostra um ponto | Se pudéssemos fotografar o elétron, cada foto mostraria um único ponto, em um lugar diferente a cada vez. | É uma analogia: nenhuma máquina fotografa um elétron assim, mas a ideia ajuda a entender a probabilidade. |
+| 5 | Muitas fotos formam uma nuvem | Juntando muitas fotos, os pontos formam uma nuvem: mais densa onde é mais provável encontrar o elétron. | Quanto mais pontos aparecem, mais clara fica a nuvem: o que isso diz sobre onde o elétron fica? |
+| 6 | O orbital | Orbital é a região onde é mais provável encontrar o elétron: uma nuvem de probabilidade, e não uma trajetória. | A superfície transparente envolve a região onde o elétron é encontrado em cerca de 90% das fotos. |
+| 7 | Orbitais têm formas diferentes | O orbital s é uma esfera. Os orbitais p têm forma de halteres e apontam em três direções. | Também existem os orbitais d e f, com formas mais complexas. Aqui mostramos os dois primeiros, fora de escala. |
+| 8 | O modelo atual | No modelo atual, não dá para saber exatamente onde o elétron está. Só dá para calcular a região onde ele tem mais chance de ser encontrado: o orbital, uma nuvem de probabilidade. | Contribuíram, entre outros, de Broglie (1924), Schrödinger (1926) e Heisenberg (1927). É o modelo usado hoje para explicar a estrutura dos átomos. |
+| 9 | Hora de brincar | Clique para fotografar o elétron, um ponto de cada vez. Segure para uma longa exposição. Troque de orbital nos botões. | Peça à turma para comparar: onde o 1s concentra os pontos? E o 2p? O 2s tem uma casca sem pontos entre duas regiões cheias. Os tamanhos não estão em escala. |
+
+**Como os pontos são sorteados (a revisar com o professor):** cada ponto é sorteado de verdade, com a probabilidade do orbital do átomo de hidrogênio (em unidades do raio de Bohr, a0): 1s proporcional a e^(−2r); 2s proporcional a (2 − r)² e^(−r), com uma casca sem pontos em r = 2; 2p proporcional a r² cos²θ e^(−r), com dois lóbulos. A superfície transparente envolve cerca de 90% dos pontos. O orbital 1s é ampliado nas cenas de ensino para ficar visível, e as formas s e p do passo 7 não estão na mesma escala.
+
 ---
 
 ## 6. Fatos de apoio (escala e extras)
@@ -227,7 +243,7 @@ Registrar aqui cada imagem usada. O nome do arquivo deve ser o **id do modelo** 
 | Thomson | `src/assets/photos/thomson.jpg` | enviada pelo autor (origem a confirmar; imagem pequena, 340 × 375 px) | a confirmar | a confirmar | **em uso (provisória)**: confirmar fonte, autor e licença antes de publicar |
 | Rutherford | `src/assets/photos/rutherford.jpg` | enviada pelo autor (origem a confirmar; retrato em cores, 250 × 336 px) | a confirmar | a confirmar | **em uso (provisória)**: confirmar fonte, autor e licença antes de publicar |
 | Bohr | `src/assets/photos/bohr.jpg` | enviada pelo autor (origem a confirmar; retrato em preto e branco, 250 × 346 px) | a confirmar | a confirmar | **em uso (provisória)**: confirmar fonte, autor e licença antes de publicar |
-| Modelo atual | `src/assets/photos/quantum.jpg` (foto de um dos cientistas do modelo) | | | | pendente |
+| Modelo atual | `src/assets/photos/quantum.jpg` (foto de um dos cientistas do modelo, por exemplo Schrödinger ou Heisenberg) | | | | pendente (sem foto, o widget mostra uma ilustração da nuvem) |
 
 ## 8. Checklist de revisão com o professor
 

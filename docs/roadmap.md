@@ -12,7 +12,7 @@ Legenda: ✅ concluído · 🔄 em andamento · ⬜ pendente
 | 3 | Cena do **Thomson** em 3D | ✅ |
 | 4 | Cena do **Rutherford** em 3D | ✅ |
 | 5 | Cena do **Bohr** em 3D | ✅ |
-| 6 | Cena do modelo atual | ⬜ |
+| 6 | Cena do **modelo atual** em 3D | ✅ |
 | 7 | Quiz | ⬜ |
 | 8 | Extras opcionais (comparador, escala de tamanho) | ⬜ |
 | 9 | Polimento, modo leve e build offline | ⬜ |
@@ -85,10 +85,18 @@ Cada cena segue o mesmo padrão: 3D, passos com legenda, widget lateral, notas d
 - [x] Foto do Bohr em `src/assets/photos/bohr.jpg` (falta registrar origem e licença)
 - [ ] Testar em tela grande/projetor e revisar os textos e as cores com o professor
 
-## Etapa 6 — Cena do modelo atual ⬜
+## Etapa 6 — Cena do modelo atual (3D) ✅
 
-- [ ] Nuvem de probabilidade, foto instantânea vs longa exposição
-- [ ] Brincar
+- [x] O elétron como onda estacionária (de Broglie) e a incerteza (Heisenberg)
+- [x] "Foto instantânea": um ponto por foto, em lugares diferentes
+- [x] "Longa exposição": os pontos se acumulam e formam a nuvem
+- [x] Orbital: nuvem com a superfície que envolve cerca de 90% dos pontos
+- [x] Formas dos orbitais: s (esfera) e p (halteres nos três eixos)
+- [x] Pontos sorteados com a probabilidade real dos orbitais 1s, 2s e 2p do hidrogênio
+- [x] Brincar: clicar para fotografar, segurar para longa exposição e trocar de orbital (1s, 2s e 2p)
+- [x] Verificação automática de layout, sem textos sobrepostos
+- [ ] Foto de um dos cientistas do modelo em `src/assets/photos/quantum.jpg` (com origem e licença)
+- [ ] Testar em tela grande/projetor e revisar os textos com o professor
 
 ## Etapa 7 — Quiz ⬜
 
