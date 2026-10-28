@@ -6,6 +6,9 @@ Formato baseado em [Keep a Changelog](https://keepachangelog.com/pt-BR/1.1.0/).
 ## [Não lançado]
 
 ### Adicionado
+- **Quiz com dois modos**: duelo de equipes (A × B, o professor divide a sala e as equipes se alternam) e jogar sozinho. Tela cheia com alternativas grandes (A a D), tela de acerto com "Correto!", confete suave e explicação curta, nova tentativa após erro (a alternativa errada fica esmaecida), pontos por tentativa (3, 2, 1, 0), placar, vez da equipe e tela final com a equipe vencedora (ou empate) ou a pontuação no solo.
+- Banco de 21 perguntas dos cinco modelos; cada partida sorteia 10 (2 por modelo, em ordem cronológica) com as alternativas embaralhadas.
+- Teclado do quiz: A a D ou 1 a 4 respondem; Enter, Espaço ou seta para a direita continuam; Esc pede confirmação no jogo.
 - **Cena do modelo atual (orbitais) em 3D** (nove passos): o elétron como onda estacionária, a incerteza, a "foto instantânea" (um ponto por foto), a "longa exposição" (os pontos formam a nuvem), o orbital com a superfície que envolve 90% dos pontos, as formas s e p, o modelo atual e **brincar** (clicar para fotografar o elétron, segurar para longa exposição e trocar entre os orbitais 1s, 2s e 2p).
 - Pontos sorteados com a probabilidade real dos orbitais do hidrogênio (testada estatisticamente).
 - Foto do Rutherford (enviada pelo autor, retrato em cores) no widget lateral e no cartão da roda. Origem e licença ainda precisam ser registradas em `docs/conteudo-modelos.md`.

@@ -126,10 +126,13 @@ explorador-de-atomos/
 
 Detalhes completos em `docs/quiz.md`.
 
-- Ocupa a **tela inteira**, uma pergunta por vez, alternativas grandes.
-- **Acertou:** tela de acerto + explicação curta + botão para continuar.
-- **Errou:** a alternativa errada fica marcada/desabilitada e o aluno **pode tentar outra**, sem punição.
-- Tom leve; é para fixar e brincar, não para dar nota.
+- Dois modos: **duelo de equipes** (A × B, alternando as perguntas) e **solo**.
+- Ocupa a **tela inteira**, uma pergunta por vez, alternativas grandes (A a D).
+- **Acertou:** tela de acerto em tela cheia + explicação curta + botão para continuar.
+- **Errou:** a alternativa errada fica esmaecida e dá para **tentar outra**; os pontos caem (3, 2, 1, 0).
+- 10 perguntas por partida (2 por modelo, em ordem cronológica), sorteadas de `src/data/quiz.js`, com alternativas embaralhadas. Para acrescentar perguntas: a primeira alternativa é a correta e há limites de tamanho (veja o arquivo).
+- As regras ficam em `src/quiz/engine.js` (funções puras, testáveis); as telas em `src/quiz/`.
+- O quiz trata o próprio teclado; o App só cuida de F e L nessa tela.
 
 ## 8. Fluxo de trabalho e documentação
 
@@ -159,8 +162,8 @@ Ao concluir qualquer mudança relevante, **atualize a documentação no mesmo co
 
 ## 10. Estado atual
 
-- **Fase:** Etapas 1 a 6 concluídas. Prontos: projeto base, **tela inicial**, **roda de cartões** e as cinco cenas dos modelos, todas em 3D e com brincar: **Dalton** (8 passos), **Thomson** (9), **Rutherford** (9), **Bohr** (9) e **modelo atual** (9). O cartão do quiz abre uma tela provisória.
-- **Próximo passo:** **Quiz** (Etapa 7), em tela cheia, com opções grandes, acerto com explicação e nova tentativa após erro (veja `docs/quiz.md`). Reaproveitar o fluxo do `App.jsx` (o quiz entra como cena do item `quiz` em `src/scenes/index.js` ou como tela própria). Depois, polimento e validação com o professor.
+- **Fase:** Etapas 1 a 7 concluídas. Prontos: projeto base, **tela inicial**, **roda de cartões**, as cinco cenas dos modelos em 3D (**Dalton**, **Thomson**, **Rutherford**, **Bohr** e **modelo atual**) e o **quiz** com dois modos (duelo de equipes e solo).
+- **Próximo passo:** polimento (Etapa 9) e validação com o professor (Etapa 10): testar no projetor, revisar textos e perguntas, registrar origem e licença das fotos, conferir o peso do arquivo final. Extras opcionais (Etapa 8): comparador lado a lado e escala de tamanho.
 - **Ritmo de trabalho:** uma etapa por vez, com commit e documentação a cada passo. Não adiantar cenas que o autor ainda não pediu.
 - Veja `docs/roadmap.md` para o detalhamento.
 

@@ -8,6 +8,19 @@ Registro cronológico do que foi feito e aprendido. Serve de matéria-prima para
 
 ## Entradas
 
+### 28/10/2026 — Quiz com dois modos
+**O que foi feito**
+- Criado o **quiz** com **duelo de equipes** (o professor divide a sala em A e B, que se alternam) e **solo**.
+- Tela cheia, alternativas grandes, tela de acerto com explicação e confete suave, nova tentativa após erro e pontos que caem a cada erro (3, 2, 1, 0), com placar e tela final.
+- Banco de 21 perguntas cobrindo os cinco modelos; cada partida sorteia 10 (2 por modelo) e embaralha as alternativas.
+- Regras separadas das telas (`engine.js`) e testadas com 500 partidas aleatórias, além de um teste do fluxo completo (menu, duelo, solo, teclado, mouse e saída).
+
+**Aprendizado**
+- Separar as regras da tela permitiu testar o jogo inteiro (pontos, alternância das equipes, fim de partida) sem abrir um navegador.
+- Num quiz projetado, o teclado precisa ser simples e sem armadilhas: os botões não ficam "focados" ao clicar (para o Enter não repetir o clique) e o Esc pede confirmação durante a partida.
+
+**Próximo passo:** polimento e validação com o professor (testar no projetor, revisar perguntas e textos, registrar origem e licença das fotos).
+
 ### 27/10/2026 — Cena do modelo atual (orbitais) em 3D
 **O que foi feito**
 - Criada a **cena do modelo atual** em 3D, a quinta e última cena de modelo, com nove passos: do átomo de Bohr ao elétron como onda, depois a incerteza, a "foto instantânea", a "longa exposição" que forma a nuvem, o orbital, as formas s e p, o modelo atual e o brincar.

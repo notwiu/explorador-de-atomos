@@ -2,13 +2,13 @@
 
 Ferramenta web de apresentação, cheia de animações, para ensinar a **evolução dos modelos atômicos** em aulas de Química do ensino médio. Feita para ser **projetada em sala** pelo professor.
 
-> **Status:** em desenvolvimento. Tela inicial, roda de cartões e as cinco cenas dos modelos (Dalton, Thomson, Rutherford, Bohr e modelo atual) em 3D prontas; falta o quiz.
+> **Status:** em desenvolvimento. Tela inicial, roda de cartões as cinco cenas dos modelos (Dalton, Thomson, Rutherford, Bohr e modelo atual) em 3D e o quiz com dois modos prontos; falta o polimento e a validação com o professor.
 
 ## O que o projeto faz
 
 1. **Roda de cartões:** o menu, com Dalton, Thomson, Rutherford, Bohr, Modelo atual e o Quiz. Clicar no cartão abre o item.
 2. **Cenas em 3D:** cada modelo explicado passo a passo, em ordem cronológica, com widget lateral (foto e texto curto para o professor ler) e um passo final para **brincar** com o modelo.
-3. **Quiz básico:** em tela cheia, com alternativas grandes, para fixar o conteúdo de forma divertida.
+3. **Quiz:** em tela cheia, com alternativas grandes, para fixar o conteúdo de forma divertida. Dois modos: **duelo de equipes** (o professor divide a sala em A e B) e **solo**.
 
 ## Por que existe
 

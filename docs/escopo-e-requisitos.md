@@ -51,6 +51,9 @@ O professor pediu um jogo/ferramenta sobre modelos atômicos que fosse **mais di
 | RF12 | Quiz em tela cheia com uma pergunta por vez |
 | RF13 | Quiz: ao acertar, mostrar tela de acerto com explicação curta |
 | RF14 | Quiz: ao errar, permitir tentar outra alternativa |
+| RF17 | Quiz com dois modos: duelo de equipes (A × B, alternando as perguntas) e solo |
+| RF18 | Quiz com pontos (3, 2, 1 ou 0 conforme a tentativa), placar e tela final com a equipe vencedora ou o total |
+| RF19 | Quiz com 10 perguntas por partida (2 por modelo, em ordem cronológica), sorteadas de um banco, com alternativas embaralhadas |
 | RF15 | Notas do professor opcionais (atalho de teclado) |
 | RF16 | Barra de progresso discreta mostrando a posição no fluxo |
 

@@ -77,6 +77,7 @@ Tudo que é conteúdo (textos, anos, créditos, perguntas) fica em `src/data/`, 
 - **Pool de partículas (Rutherford):** 64 partículas e 90 brilhos reaproveitados; cada partícula tem um rastro (linha) que cresce enquanto ela se move e some aos poucos.
 - **Saltos do elétron (Bohr):** uma fila de ações (esperar, subir, descer, mover) controla o elétron. Subir faz um fóton chegar até o elétron antes do salto; descer emite um fóton. As cores vêm de `photonInfo(baixo, alto)`, exportada e testada. Clique em camada ou nível usa áreas de clique invisíveis (raycast).
 - **Orbitais (modelo atual):** `ORBITALS` sorteia pontos com a probabilidade de cada orbital (1s, 2s, 2p) e `R90` guarda o raio que envolve 90% dos pontos. As nuvens são `THREE.Points` com um buffer circular (quando enche, os pontos mais antigos são substituídos).
+- **Quiz:** `src/quiz/engine.js` guarda as regras (sorteio, pontos, vez das equipes, fim) como funções puras; `Quiz.jsx` liga as regras às telas (`Menu`, `Question`, `Correct`, `Final`) e ao teclado. O App só abre e fecha o quiz.
 - Animações entre passos usam `animate` do Framer Motion sobre os valores; as cenas não dependem de GSAP.
 - **Estoque de esferas (Dalton):** 125 esferas reaproveitadas em todos os passos. Cada passo define um "alvo" (posição, tamanho e cor) para cada esfera, e elas se transformam de um desenho para o outro.
 - **Desempenho:** modo leve usa esferas com menos faces, material simples, sem suavização de bordas e resolução 1x.

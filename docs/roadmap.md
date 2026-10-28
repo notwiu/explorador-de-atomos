@@ -13,7 +13,7 @@ Legenda: ✅ concluído · 🔄 em andamento · ⬜ pendente
 | 4 | Cena do **Rutherford** em 3D | ✅ |
 | 5 | Cena do **Bohr** em 3D | ✅ |
 | 6 | Cena do **modelo atual** em 3D | ✅ |
-| 7 | Quiz | ⬜ |
+| 7 | **Quiz** (duelo de equipes e solo) | ✅ |
 | 8 | Extras opcionais (comparador, escala de tamanho) | ⬜ |
 | 9 | Polimento, modo leve e build offline | ⬜ |
 | 10 | Validação com o professor e ajustes | ⬜ |
@@ -98,13 +98,17 @@ Cada cena segue o mesmo padrão: 3D, passos com legenda, widget lateral, notas d
 - [ ] Foto de um dos cientistas do modelo em `src/assets/photos/quantum.jpg` (com origem e licença)
 - [ ] Testar em tela grande/projetor e revisar os textos com o professor
 
-## Etapa 7 — Quiz ⬜
+## Etapa 7 — Quiz ✅
 
-- [ ] Tela de pergunta em tela cheia com alternativas grandes
-- [ ] Seleção por clique e por tecla
-- [ ] Tela de acerto com explicação e nova tentativa após erro
-- [ ] Tela final
-- [ ] Perguntas em `src/data/quiz.js`
+- [x] Menu com dois modos: **Duelo de equipes** (A × B) e **Jogar sozinho**
+- [x] Pergunta em tela cheia com alternativas grandes (A a D), por clique ou teclado
+- [x] Tela de acerto em tela cheia com explicação curta e confete suave
+- [x] Nova tentativa após erro, com pontos que diminuem (3, 2, 1, 0)
+- [x] Placar das equipes, vez da equipe, tela final com vencedora/empate e pontuação no solo
+- [x] Banco de 21 perguntas dos cinco modelos; cada partida sorteia 10 (2 por modelo) com alternativas embaralhadas
+- [x] Regras testadas sem navegador e fluxo completo testado (menu, duelo, solo, teclas, mouse e saída)
+- [ ] Validar as perguntas e as explicações com o professor
+- [ ] Testar no projetor (tamanho das letras e das alternativas)
 
 ## Etapa 8 — Extras opcionais ⬜
 

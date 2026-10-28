@@ -5,6 +5,7 @@ import Controls from '../components/Controls.jsx'
 import Intro from '../screens/Intro.jsx'
 import Timeline from '../screens/Timeline.jsx'
 import Placeholder from '../screens/Placeholder.jsx'
+import Quiz from '../quiz/Quiz.jsx'
 import { sceneRegistry } from '../scenes/index.js'
 import { timelineItems } from '../data/models.js'
 import { useFullscreen } from '../hooks/useFullscreen.js'
@@ -15,7 +16,7 @@ import { getPerformance } from './performance.js'
 import styles from './App.module.css'
 
 // Fluxo geral:
-//   intro (abertura) -> wheel (roda de cartões) -> scene (cena do item escolhido)
+//   intro (abertura) -> wheel (roda de cartões) -> scene (cena do modelo) ou quiz
 // As cenas ainda são telas provisórias; entram uma por vez nas próximas etapas.
 const N = timelineItems.length
 const mod = (v, n) => ((v % n) + n) % n
@@ -35,6 +36,10 @@ export default function App() {
   const scene = sceneRegistry[current.id] // undefined = cena ainda não criada
 
   const openItem = () => {
+    if (current.kind === 'quiz') {
+      setStage('quiz')
+      return
+    }
     setSceneStep(0)
     setStage('scene')
   }
@@ -61,6 +66,7 @@ export default function App() {
       back: () => setStage('intro'),
     },
     scene: sceneKeys,
+    quiz: {}, // o quiz trata o próprio teclado (o App só cuida de F e L)
   }[stage]
 
   useKeyboardNav({
@@ -106,6 +112,8 @@ export default function App() {
               notesOpen={notesOpen}
             />
           )}
+
+          {stage === 'quiz' && <Quiz onExit={goWheel} light={lightMode} />}
 
           {stage === 'scene' && !scene && (
             <Placeholder

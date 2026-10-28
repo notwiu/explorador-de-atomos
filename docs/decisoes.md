@@ -39,6 +39,9 @@ Cada decisão importante fica registrada aqui, com data, motivo e consequências
 | D31 | Verificação automática de sobreposição de textos nas cenas 3D | Ativa |
 | D32 | Cena do modelo atual: nove passos, com pontos sorteados com a probabilidade real dos orbitais | Proposta (confirmar) |
 | D33 | A "foto do elétron" é uma analogia e o brincar tem os orbitais 1s, 2s e 2p | Proposta (confirmar) |
+| D34 | Quiz com dois modos: duelo de equipes (A × B) e solo | Ativa |
+| D35 | Quiz: pontos por tentativa, 10 perguntas sorteadas e alternativas embaralhadas | Proposta (confirmar) |
+| D36 | Quiz: o teclado é tratado dentro do quiz, e Esc pede confirmação no jogo | Proposta (confirmar) |
 
 ---
 
@@ -222,15 +225,30 @@ Cada decisão importante fica registrada aqui, com data, motivo e consequências
 - **Decisão:** a "foto instantânea" e a "longa exposição" são analogias (e a nota do professor avisa isso). No brincar, clicar tira uma foto (um ponto), segurar faz uma longa exposição, e os botões trocam entre 1s, 2s e 2p; o botão direito gira a câmera e R zera.
 - **Consequência:** o 2s e o 2p ficam bem maiores que o 1s, o que ajuda a mostrar que orbitais mais externos ocupam mais espaço.
 
+### D34 — Quiz com dois modos
+- **Data:** 28/10/2026
+- **Contexto:** o autor pediu uma opção de jogo 1 × 1, em que o professor separa a sala em duas equipes (A contra B), e outra opção de jogar sozinho, com a mesma dinâmica já definida (tela cheia, alternativas grandes, tela de acerto com explicação e nova tentativa após erro).
+- **Decisão:** menu com **Duelo de equipes** e **Jogar sozinho**. No duelo, as equipes se alternam, uma pergunta para cada vez.
+- **Substitui em parte:** D10 (sem pontuação), porque agora há pontos e placar. Continuam valendo: tela cheia, nova tentativa após erro e tom leve.
+
+### D35 — Pontos, sorteio e alternativas
+- **Data:** 28/10/2026
+- **Decisão:** acertar na 1ª tentativa vale 3 pontos, na 2ª vale 2, na 3ª vale 1 e na 4ª vale 0 (e a pergunta avança). Cada partida tem 10 perguntas: 2 de cada modelo, em ordem cronológica, sorteadas de um banco de 21. As alternativas são embaralhadas a cada pergunta. Sem cronômetro e sem salvar pontuação.
+- **Resolve a pendência:** "alternativas do quiz: ordem fixa ou embaralhada" (agora embaralhada).
+- **Consequência:** em jogo perfeito, o duelo termina 15 a 15 (empate), e o solo, 30 pontos.
+
+### D36 — Teclado do quiz
+- **Data:** 28/10/2026
+- **Decisão:** o quiz trata o próprio teclado (A a D e 1 a 4 respondem; Enter, Espaço ou seta para a direita continuam). O App só cuida de F (tela cheia) e L (modo leve). Dentro do jogo, Esc pede confirmação (apertar duas vezes) para ninguém perder a partida sem querer. Os botões não ficam "focados" ao clicar, para o Enter não repetir o clique.
+
 ---
 
 ## Decisões em aberto
 
 | Tema | Opções | Responsável |
 |---|---|---|
-| Confirmar D13 a D17, D19, D20, D24, D25, D27 a D33 | Aceitar ou trocar | Autores |
+| Confirmar D13 a D17, D19, D20, D24, D25, D27 a D33, D35 e D36 | Aceitar ou trocar | Autores |
 | Fotos | Embutidas no arquivo único ou pasta ao lado | Willian |
-| Alternativas do quiz | Ordem fixa ou embaralhada | Willian + professor |
 
 ## Modelo para novas decisões
 

@@ -275,7 +275,9 @@ Não existe um laboratório separado. **Brincar é um passo dentro de cada cena*
 
 ## 7. Quiz
 
-Veja [quiz.md](quiz.md). Em resumo: tela cheia, alternativas grandes, feedback de acerto com explicação e nova tentativa após erro.
+O quiz é o último cartão da roda e abre um **menu com dois modos**: duelo de equipes (A × B, o professor divide a sala em duas equipes que se alternam) e solo. As telas são em tela cheia: pergunta com letras grandes, quatro alternativas enormes (A, B, C e D, cada uma com sua cor), tela de acerto com "Correto!", confete suave e explicação curta, e tela final com a equipe vencedora ou a pontuação. Errou: a alternativa fica esmaecida com um ✕ e a equipe tenta outra, com pontos menores (3, 2, 1, 0).
+
+Detalhes, regras, teclas e banco de perguntas: [quiz.md](quiz.md).
 
 ## 8. Animação: diretrizes técnicas
 
